@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+FONTS
+*/
+@font-face {
+	font-family: 'ibm-plex-regular';
+	src: url('/fonts/IBMPlexSans-Regular.ttf');
+}
+@font-face {
+	font-family: 'ibm-plex-medium';
+	src: url('/fonts/IBMPlexSans-Medium.ttf');
+}
+@font-face {
+	font-family: 'rama-slab';
+	src: url('/fonts/Rama-Slab-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'rama-slab-bold';
+	src: url('/fonts/Rama-Slab-Bold.ttf');
+}
+/*
+NAVIGATION
+*/
+
+.nav__container {
+	@apply relative w-full flex justify-center z-[1001];	
+}
+
+.nav__menu {
+	@apply text-g-white-500 bg-g-black-500 z-20;
+	position: fixed;
+	top: 0;
+	display: grid;
+	grid-template-columns: minmax(15%, 1fr) minmax(70%, 1fr) minmax(15%, 1fr);
+	grid-template-rows: minmax(80px, auto) auto;
+	width: 100%;
+}
+
+.nav__leading {
+	grid-column: 1;
+	grid-row: 1/2;
+	@apply flex items-center justify-start pl-3 gap-3;
+}
+
+.nav__center {
+	grid-column: 2;
+	grid-row: 1/2;
+	@apply relative w-full h-full px-3 text-center;
+}
+
+.nav__actions {
+	grid-column: 3;
+	grid-row: 1/2;
+	@apply flex items-center justify-end px-3 gap-4;
+}
+
+.nav__margin {
+	@apply mt-[80px];
+}
+
+/*
+TEXT
+*/
+
+/*
+p = paragraph, h[number] = heading, pf = primary font, sf = secondary font, r = regular, b = bold, l = light, d =dark, u = uppercase
+*/
+
+.h3_sf_b_l_u {
+	@apply font-rama-slab-bold text-g-white-500 uppercase;
+}
+
+.p_pf_r_l {
+	@apply font-ibm-plex-regular text-g-white-500;
+}
+
+.t05 {
+	@apply tracking-[0.05em];
+}
+
+.p__font__r {
+	@apply font-ibm-plex-regular;
+}
+
+.p__font__m {
+	@apply font-ibm-plex-medium;
+}
+
+.p__text__m {
+	@apply text-[1.2rem];
+}
+
+.s__font__r {
+	@apply font-rama-slab;
+}
+
+.s__font__b {
+	@apply font-rama-slab-bold;
+}
+
+.text__med {
+	@apply text-[1.8rem] uppercase tracking-[0.12rem];
+}
+.text__sub {
+	@apply text-[2.2rem] uppercase tracking-[0.19rem];
+}
+.text__title {
+	@apply text-[3.2rem] uppercase tracking-[0.19rem];
+}
+
+.prw {
+	@apply text-g-white-500 font-ibm-plex-regular;
+}
+.prb {
+	@apply text-g-black-500 font-ibm-plex-regular;
+}
+.prwu {
+	@apply text-g-white-500 font-ibm-plex-regular uppercase;
+}
+
+.h1pr {
+	@apply text-g-white-500 text-[2rem] md:text-[3rem];
+	font-family: ibm-plex-medium;
+}
+.h1big {
+	@apply text-g-white-500 text-[3.5rem] md:text-[5rem] font-rama-slab-bold uppercase leading-none tracking-[0.05em];
+}
+.h1sb {
+	@apply text-g-white-500 text-[2.5rem] md:text-[3.5rem] font-rama-slab-bold uppercase leading-none tracking-[0.05em];
+}
+.h1sbb {
+	@apply text-g-black-500 text-[2.5rem] md:text-[3.5rem] font-rama-slab-bold uppercase leading-none tracking-[0.05em];
+}
+.h2sb {
+	@apply text-g-white-500 text-[1.8rem] md:text-[2.8rem] font-rama-slab-bold uppercase leading-none tracking-[0.05em];
+}
+.h3sr {
+	@apply text-g-white-500 text-[2rem] md:text-[2.2rem] font-rama-slab uppercase leading-none tracking-[0.05em];
+}
+.h4sr {
+	@apply text-g-white-500;
+	font-family: rama-slab;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.12rem;
+}
+
+.a__pr {
+	@apply text-g-white-700 hover:text-g-white-500 duration-300;
+	font-family: ibm-plex-regular;
+}
+
+.video__title__text {
+	@apply text-g-white-500 text-[3rem] md:text-[4.5rem] font-rama-slab-bold uppercase leading-none tracking-[0.05em];
+}
+
+/* 
+OTHER
+*/
+
+/* Flex Center All */
+.fca {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Flex Center Start */
+.fcs {
+	display: flex;
+	justify-content: center;
+	align-items: start;
+}
+
+/* Flex Start Start */
+.fss {
+	display: flex;
+	justify-content: start;
+	align-items: start;
+}
+
+/* Flex Start Center */
+.fsc {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+}
