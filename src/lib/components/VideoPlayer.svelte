@@ -189,6 +189,7 @@
 		autoplay={autoPlay}
 		{muted}
 		loop
+		playsinline
 		style="object-fit: {fit};"
 	>
 		{#if vttSource}
