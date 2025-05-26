@@ -1,9 +1,10 @@
 <script lang="ts">
 	import CallToActionButton from '$lib/components/CallToActionButton.svelte';
+	import Footer from '$lib/components/Footer.svelte';
+	import GetStarted from '$lib/components/GetStarted.svelte';
 	import Nav from '$lib/components/Nav.svelte';
 	import { acs } from '$lib/types';
 	import { Accordion5 } from '@djcali570/component-lib';
-	import type { Accordion5ColorScheme } from '@djcali570/component-lib';
 
 	// Define coach type
 	interface Coach {
@@ -51,7 +52,7 @@
 <Nav />
 
 <main class="nav__margin bg-g-white-500">
-	<section class="bg-g-black-500">
+	<section class="bg-g-black-500" title="Title">
 		<div class="grid md:grid-cols-2 h-[200px]">
 			<div class="w-full fca">
 				<h1 class="h1big">meet the team</h1>
@@ -62,7 +63,7 @@
 			</div>
 		</div>
 	</section>
-	<section>
+	<section title="Team Grid">
 		<div class="flex flex-col md:flex-row md:justify-evenly w-full gap-8 p-8">
 			{#each coaches as c}
 				<div class="h-full flex flex-col">
@@ -89,6 +90,12 @@
 			{/each}
 		</div>
 	</section>
-
-	<div>Some other data</div>
+	<section class="px-4 md:px-20 py-4 md:py-20"  title="Join">
+		<div class="bg-g-black-500 w-full py-20">
+			<GetStarted title="join today" />
+		</div>
+	</section>
+	<section class="w-full bg-g-black-500" title="footer">
+		<Footer />
+	</section>
 </main>
