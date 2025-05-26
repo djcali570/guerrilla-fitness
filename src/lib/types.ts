@@ -1,4 +1,4 @@
-import type { Accordion5ColorScheme } from "@djcali570/component-lib";
+import type { Accordion5ColorScheme, Input5ColorScheme } from "@djcali570/component-lib";
 
 export type link = {
     href: string,
@@ -35,4 +35,13 @@ export let acs: Accordion5ColorScheme = {
     bgColor: '#FFF',
     textColor: '#010001',
     triggerColor: '#010001',
+    panelBgColor: '#FFF'
+}
+
+export let ics: Input5ColorScheme = {
+    mainBgColor: '#FFF',
+    mainTextColor: '#010001',
+    focusedColor: '#010001',
+    counterBgColor: '#FFF',
+    counterTextColor: '#010001'
 }
