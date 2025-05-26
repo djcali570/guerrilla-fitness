@@ -9,13 +9,8 @@
 	import Nav from '$lib/components/Nav.svelte';
 	import Offerings from '$lib/components/Offerings.svelte';
 	import VideoPlayer from '$lib/components/VideoPlayer.svelte';
-	import type { Gym, ScheduleItem, scheduleType, weekday } from '$lib/types';
-
-	let gym: Gym = {
-		name: 'Montclair',
-		address: '19 Elm Street Montclair, NJ 07042',
-		phone: '1-973-337-6538'
-	};
+	import type { ScheduleItem, scheduleType, weekday } from '$lib/types';
+	import { gyms } from '$lib/state/appState.svelte';
 
 	let sliderImages: string[] = [
 		'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0',
@@ -244,7 +239,7 @@
 		</div>
 	</section>
 	<section class="px-4 md:px-32 md:py-16 pb-16" title="Gym Details">
-		<GymComponent {gym} />
+		<GymComponent gym={gyms[0]}  />
 	</section>
 	<Footer />
 </main>

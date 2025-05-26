@@ -9,7 +9,8 @@
 	import Nav from '$lib/components/Nav.svelte';
 	import Offerings from '$lib/components/Offerings.svelte';
 	import VideoPlayer from '$lib/components/VideoPlayer.svelte';
-	import type { Gym, ScheduleItem, scheduleType, weekday } from '$lib/types';
+	import type { ScheduleItem, scheduleType, weekday } from '$lib/types';
+	import { gyms } from '$lib/state/appState.svelte';
 
 	let sliderImages: string[] = [
 		'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0',
@@ -18,12 +19,6 @@
 		'https://images.unsplash.com/photo-1441974231531-c6227db76b6e',
 		'https://images.unsplash.com/photo-1742301039878-3ec6e0d15078'
 	];
-
-	let gym: Gym = {
-		name: 'Paramus',
-		address: '348 Evelyn Street Paramus, NJ 07652',
-		phone: '1-201-967-5000'
-	};
 
 	let schedule: ScheduleItem[] = [
 		{ day: 'Monday', time: '5:30AM', scheduleType: 'Crossfit' },
@@ -244,7 +239,7 @@
 		</div>
 	</section>
 	<section class="px-4 md:px-32 md:py-16 pb-16" title="Gym Details">
-		<GymComponent {gym} />
+		<GymComponent gym={gyms[1]} />
 	</section>
 	<Footer />
 </main>
