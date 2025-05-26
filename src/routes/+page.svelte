@@ -7,27 +7,10 @@
 	import Nav from '$lib/components/Nav.svelte';
 	import Offerings from '$lib/components/Offerings.svelte';
 	import VideoPlayer from '$lib/components/VideoPlayer.svelte';
-	import type { Gym } from '$lib/types';
+	import { gyms } from '$lib/state/appState.svelte';
 	import SectionTitle from './_components/SectionTitle.svelte';
 	import TestimonialTilteDesktop from './_components/TestimonialTilteDesktop.svelte';
 	import TestimonialTitleMobile from './_components/TestimonialTitleMobile.svelte';
-
-	const gyms: Gym[] = [
-		{
-			name: 'Montclair',
-			address: '19 Elm St, Montclair NJ 07042',
-			phone: '1-973-337-6538',
-			image: `${PUBLIC_WEB_IMAGE_ENDPOINT}/temp_gym1/view?project=guerrilla&project=guerrilla`,
-			link: '/montclair'
-		},
-		{
-			name: 'Paramus',
-			address: '348 Evelyn St, Paramus NJ 07652',
-			phone: '1-201-967-5000',
-			image: `${PUBLIC_WEB_IMAGE_ENDPOINT}/temp_gym2/view?project=guerrilla&project=guerrilla`,
-			link: '/paramus'
-		}
-	];
 
 	let logo = `${PUBLIC_WEB_IMAGE_ENDPOINT}/6709df20c5ef3b5c29c0/view?project=${PUBLIC_PROJECT_ID}`
 </script>
