@@ -92,9 +92,10 @@
 		position: absolute;
 		left: 0;
 		display: block;
-		width: 100%;
+		width: 15rem;
 		color: #fff;
 		background: #000;
+		text-align: left;
 		border-radius: 0.375rem;
 		overflow: hidden;
 		transition-duration: 700ms;
