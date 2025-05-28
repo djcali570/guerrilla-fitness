@@ -55,7 +55,7 @@
 			<div class="grid grid-rows-[min-content_1fr] px-6">
 				<div class="hidden md:block h-32"></div>
 
-				<div class="flex flex-col gap-6">
+				<div class="flex flex-col gap-6 pt-10 md:pt-0">
 					<hr />
 					<h6 class="h_sf_r_d_u text-lg tracking-widest">Our Locations</h6>
 					{#each gyms as gym}
