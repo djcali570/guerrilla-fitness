@@ -172,7 +172,6 @@
 	<section class="px-4 md:px-32 py-16" title="Offerings">
 		<Offerings />
 	</section>
-
 	<section class="px-4 md:px-32 pb-16" title="locations">
 		<h4 class="s__font__r text__med text-g-white-500 uppercase mb-4">our locations</h4>
 		{#each gyms as gym, i}
