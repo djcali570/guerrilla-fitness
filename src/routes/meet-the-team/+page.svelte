@@ -59,7 +59,7 @@
 			</div>
 			<div class="fca">
 				<div class="pr-2"><CallToActionButton title="Join Now" /></div>
-				<div class="pl-2"><CallToActionButton title="Contact" /></div>
+				<div class="pl-2"><CallToActionButton title="Contact" link="/contact" /></div>
 			</div>
 		</div>
 	</section>
@@ -74,7 +74,10 @@
 							alt={c.name}
 						/>
 						<div class="pt-4 w-full max-w-[350px]">
-							<Accordion5 title={`Meet ${c.name}`} colorScheme={acs}>
+							<Accordion5 colorScheme={acs}>
+								{#snippet title()}
+									<h4>Meet {c.name}</h4>
+								{/snippet}
 								{#snippet panel()}
 									<p class="prb pb-2">{c.text}</p>
 								{/snippet}
@@ -90,7 +93,7 @@
 			{/each}
 		</div>
 	</section>
-	<section class="px-4 md:px-20 py-4 md:py-20"  title="Join">
+	<section class="px-4 md:px-20 py-4 md:py-20" title="Join">
 		<div class="bg-g-black-500 w-full py-20">
 			<GetStarted title="join today" />
 		</div>
