@@ -27,7 +27,7 @@ NAVIGATION
 */
 
 .nav__container {
-	@apply relative w-full flex justify-center z-[1001];	
+	@apply relative w-full flex justify-center z-[1001];
 }
 
 .nav__menu {
@@ -69,13 +69,39 @@ TEXT
 /*
 p = paragraph, h[number] = heading, pf = primary font, sf = secondary font, r = regular, b = bold, l = light, d =dark, u = uppercase
 */
-
+.a_pf_b_d_u {
+	@apply font-ibm-plex-medium text-g-black-500 uppercase;
+}
 .h3_sf_b_l_u {
+	@apply font-rama-slab-bold text-g-white-500 uppercase;
+}
+
+.h_sf_r_d_u {
+	@apply font-rama-slab text-g-black-500 uppercase;
+}
+
+.h_sf_r_l_u {
+	@apply font-rama-slab text-g-white-500 uppercase;
+}
+
+.h_sf_b_d_u {
+	@apply font-rama-slab-bold text-g-black-500 uppercase;
+}
+
+.h_sf_b_l_u {
 	@apply font-rama-slab-bold text-g-white-500 uppercase;
 }
 
 .p_pf_r_l {
 	@apply font-ibm-plex-regular text-g-white-500;
+}
+
+.p_pf_r_d {
+	@apply font-ibm-plex-regular text-g-black-500;
+}
+
+.p_pf_r_g {
+	@apply font-ibm-plex-regular text-gray-500;
 }
 
 .t05 {
@@ -150,7 +176,7 @@ p = paragraph, h[number] = heading, pf = primary font, sf = secondary font, r = 
 }
 
 .a__pr {
-	@apply text-g-white-700 hover:text-g-white-500 duration-300;
+	@apply text-g-white-700 hover:text-g-white-500 duration-300 text-sm;
 	font-family: ibm-plex-regular;
 }
 
