@@ -1,6 +1,6 @@
 {
 	"name": "guerrilla",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
@@ -34,7 +34,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@djcali570/component-lib": "^0.0.7",
-		"gsap": "^3.12.7"
+		"@djcali570/component-lib": "^0.1.00",
+		"gsap": "^3.13.0"
 	}
 }
