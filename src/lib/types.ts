@@ -38,6 +38,13 @@ export let acs: Accordion5ColorScheme = {
     panelBgColor: '#FFF'
 }
 
+export let acs_dark: Accordion5ColorScheme = {
+    textColor: '#FFF',
+    bgColor: 'transparent',
+    triggerColor: '#FFF',
+    panelBgColor: 'transparent'
+}
+
 export let ics: Input5ColorScheme = {
     mainBgColor: '#FFF',
     mainTextColor: '#010001',
