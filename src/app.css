@@ -72,6 +72,9 @@ p = paragraph, h[number] = heading, pf = primary font, sf = secondary font, r = 
 .a_pf_b_d_u {
 	@apply font-ibm-plex-medium text-g-black-500 uppercase;
 }
+.h_pf_b_d_u {
+	@apply font-ibm-plex-medium text-g-black-500 uppercase;
+}
 .h3_sf_b_l_u {
 	@apply font-rama-slab-bold text-g-white-500 uppercase;
 }
@@ -126,6 +129,10 @@ p = paragraph, h[number] = heading, pf = primary font, sf = secondary font, r = 
 
 .s__font__b {
 	@apply font-rama-slab-bold;
+}
+
+.pfr {
+	@apply font-ibm-plex-regular;
 }
 
 .text__med {
