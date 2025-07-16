@@ -6,6 +6,7 @@
 	import GymComponent from '$lib/components/GymComponent.svelte';
 	import Nav from '$lib/components/Nav.svelte';
 	import Offerings from '$lib/components/Offerings.svelte';
+	import { fade, slideIn } from '$lib/gsapFunc';
 	import { gyms } from '$lib/state/appState.svelte';
 	import { acs_dark } from '$lib/types';
 	import { Accordion5 } from '@djcali570/component-lib';
@@ -30,7 +31,7 @@
 				src="{PUBLIC_WEB_IMAGE_ENDPOINT}/photob/view?project=guerrilla&project=guerrilla"
 				alt=""
 			/>
-			<div class="image__text">
+			<div class="image__text" {@attach slideIn}>
 				<div class="">
 					<h6 class="h_sf_b_l_u text-[1.1rem] tracking-[0.3rem] text-center m-8">
 						effort over everything
@@ -50,13 +51,13 @@
 	<section class="mt-20 px-4 md:px-32" title="More Than A Gym">
 		<div class="grid grid-rows-[min-content_1fr] md:grid-cols-2">
 			<div class="max-w-[22rem]">
-				<h1 class="h3_sf_b_l_u text-[4rem] leading-[3.5rem] t05 w-full">
+				<h1 class="h3_sf_b_l_u text-[4rem] leading-[3.5rem] t05 w-full" {@attach slideIn}>
 					We are more than just another gym
 				</h1>
 			</div>
 			<div class="pt-6 md:pt-0 p__font__r">
 				<div class="w-full h-full flex justify-center items-center">
-					<p class="p_pf_r_l text-justify leading-[2rem]">
+					<p class="p_pf_r_l text-justify leading-[2rem]" {@attach fade}>
 						At Guerrilla Fitness, we know what it takes to live a life free of limitations. It takes
 						hard work, effort, and a support system that will hold you accountable when things get
 						tough.
@@ -68,10 +69,13 @@
 	<section class="mt-20 px-4 md:px-32" title="Our Mission">
 		<div class="grid grid-rows-[min-content_1fr] md:grid-cols-2">
 			<div class="max-w-[30rem] flex flex-col justify-center order-2 md:order-1">
-				<h1 class="hidden md:block h3_sf_b_l_u text-[4rem] leading-[3.5rem] t05 w-full">
+				<h1
+					class="hidden md:block h3_sf_b_l_u text-[4rem] leading-[3.5rem] t05 w-full"
+					{@attach (node) => slideIn(node, 0)}
+				>
 					Our Mission
 				</h1>
-				<p class="p_pf_r_l text-justify leading-[2rem] pt-8">
+				<p class="p_pf_r_l text-justify leading-[2rem] pt-8" {@attach (node) => slideIn(node, 0.3)}>
 					At Gurrilla Fitness we empower you to become the best version of yourself through
 					CrossFit, Nutrition, and Accountability. We believe in pushing ourselves beyond our limits
 					and achieving our goals, and we want to help you do the same.
@@ -82,9 +86,15 @@
 					class="w-full h-full object-cover filter"
 					src="{PUBLIC_WEB_IMAGE_ENDPOINT}/photob/view?project=guerrilla&project=guerrilla"
 					alt=""
+					{@attach (node) => slideIn(node, 0.5)}
 				/>
 				<div class="md:hidden absolute bottom-[20%] left-4">
-					<h1 class="h3_sf_b_l_u text-[3.2rem] leading-[3.5rem] t05 w-full">Our Mission</h1>
+					<h1
+						class="h3_sf_b_l_u text-[3.2rem] leading-[3.5rem] t05 w-full"
+						{@attach (node) => slideIn(node, 0)}
+					>
+						Our Mission
+					</h1>
 				</div>
 			</div>
 		</div>
@@ -96,6 +106,7 @@
 					class="w-full h-full object-cover filter"
 					src="{PUBLIC_WEB_IMAGE_ENDPOINT}/photob/view?project=guerrilla&project=guerrilla"
 					alt=""
+					{@attach (node) => slideIn(node, 0.5)}
 				/>
 				<div class="md:hidden absolute bottom-[20%] left-4">
 					<h1 class="h3_sf_b_l_u text-[3.2rem] leading-[3.5rem] t05 w-full">How It Works</h1>
@@ -103,10 +114,13 @@
 			</div>
 			<div class="w-full flex justify-center pt-8 md:pt-0">
 				<div class="max-w-[30rem] flex flex-col justify-center items-start">
-					<h1 class="hidden md:block h3_sf_b_l_u text-[4rem] leading-[3.5rem] t05 w-full">
+					<h1
+						class="hidden md:block h3_sf_b_l_u text-[4rem] leading-[3.5rem] t05 w-full"
+						{@attach slideIn}
+					>
 						How It Works
 					</h1>
-					<div class="w-full">
+					<div class="w-full" {@attach (node) => slideIn(node, 0.5)}>
 						<Accordion5 iconWidth="2.5rem" iconHeight="2.5rem" colorScheme={acs_dark}>
 							{#snippet title()}
 								<h4 class="h_sf_r_l_u text-[2rem] tracking-widest pr-2">
@@ -194,7 +208,7 @@
 			</div>
 		{/each}
 	</section>
-    <section class="my-20 px-4 md:px-32" title="Get Started">
+	<section class="my-20 px-4 md:px-32" title="Get Started">
 		<GetStarted />
 	</section>
 	<Footer />
