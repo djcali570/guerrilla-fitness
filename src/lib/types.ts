@@ -1,4 +1,4 @@
-import type { Accordion5ColorScheme, Input5ColorScheme } from "@djcali570/component-lib";
+import type { Accordion5ColorScheme, DropDown5ColorScheme, DropDownItem, Input5ColorScheme } from "@djcali570/component-lib";
 
 export type link = {
     href: string,
@@ -10,7 +10,10 @@ export type Carousel = {
     title: string,
     subtitle: string,
     text: string,
-    img: string
+    img: string,
+    showButton?: boolean,
+    buttonText?: string,
+    link?: string,
 }
 
 export type Gym = {
@@ -52,3 +55,33 @@ export let ics: Input5ColorScheme = {
     counterBgColor: '#FFF',
     counterTextColor: '#010001'
 }
+
+export let d5cs: DropDown5ColorScheme = {
+    bgColor: '#FFF',
+    textColor: '#010001',
+    focusedColor: '#010001',
+    itemHoverBgColor: '#BF1E2D',
+    dropdownBgColor: '#FFF',
+    itemTextColor: '#010001',
+    itemHoverTextColor: '#FFF'
+}
+
+export type MembershipCardData = {
+    price?: string;
+    priceAbbv?: string;
+    subTitle?: string;
+    title?: string;
+    desc?: string;
+    buttonTitle?: string;
+    bullets?: string[];
+    link?: string;
+}
+
+export let gymDropdown: DropDownItem[] = [
+    {
+        value: 'Montclair'
+    },
+    {
+        value: 'Paramus'
+    }
+];
