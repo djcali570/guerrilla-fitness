@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { slideIn } from '$lib/gsapFunc';
+
 	let {
 		link = '/',
 		title = 'Title',
@@ -6,6 +8,8 @@
 		bgColor = 'transparent',
 		borderColor = '#bf1e2d',
 		type = 'link',
+		useSlideIn = false,
+		width = '8rem',		
 		click = () => {}
 	}: {
 		link?: string;
@@ -14,22 +18,34 @@
 		bgColor?: string;
 		borderColor?: string;
 		type?: 'link' | 'btn';
+		useSlideIn?: boolean;
+		width?: string;
 		click?: () => void;
 	} = $props();
 </script>
 
 {#if type === 'link'}
-	<a
-		href={link}
-		class="button"
-		style="--bgColor: {bgColor}; --borderColor: {borderColor}; --textColor: {textColor}"
-		><div class="w-full h-full flex justify-center items-center">{title}</div></a
-	>
+	{#if useSlideIn}
+		<a
+			href={link}
+			class="button"
+			style="--bgColor: {bgColor}; --borderColor: {borderColor}; --textColor: {textColor}; --width: {width};"
+			{@attach slideIn}
+			><div class="w-full h-full flex justify-center items-center pfr">{title}</div></a
+		>
+	{:else}
+		<a
+			href={link}
+			class="button"
+			style="--bgColor: {bgColor}; --borderColor: {borderColor}; --textColor: {textColor}; --width: {width};"
+			><div class="w-full h-full flex justify-center items-center pfr">{title}</div></a
+		>
+	{/if}
 {:else}
 	<button
 		onclick={click}
 		class="button"
-		style="--bgColor: {bgColor}; --borderColor: {borderColor}; --textColor: {textColor}"
+		style="--bgColor: {bgColor}; --borderColor: {borderColor}; --textColor: {textColor}; --width: {width};"
 	>
 		<div class="w-full h-full flex justify-center items-center">{title}</div>
 	</button>
@@ -40,7 +56,7 @@
 		display: flex;
 		justify-items: center;
 		align-items: center;
-		width: 8rem;
+		width: var(--width);
 		height: 3rem;
 		font-size: 0.875rem;
 		font-family: ibm-plex-regular;
