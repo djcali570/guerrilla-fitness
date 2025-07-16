@@ -7,12 +7,13 @@
 	import Nav from '$lib/components/Nav.svelte';
 	import Offerings from '$lib/components/Offerings.svelte';
 	import VideoPlayer from '$lib/components/VideoPlayer.svelte';
+	import { fade, slideIn } from '$lib/gsapFunc';
 	import { gyms } from '$lib/state/appState.svelte';
 	import SectionTitle from './_components/SectionTitle.svelte';
 	import TestimonialTilteDesktop from './_components/TestimonialTilteDesktop.svelte';
 	import TestimonialTitleMobile from './_components/TestimonialTitleMobile.svelte';
 
-	let logo = `${PUBLIC_WEB_IMAGE_ENDPOINT}/6709df20c5ef3b5c29c0/view?project=${PUBLIC_PROJECT_ID}`
+	let logo = `${PUBLIC_WEB_IMAGE_ENDPOINT}/6709df20c5ef3b5c29c0/view?project=${PUBLIC_PROJECT_ID}`;
 </script>
 
 <svelte:head>
@@ -20,8 +21,8 @@
 	<meta name="description" content="Best hour of your day." />
 	<meta property="og:title" content="Guerrilla Fitness - Home Page" />
 	<meta property="og:description" content="Best hour of your day." />
-	<meta property="og:image" content="{logo}" />
-	<meta name="twitter:card" content="{logo}" />
+	<meta property="og:image" content={logo} />
+	<meta name="twitter:card" content={logo} />
 </svelte:head>
 
 <Nav />
@@ -34,9 +35,9 @@
 			/>
 		</div>
 		<div class="video__overlay"></div>
-		<h1 class="video__title">Best hour of your day</h1>
+		<h1 class="video__title" {@attach slideIn}>Best hour of your day</h1>
 	</section>
-	<section class="py-24 px-4 md:px-32" title="Guarantee">
+	<section class="py-24 px-4 md:px-32" {@attach (node) => slideIn(node, 0, 10)} title="Guarantee">
 		<div class="grid grid-rows-[min-content_1fr] md:grid-cols-2">
 			<h1 class="h3_sf_b_l_u text-5xl t05 w-full">
 				The Guerrilla, <br /> Guarantee
@@ -90,7 +91,7 @@
 							</div>
 							<div class="block md:hidden">
 								<div class="flex items-center justify-start">
-									<h3 class="h3_sf_b_l_u t05 text-4xl">
+									<h3 class="h3_sf_b_l_u t05 text-4xl" {@attach slideIn}>
 										If you answered yes, Guerrilla Fitness is for you!
 									</h3>
 								</div>
@@ -119,7 +120,7 @@
 			<div class="min-h-full">
 				<div class="grid grid-rows-2 grid-cols-2 h-full">
 					<div class="col-span-2 row-span-2 flex items-center justify-start s__font__b">
-						<h2 class="h3_sf_b_l_u text-4xl w-full lg:max-w-md tracking-[0.08em]">
+						<h2 class="h3_sf_b_l_u text-4xl w-full lg:max-w-md tracking-[0.08em]" {@attach slideIn}>
 							if you answered yes, Guerrilla Fitness is for you!
 						</h2>
 					</div>
@@ -142,7 +143,7 @@
 					<div>
 						<p>2. Are you looking for support from a world-class coach to help you get in shape?</p>
 					</div>
-					<div>
+					<div {@attach slideIn}>
 						<CallToActionButton />
 					</div>
 				</div>
@@ -155,16 +156,24 @@
 	<section class="px-4 md:px-32 pb-12" title="Join">
 		<div class="w-full flex flex-col">
 			<div class="w-full flex justify-center text-g-white-500">
-				<h4 class="font-rama-slab uppercase text-[1.2rem]" style="letter-spacing: 1pt;">
+				<h4
+					class="font-rama-slab uppercase text-[1.2rem]"
+					style="letter-spacing: 1pt;"
+					{@attach (node) => slideIn(node, 0)}
+				>
 					CrossFit. Nutrition. Accountability. Results.
 				</h4>
 			</div>
 			<div class="w-full flex justify-center text-g-white-500">
-				<h1 class="h3_sf_b_l_u text-[3.2rem] md:text-[6.5rem]" style="letter-spacing: 1pt;">
+				<h1
+					class="h3_sf_b_l_u text-[3.2rem] md:text-[6.5rem]"
+					style="letter-spacing: 1pt;"
+					{@attach (node) => slideIn(node, 0.2)}
+				>
 					Get Started
 				</h1>
 			</div>
-			<div class="w-full flex justify-center">
+			<div class="w-full flex justify-center" {@attach (node) => slideIn(node, 0.4)}>
 				<CallToActionButton title="3 Class Trial" />
 			</div>
 		</div>
