@@ -3,27 +3,9 @@
 	import CallToActionButton from './CallToActionButton.svelte';
 	import gsap from 'gsap';
 	import type { Carousel } from '$lib/types';
+	import { mainCarouselitems } from '$lib/state/appState.svelte';
 
-	const items: Carousel[] = [
-		{
-			title: 'What To Expect',
-			subtitle: 'Create Your Plan',
-			text: 'Work with our Guerrilla Fitness and nutrition experts to create a simple and sustainable plan to reach your goals',
-			img: 'https://images.unsplash.com/photo-1548690312-e3b507d8c110'
-		},
-		{
-			title: 'What To Expect',
-			subtitle: 'Get Results',
-			text: 'Get ready to transform how you look and feel with a fitness nutrition program that works',
-			img: 'https://images.unsplash.com/photo-1550259979-ed79b48d2a30'
-		},
-		{
-			title: 'What To Expect',
-			subtitle: 'Set Your Goals',
-			text: 'Set your goals with a Guerrilla Fitness team member and take biometric measurements to measure your success',
-			img: 'https://images.unsplash.com/photo-1595078475328-1ab05d0a6a0e'
-		}
-	];
+	let { items = mainCarouselitems }: { items?: Carousel[] } = $props();
 
 	let currentIndex: number = $state(0);
 	let carouselContainer: HTMLElement;
@@ -80,16 +62,17 @@
 			class="relative flex flex-col md:flex-none md:grid md:grid-rows-9 w-full h-[420px] md:h-[700px]"
 		>
 			<div class="flex justify-start pt-0 md:pt-10 md:row-span-2">
-				<h1 class="s__font__b text-[3rem] tracking-wider uppercase">{items[currentIndex].title}</h1>
+				<h1 class="s__font__b text-[3rem] leading-[3rem] tracking-wider uppercase">
+					{items[currentIndex].title}
+				</h1>
 			</div>
 
 			<div class="relative h-10 md:hidden">
-				{#each items}					
+				{#each items}
 					<p class="index__p p__font__r text-[1rem] absolute right-0">
 						{currentIndex + 1} / {items.length}
 					</p>
 				{/each}
-			
 			</div>
 			<div class="w-full h-full md:row-span-6 relative pt-4">
 				{#each items as item}
@@ -98,7 +81,9 @@
 							{item.subtitle}
 						</h4>
 						<p class="text__p p__font__r">{item.text}</p>
-						<div class="pt-6"><CallToActionButton /></div>
+						{#if item.showButton}
+							<div class="pt-6"><CallToActionButton title={item.buttonText} /></div>
+						{/if}
 					</div>
 				{/each}
 			</div>
@@ -113,7 +98,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="md:grid md:grid-rows-3 w-full h-[700px] px-0 md:px-12 py-4">
+		<div class="md:grid md:grid-rows-3 w-full h-[700px] px-0 md:pl-12 py-4">
 			<div class="w-full h-full md:row-span-3">
 				<div class="w-full h-full relative">
 					{#each items as item}
