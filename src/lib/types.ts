@@ -85,3 +85,12 @@ export let gymDropdown: DropDownItem[] = [
         value: 'Paramus'
     }
 ];
+
+// Define coach type
+export interface Coach {
+    name: string;
+    img: string;
+    text: string;
+    title: string;
+    newClients: boolean;
+}
