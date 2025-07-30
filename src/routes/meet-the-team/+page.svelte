@@ -1,43 +1,15 @@
 <script lang="ts">
+	import { PUBLIC_PROJECT_ID, PUBLIC_WEB_IMAGE_ENDPOINT } from '$env/static/public';
 	import CallToActionButton from '$lib/components/CallToActionButton.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import GetStarted from '$lib/components/GetStarted.svelte';
 	import Nav from '$lib/components/Nav.svelte';
-	import { acs } from '$lib/types';
+	import { slideIn } from '$lib/gsapFunc';
+	import { coaches } from '$lib/state/appState.svelte';
+	import { acs, type Coach } from '$lib/types';
 	import { Accordion5 } from '@djcali570/component-lib';
 
-	// Define coach type
-	interface Coach {
-		name: string;
-		img: string;
-		text: string;
-		title: string;
-		newClients: boolean;
-	}
-
-	let coaches: Coach[] = [
-		{
-			name: 'Emily',
-			img: 'https://images.squarespace-cdn.com/content/v1/609aebc633b51e385cbaecb2/77e16544-9f44-4856-a7ac-f29b4f60da6a/Emily.jpg?format=2500w',
-			text: 'Howdy friends! I’ve been doing CrossFit since 2012 and coaching since 2013. CrossFit showed me camaraderie and confidence, which are key things I aim to teach and share with others. Coaching is a beautiful balance of education, motivation, and accountability. For anyone on the fence thinking about changing their lifestyle habits, I say go for it and we’re here to help! Regardless of the time I coach, I will bring energy like I’ve just had a double shot of espresso.',
-			title: 'Coach',
-			newClients: true
-		},
-		{
-			name: 'Karen',
-			img: 'https://images.squarespace-cdn.com/content/v1/609aebc633b51e385cbaecb2/77e16544-9f44-4856-a7ac-f29b4f60da6a/Emily.jpg?format=2500w',
-			text: 'Emily is a fool',
-			title: 'Personal Training',
-			newClients: false
-		},
-		{
-			name: 'Stinky',
-			img: 'https://images.squarespace-cdn.com/content/v1/609aebc633b51e385cbaecb2/77e16544-9f44-4856-a7ac-f29b4f60da6a/Emily.jpg?format=2500w',
-			text: 'Emily sucks a ?',
-			title: 'Nutrition Specialist',
-			newClients: true
-		}
-	];
+	const contentImage = `${PUBLIC_WEB_IMAGE_ENDPOINT}/6709df20c5ef3b5c29c0/view?project=${PUBLIC_PROJECT_ID}`;
 </script>
 
 <svelte:head>
@@ -45,41 +17,43 @@
 	<meta name="description" content="About our coaches" />
 	<meta property="og:title" content="Guerrilla Fitness - Meet The Team" />
 	<meta property="og:description" content="About our coaches" />
-	<meta property="og:image" content="https://www.guerrillafitness.net/myimage.jpg" />
-	<meta name="twitter:card" content="https://www.guerrillafitness.net/myimage.jpg" />
+	<meta property="og:image" content="{contentImage}" />
+	<meta name="twitter:card" content="{contentImage}}" />
 </svelte:head>
 
 <Nav />
 
 <main class="nav__margin bg-g-white-500">
-	<section class="bg-g-black-500" title="Title">
-		<div class="grid md:grid-cols-2 h-[200px]">
-			<div class="w-full fca">
+	<section class="bg-g-black-500 p-8 md:px-24" title="Title">
+		<div class="grid md:grid-cols-2 h-[200px] gap-8">
+			<div class="w-full flex justify-start items-center">
 				<h1 class="h1big">meet the team</h1>
-			</div>
-			<div class="fca">
+			</div>			
+			<div class="flex justify-end items-center">
 				<div class="pr-2"><CallToActionButton title="Join Now" /></div>
 				<div class="pl-2"><CallToActionButton title="Contact" link="/contact" /></div>
 			</div>
 		</div>
 	</section>
 	<section title="Team Grid">
-		<div class="flex flex-col md:flex-row md:justify-evenly w-full gap-8 p-8">
+		<div class="flex flex-col md:grid md:grid-cols-3 w-full gap-8 p-8 md:px-24">
 			{#each coaches as c}
-				<div class="h-full flex flex-col">
+				<div class="h-full flex flex-col" {@attach slideIn}>
 					<div class="w-full h-full fca flex-col">
 						<img
-							class="w-full h-auto object-cover aspect-[22/24] max-w-[350px]"
+							class="w-full h-auto object-cover aspect-[22/22] max-w-[350px] md:max-w-[400px] object-top"
 							src={c.img}
 							alt={c.name}
 						/>
-						<div class="pt-4 w-full max-w-[350px]">
+
+						<div class="pt-4 w-full max-w-[350px] md:max-w-[400px]">
+							<div class="h_sf_r_d_u text-[3rem]">{c.name}</div>
 							<Accordion5 colorScheme={acs}>
 								{#snippet title()}
 									<h4>Meet {c.name}</h4>
 								{/snippet}
 								{#snippet panel()}
-									<p class="prb pb-2">{c.text}</p>
+									<p class="prb pb-2 whitespace-pre-wrap">{c.text}</p>
 								{/snippet}
 							</Accordion5>
 							<hr class="border-t-gray-500" />
