@@ -11,7 +11,7 @@
 			<ImageCard
 				imgLink="{PUBLIC_WEB_IMAGE_ENDPOINT}/photoa/view?project=guerrilla&project=guerrilla"
 				title="CROSSFIT"
-				desc="Unlimited access to 40+ CrossFit classes per week"
+				desc="Unlimited access to classes 7 days/wk"
 			/>
 		</div>
 	</div>
@@ -20,7 +20,7 @@
 			<ImageCard
 				imgLink="{PUBLIC_WEB_IMAGE_ENDPOINT}/photob/view?project=guerrilla&project=guerrilla"
 				title="NUTRITION"
-				desc="Dial in your nutrition with Nutrition and Accountability coaching"
+				desc="Optimize your health with Nutrition and accountability coaching"
 			/>
 		</div>
 	</div>
@@ -28,8 +28,8 @@
 		<div class="w-full h-full flex justify-end" {@attach (node)=> slideIn(node, 0.5)}>
 			<ImageCard
 				imgLink="{PUBLIC_WEB_IMAGE_ENDPOINT}/photoc/view?project=guerrilla&project=guerrilla"
-				title="PRIVATE TRAINING"
-				desc="Work towards specific goals with private personal training"
+				title="PRIVATE/SEMI PRIVATE TRAINING"
+				desc="Pursue your goals with focused 1-on-1 or small group coaching sessions"
 			/>
 		</div>
 	</div>
