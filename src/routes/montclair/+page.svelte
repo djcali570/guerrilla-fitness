@@ -91,7 +91,7 @@
 	<section class="video__section" title="Video">
 		<div class="main__video">
 			<VideoPlayer
-				videoSource="{PUBLIC_WEB_IMAGE_ENDPOINT}/main_video/view?project={PUBLIC_PROJECT_ID}"
+				videoSource="{PUBLIC_WEB_IMAGE_ENDPOINT}/montclair_header_video/view?project={PUBLIC_PROJECT_ID}"
 				showControls={false}
 			/>
 			<div class="video__overlay"></div>
