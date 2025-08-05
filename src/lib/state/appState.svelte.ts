@@ -50,24 +50,24 @@ export const gyms: Gym[] = [
 export const mainCarouselitems: Carousel[] = [
     {
         title: 'What To Expect',
-        subtitle: 'Create Your Plan',
-        text: 'Work with our Guerrilla Fitness and nutrition experts to create a simple and sustainable plan to reach your goals',
+        subtitle: 'Expert Coaching',
+        text: 'Learn how to move well, safely, and with purpose.  Our coaches tailor every workout to your current ability.  Ensuring you get the challenge you need and the support to reach your goals.',
         img: 'https://images.unsplash.com/photo-1548690312-e3b507d8c110',
         showButton: true,
         buttonText: 'Join Now'
     },
     {
         title: 'What To Expect',
-        subtitle: 'Get Results',
-        text: 'Get ready to transform how you look and feel with a fitness nutrition program that works',
+        subtitle: 'Positive Culture',
+        text: 'Thrive in an environment where encouragement is the norm and everyone’s effort is respected.  Here we train for strength, health, and longevity.  We are better together.',
         img: 'https://images.unsplash.com/photo-1550259979-ed79b48d2a30',
         showButton: true,
         buttonText: 'Join Now'
     },
     {
         title: 'What To Expect',
-        subtitle: 'Set Your Goals',
-        text: 'Set your goals with a Guerrilla Fitness team member and take biometric measurements to measure your success',
+        subtitle: 'Long Term Health',
+        text: 'Get ready to transform how you look and feel for the rest of your life.',
         img: 'https://images.unsplash.com/photo-1595078475328-1ab05d0a6a0e',
         showButton: true,
         buttonText: 'Join Now'
