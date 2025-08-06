@@ -5,14 +5,14 @@
 	let {
 		videoSource,
 		vttSource = undefined,
-        autoPlay = true,
+		autoPlay = true,
 		mute = true,
 		showControls = true,
-		fit = 'cover',        
+		fit = 'cover'
 	}: {
 		videoSource: string;
 		vttSource?: string | undefined;
-        autoPlay?: boolean;
+		autoPlay?: boolean;
 		mute?: boolean;
 		showControls?: boolean;
 		fit?: 'cover' | 'contain' | 'fill' | 'none';
@@ -43,6 +43,11 @@
 			}
 		};
 		checkLoaded(); // Initial check
+
+		// Ensure metadata is loaded to avoid blank screen
+		if (videoRef && !autoPlay) {
+			videoRef.load(); // Force load metadata
+		}
 	});
 
 	$effect(() => {
@@ -148,7 +153,7 @@
 
 	/**
 	 * Generate a random string so that each
-	 * picker will have a unique id in the dom
+	 * item will have a unique id in the dom
 	 */
 	function generateRandomString() {
 		const length = 6;
@@ -199,19 +204,19 @@
 	{#if showControls}
 		{#if isHovered || !status}
 			<div class="time" transition:fly={{ y: 20 }}>
-				<div class="w-full grid grid-cols-3">
+				<div style="width: 100%; display:grid; grid-template-columns: repeat(3, minmax(0, 1fr));">
 					<div>
-						<span>{formatTime(time)}</span><span class="px-2">/</span><span
-							>{duration ? formatTime(duration) : '--:--'}</span
-						>
+						<span>{formatTime(time)}</span><span
+							style="padding-left: 0.5rem; padding-right: 0.5rem;">/</span
+						><span>{duration ? formatTime(duration) : '--:--'}</span>
 					</div>
 					<div></div>
-					<div class="flex justify-end items-center">
+					<div style="display: flex; justify-content:flex-end; align-items:center;">
 						<button
 							onclick={toggleMute}
 							aria-label="Speaker Control"
 							onmouseenter={() => (isHovered = true)}
-							><div class="w-8 h-8">
+							><div class="control__icon">
 								{#if muted}
 									<svg viewBox="0 0 200 200" fill="currentColor">
 										<path
@@ -243,9 +248,9 @@
 						>
 
 						<button onclick={toggleFullScreen} class="fullscreen" aria-label="Toggle Full Screen">
-							<div class="w-8 h-8">
+							<div class="control__icon">
 								<!-- SVG for full screen icon -->
-								<svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full">
+								<svg viewBox="0 0 24 24" fill="currentColor" class="fullscreen__svg">
 									<path
 										d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"
 									/>
@@ -261,7 +266,7 @@
 			</div>
 			<button onclick={togglePlay} class="playpause" onmouseenter={() => (isHovered = true)}>
 				{#if status}
-					<div class="w-8 h-8">
+					<div class="control__icon">
 						<svg viewBox="0 0 200 200" fill="currentColor">
 							<path
 								d="M79.4,171h-7.6c-1.9,0-3.4-1.5-3.4-3.4V32.4c0-1.9,1.5-3.4,3.4-3.4h7.6c1.9,0,3.4,1.5,3.4,3.4v135.3
@@ -271,7 +276,7 @@
 						</svg>
 					</div>
 				{:else}
-					<div class="w-8 h-8">
+					<div class="control__icon">
 						<svg viewBox="0 0 200 200" fill="currentColor">
 							<path d="M47,100V29l61.5,35.5L170,100l-61.5,35.5L47,171V100z" />
 						</svg>
@@ -282,38 +287,94 @@
 	{/if}
 </div>
 
-<style lang="postcss">
+<style>
 	.video-container {
-		@apply relative w-full h-full overflow-hidden;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
 	}
 
 	video {
-		@apply absolute top-0 left-0 w-full h-full;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 	}
 
 	.playpause {
-		@apply absolute flex justify-center items-center w-20 h-20;
-		@apply top-1/2 left-1/2;
-		@apply cursor-pointer z-10 transition-all duration-300;
-		@apply translate-x-[-50%] translate-y-[-50%];
-		@apply rounded-full text-white border-g-primary-500 border-2 bg-[rgba(0,0,0,0.5)] hover:bg-g-primary-500;
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 5rem;
+		height: 5rem;
+		top: 50%;
+		left: 50%;
+		cursor: pointer;
+		z-index: 10;
+		transition-property: all;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		transition-duration: 300ms;
+		transform: translate(-50%, -50%); /* Combine both translations */
+		border-radius: 9999px;
+		color: #fff;
+		border-color: #bf1e2d;
+		border-width: 2px;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	.playpause:hover {
+		background-color: #bf1e2d;
 	}
 
 	.time {
-		@apply w-full absolute flex flex-col bottom-0 left-0 items-center gap-2 px-4 text-white text-sm;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		gap: 0.5rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		color: #fff;
+		font-size: 0.875rem;
+		line-height: 1.25rem;
 	}
 
 	.slider {
-		@apply w-full h-2 rounded-lg overflow-hidden bg-gray-600 mb-4;
+		width: 100%;
+		height: 0.5rem;
+		border-radius: 0.5rem;
+		overflow: hidden;
+		background-color: #4b5563;
+		margin-bottom: 1rem;
 	}
 
 	.progress {
-		@apply h-full bg-white;
+		height: 100%;
+		background-color: #fff;
 		width: calc(100 * var(--progress));
 	}
 
+	.control__icon {
+		width: 2rem;
+		height: 2rem;
+	}
+	.fullscreen__svg {
+		width: 100%;
+		height: 100%;
+	}
+
 	video::-webkit-media-text-track-display {
-		@apply px-12 pb-16 text-lg;
+		padding-left: 3rem;
+		padding-right: 3rem;
+		padding-bottom: 4rem;
+		font-size: 1.125rem;
+		line-height: 1.75rem;
 	}
 
 	::cue-region {
