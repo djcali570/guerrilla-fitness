@@ -119,6 +119,6 @@
 		@apply text-[1.8rem] uppercase tracking-[0.12rem];
 	}
 	.text__p {
-		@apply text-[1.6rem] pt-4;
+		@apply text-[1.2rem] md:text-[1.6rem] pt-4;
 	}
 </style>
