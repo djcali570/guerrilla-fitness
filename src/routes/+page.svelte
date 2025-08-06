@@ -40,15 +40,14 @@
 	<section class="py-24 px-4 md:px-32" {@attach (node) => slideIn(node, 0, 10)} title="Guarantee">
 		<div class="grid grid-rows-[min-content_1fr] md:grid-cols-2">
 			<h1 class="h3_sf_b_l_u text-5xl t05 w-full">
-				The Guerrilla, <br /> Guarantee
+				The Guerrilla, <br /> Promise
 			</h1>
 
 			<div class="pt-6 md:pt-0 p__font__r">
 				<div class="grid grid-cols-1 gap-6 text-white h-full">
 					<p>
-						At Guerrilla Crossfit, we know exactly what it takes for our athletes to get real
-						sustainable results that will translate both inside and outside the gym. Join today, and
-						we promise you'll love us or your money back!
+						Our promise is to inspire, educate, guide, and support you, to a life lived stronger and
+						longer.
 					</p>
 				</div>
 			</div>
@@ -56,15 +55,17 @@
 	</section>
 	<section class="pb-16 px-4 md:px-32" title="Testimonials">
 		<div class="grid md:grid-cols-[40%_60%]">
-			<SectionTitle title="Is Guerrilla Fitness Right For You?" mobile={true} />
+			<div class="pr-4 w-full h-full flex items-center">
+				<SectionTitle title="Is Guerrilla Fitness Right For You?" mobile={true} />
+			</div>
 			<div class="min-h-full">
 				<div class="flex flex-col md:flex-none md:grid md:grid-cols-2 gap-6 text-white md:h-full">
-					<div class="relative md:max-w-[350px] h-[622px]">
+					<div class="relative w-full h-[622px]">
 						<VideoPlayer
-							videoSource="{PUBLIC_WEB_IMAGE_ENDPOINT}/cameron/view?project={PUBLIC_PROJECT_ID}"
-							vttSource="/vtt/test_cameron.vtt"
+							videoSource="{PUBLIC_WEB_IMAGE_ENDPOINT}/joanne/view?project={PUBLIC_PROJECT_ID}"
+							vttSource="/vtt/joanne.vtt"
 						/>
-						<TestimonialTitleMobile name="Jane Doe" title="Coach" />
+						<TestimonialTitleMobile name="Joanne" title="Member Since 2024" />
 					</div>
 					<div class="block md:hidden">
 						<div class="flex items-center justify-start">
@@ -101,16 +102,16 @@
 							</div>
 						</div>
 					</div>
-					<div class="relative md:max-w-[350px] h-[622px]">
+					<div class="relative w-full h-[622px]">
 						<VideoPlayer
 							videoSource="{PUBLIC_WEB_IMAGE_ENDPOINT}/cameron/view?project={PUBLIC_PROJECT_ID}"
 							vttSource="/vtt/test_cameron.vtt"
 							autoPlay={false}
 						/>
-						<TestimonialTitleMobile name="John Doe" title="Member since 2016" />
+						<TestimonialTitleMobile name="Cameron" title="Member Since 2016" />
 					</div>
-					<TestimonialTilteDesktop name="Jane Doe" title="Coach" />
-					<TestimonialTilteDesktop name="John Doe" title="Member since 2016" />
+					<TestimonialTilteDesktop name="Joanne" title="Member Since 2024" />
+					<TestimonialTilteDesktop name="Cameron" title="Member Since 2016" />
 				</div>
 			</div>
 		</div>
