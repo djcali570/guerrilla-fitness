@@ -39,7 +39,7 @@
 					<h1
 						class="h_sf_b_l_u text-[3rem] md:text-[4.5rem] tracking-widest leading-[3rem] md:leading-[5rem] text-center"
 					>
-						we help people live freely through crossfit, nutrition, and accountability
+						WE HELP PEOPLE LIVE STRONGER, HEALTHIER LIVES, THROUGH SOUND TRAINING AND NUTRITION
 					</h1>
 					<div class="flex justify-center m-8">
 						<CallToActionButton title="Join Now" />
@@ -50,17 +50,16 @@
 	</section>
 	<section class="mt-20 px-4 md:px-32" title="More Than A Gym">
 		<div class="grid grid-rows-[min-content_1fr] md:grid-cols-2">
-			<div class="max-w-[22rem]">
+			<div class="max-w-[32rem]">
 				<h1 class="h3_sf_b_l_u text-[4rem] leading-[3.5rem] t05 w-full" {@attach slideIn}>
-					We are more than just another gym
+					GUERRILLA FITNESS STANDS APART
 				</h1>
 			</div>
 			<div class="pt-6 md:pt-0 p__font__r">
 				<div class="w-full h-full flex justify-center items-center">
 					<p class="p_pf_r_l text-justify leading-[2rem]" {@attach fade}>
-						At Guerrilla Fitness, we know what it takes to live a life free of limitations. It takes
-						hard work, effort, and a support system that will hold you accountable when things get
-						tough.
+						We get to know you. Listen to your story and focus on your goals. Your journey is ours,
+						and we are with you every step of the way.
 					</p>
 				</div>
 			</div>
@@ -115,7 +114,7 @@
 			<div class="w-full flex justify-center pt-8 md:pt-0">
 				<div class="max-w-[30rem] flex flex-col justify-center items-start">
 					<h1
-						class="hidden md:block h3_sf_b_l_u text-[4rem] leading-[3.5rem] t05 w-full"
+						class="hidden md:block h3_sf_b_l_u text-[4rem] leading-[3.5rem] t05 w-full pb-4"
 						{@attach slideIn}
 					>
 						How It Works
@@ -123,14 +122,42 @@
 					<div class="w-full" {@attach (node) => slideIn(node, 0.5)}>
 						<Accordion5 iconWidth="2.5rem" iconHeight="2.5rem" colorScheme={acs_dark}>
 							{#snippet title()}
-								<h4 class="h_sf_r_l_u text-[2rem] tracking-widest pr-2">
-									Talk To A Coach. Set Your Goals.
-								</h4>
+								<h4 class="h_sf_r_l_u text-[2rem] tracking-widest pr-2">Try a few classes</h4>
 							{/snippet}
 							{#snippet panel()}
 								<p class="p_pf_r_l text-justify leading-[2rem] pt-4">
-									If you fail to plan, you are planning to fail. Meet with a Guerrilla Fitness Coach
-									to go over your goals, measure your biometrics, and establish your starting point.
+									Trial classes serve two important purposes:
+								</p>
+								<ul class="">
+									<li class="p_pf_r_l py-2">
+										1. You get to experience our coaching firsthand, feel the energy of our
+										community, and see what the workouts are all about.
+									</li>
+									<li class="p_pf_r_l py-2">
+										2. We get to learn about you - Where you are in your fitness journey, what you
+										are looking for, and how we can best guide you toward your goals. It’s a two way
+										introduction built to set you up for success
+									</li>
+								</ul>
+							{/snippet}
+						</Accordion5>
+						<div class="py-4">
+							<hr class="border-gray-700" />
+						</div>
+
+						<Accordion5 iconWidth="2.5rem" iconHeight="2.5rem" colorScheme={acs_dark}>
+							{#snippet title()}
+								<h4 class="h_sf_r_l_u text-[2rem] tracking-widest pr-2">Choose your membership</h4>
+							{/snippet}
+							{#snippet panel()}
+								<p class="p_pf_r_l text-justify leading-[2rem] pt-4">
+									After your trial classes, we’ll follow up to talk about your experience and answer
+									any questions. Based on that, and what we learned about you and where you are at,
+									we’ll help guide you toward the membership option that fits you best.
+								</p>
+								<p class="p_pf_r_l text-justify leading-[2rem] pt-4">
+									Our goal is to ensure you get started in the way that sets you up for long term
+									success.
 								</p>
 							{/snippet}
 						</Accordion5>
@@ -140,46 +167,17 @@
 
 						<Accordion5 iconWidth="2.5rem" iconHeight="2.5rem" colorScheme={acs_dark}>
 							{#snippet title()}
-								<h4 class="h_sf_r_l_u text-[2rem] tracking-widest pr-2">Create Your Plan.</h4>
+								<h4 class="h_sf_r_l_u text-[2rem] tracking-widest pr-2">Get lasting results</h4>
 							{/snippet}
 							{#snippet panel()}
 								<p class="p_pf_r_l text-justify leading-[2rem] pt-4">
-									Work with our Guerrilla Fitness and Nutrition experts to create a simple and
-									sustainable plan to reach your goals. Once we figure out where you want to go, we
-									will work with you to set up a plan that is guaranteed to get you there.
+									Transform how you feel in your body with a proven fitness and nutrition program.
+									We don’t promise quick fixes, but we do promise our committment to you. It’s not
+									just about reaching your goals; it’s about who you become in the process. We are
+									here to support and challenge you every step of the way, to become your best self.
 								</p>
 								<p class="p_pf_r_l text-justify leading-[2rem] pt-4">
-									Everyone’s end goal is a little bit different. At Guerrilla Fitness, we don’t
-									believe in a one-size-fits-all approach to health and fitness. Your plan is your
-									plan. That’s why it works.
-								</p>
-								<p class="p_pf_r_l text-justify leading-[2rem] pt-4">
-									Our workouts work because they are the perfect blend of strength and conditioning,
-									using our unique take on CrossFit and over a decade of experience programming
-									workouts for gyms all over the world
-								</p>
-							{/snippet}
-						</Accordion5>
-						<div class="py-4">
-							<hr class="border-gray-700" />
-						</div>
-
-						<Accordion5 iconWidth="2.5rem" iconHeight="2.5rem" colorScheme={acs_dark}>
-							{#snippet title()}
-								<h4 class="h_sf_r_l_u text-[2rem] tracking-widest pr-2">See Amazing Results.</h4>
-							{/snippet}
-							{#snippet panel()}
-								<p class="p_pf_r_l text-justify leading-[2rem] pt-4">
-									Get ready to transform how you feel and how you look with a fitness and nutrition
-									coaching program that works!
-								</p>
-								<p class="p_pf_r_l text-justify leading-[2rem] pt-4">
-									It won’t happen overnight or even in thirty days. We are more than just another
-									gym because we won’t try to sell you a quick fix or a shortcut.
-								</p>
-								<p class="p_pf_r_l text-justify leading-[2rem] pt-4">
-									Amazing results take time. If you join us, we are in this with you for the long
-									haul. We are the last gym you’ll ever need.
+									Just show up. Trust the process. Good things will happen!
 								</p>
 							{/snippet}
 						</Accordion5>
