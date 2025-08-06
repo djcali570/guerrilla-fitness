@@ -96,11 +96,14 @@
 <Nav />
 
 <main class="nav__margin bg-g-white-500">
-	<section class="video__section h-[30vh] md:h-[25vw]">
-		<VideoPlayer
-			showControls={false}
-			videoSource="{PUBLIC_WEB_IMAGE_ENDPOINT}/main_video/view?project={PUBLIC_PROJECT_ID}"
-		/>
+	<section class="video__section">
+		<div class="main__video">
+			<VideoPlayer
+				showControls={false}
+				videoSource="{PUBLIC_WEB_IMAGE_ENDPOINT}/main_video/view?project={PUBLIC_PROJECT_ID}"
+			/>
+		</div>
+		<div class="video__overlay"></div>
 	</section>
 	<section class="px-4 md:px-32 bg-[#fefffe]">
 		<div class="flex justify-center py-10">
@@ -153,5 +156,21 @@
 	.video__section {
 		position: relative;
 		z-index: 2;
+	}
+	.main__video {
+		height: 30vh;
+	}
+
+	@media (min-width: 768px) {
+		.main__video {
+			height: 25vw;
+		}
+	}
+	.video__overlay {
+		position: absolute;
+		inset: 0px;
+		background-color: black;
+		opacity: 0.4;
+		z-index: 2; /* Below the title but above the video */
 	}
 </style>
