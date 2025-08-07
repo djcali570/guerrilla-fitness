@@ -105,11 +105,10 @@
 	</section>
 	<section class="pt-16" title="Crossfit">
 		<ColumnTitleandText
-			text="We are more than just another gym. We know what it takes to live a life free of limitations.
-		It takes hard work, effort, and a support system that will hold you accountable when things get tough."
+			text="Thrive in an atmosphere where people encourage and motivate each other in every class as they work toward their individual goals together."
 		>
 			{#snippet title()}
-				<h1 class="h1sb">group crossfit<br />done right.</h1>
+				<h1 class="h1sb">best hour<br />of your day.</h1>
 			{/snippet}
 		</ColumnTitleandText>
 	</section>
@@ -124,20 +123,20 @@
 				<h3 class="h3sr pb-4 md:pb-0">Features</h3>
 			</div>
 			<div class="pt-10">
-				<p class="prw">Offerings</p>
+				<!-- <p class="prw">Offerings</p> -->
 				<ul class="pt-4 prw">
-					<li>- Group CrossFit Classes</li>
-					<li>- Nutrition + Accountability Coaching</li>
-					<li>- Personal Training</li>
+					<li>- Open 7 days a week</li>
+					<li>- Convenient and accessible schedule</li>
+					<li>- 1-on-1 & small group personal training</li>
 				</ul>
 			</div>
 			<div class="pt-10">
-				<p class="prw">Amenities</p>
+				<!-- <p class="prw">Amenities</p> -->
 				<ul class="pt-4 prw">
-					<li>- 40+ classes per week</li>
-					<li>- Dedicated open gym space</li>
+					<li>- Open gym hours</li>
 					<li>- Showers</li>
-					<li>- Members only seminars and events</li>
+					<li>- Communal space</li>
+					<li>- Members only events</li>
 				</ul>
 			</div>
 		</div>
