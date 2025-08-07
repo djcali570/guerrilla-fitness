@@ -4,7 +4,7 @@
 	import ImageCard from './ImageCard.svelte';
 </script>
 
-<h3 class="h3sr">Offerings</h3>
+<h3 class="h3sr">Programs</h3>
 <div class="grid grid-rows-3 gap-3 md:gap-0 md:grid-cols-3 md:grid-rows-12">
 	<div class="md:col-start-1 md:row-span-6 h-[430px]">
 		<div class="w-full h-full" {@attach slideIn}>
