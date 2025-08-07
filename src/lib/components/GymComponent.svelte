@@ -14,19 +14,21 @@
 		? 'grid-rows-[1fr_min-content_min-content] md:grid-cols-2'
 		: 'md:grid-cols-2'} h-full md:h-[600px]"
 >
-	<div class="flex flex-col justify-center md:gap-4 order-2 md:order-1">
+	<div class="flex flex-col justify-center order-2 md:order-1">
 		<div>
 			<h2 class="h2sb">guerrilla fitness</h2>
 			<h1 class="h1sb">{gym.name}</h1>
 		</div>
-		<p class="prw mt-10">{gym.address}</p>
-		<div class="mt-10">
+		<div class="prw mt-10 flex flex-col gap-1">
+			<p>{gym.address}</p>
+			<p class="pt-3">Text or Email:</p>
 			<a href="mailTo:info@guerrillafitness.net" class="prw">{gym.email}</a>
+			<a href={`tel:+${stripPhoneNumber(gym.phone)}`} class="prw">{gym.phone}</a>
+			<a href="mailTo:info@guerrillafitness.net" class="prw">info@guerrillafitness.net</a>
+			{#if extraContent}
+				{@render extraContent()}
+			{/if}
 		</div>
-		<a href={`tel:+${stripPhoneNumber(gym.phone)}`} class="prw">{gym.phone}</a>
-		{#if extraContent}
-			{@render extraContent()}
-		{/if}
 	</div>
 	{#if gym.image}
 		<div class="grid md:grid-rows-[450px_150px] order-1 md:order-2">
