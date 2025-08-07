@@ -37,7 +37,7 @@
 		<div class="video__overlay"></div>
 		<h1 class="video__title" {@attach slideIn}>Best hour of your day</h1>
 	</section>
-	<section class="py-24 px-4 md:px-32" {@attach (node) => slideIn(node, 0, 10)} title="Guarantee">
+	<section class="py-24 px-4 md:px-8 lg:px-32" {@attach (node) => slideIn(node, 0, 10)} title="Guarantee">
 		<div class="grid grid-rows-[min-content_1fr] md:grid-cols-2">
 			<h1 class="h3_sf_b_l_u text-5xl t05 w-full">
 				The Guerrilla, <br /> Promise
@@ -53,7 +53,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="pb-16 px-4 md:px-32" title="Testimonials">
+	<section class="pb-16 px-4 md:px-8 lg:px-32" title="Testimonials">
 		<div class="grid md:grid-cols-[40%_60%]">
 			<div class="pr-4 w-full h-full flex items-center">
 				<SectionTitle title="Is Guerrilla Fitness Right For You?" mobile={true} />
@@ -65,7 +65,7 @@
 							videoSource="{PUBLIC_WEB_IMAGE_ENDPOINT}/joanne/view?project={PUBLIC_PROJECT_ID}"
 							vttSource="/vtt/joanne.vtt"
 						/>
-						<TestimonialTitleMobile name="Joanne" title="Member Since 2024" />
+						<TestimonialTitleMobile name="Joanne" title="Member Since 2019" />
 					</div>
 					<div class="block md:hidden">
 						<div class="flex items-center justify-start">
@@ -116,7 +116,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="hidden md:block px-32 pb-16" title="Answers">
+	<section class="hidden md:block md:px-8 lg:px-32 pb-16" title="Answers">
 		<div class="grid grid-cols-2">
 			<div class="min-h-full">
 				<div class="grid grid-rows-2 grid-cols-2 h-full">
@@ -151,7 +151,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="pb-12 px-4 md:px-32" title="Carousel">
+	<section class="pb-12 px-4 md:px-8 lg:px-32" title="Carousel">
 		<Carousel />
 	</section>
 	<section class="px-4 md:px-32 pb-12" title="Join">
@@ -179,10 +179,10 @@
 			</div>
 		</div>
 	</section>
-	<section class="px-4 md:px-32 py-16" title="Offerings">
+	<section class="px-4 md:px-8 lg:px-32 py-16" title="Offerings">
 		<Offerings />
 	</section>
-	<section class="px-4 md:px-32 pb-16" title="locations">
+	<section class="px-4 md:px-8 lg:px-32 pb-16" title="locations">
 		<h4 class="s__font__r text__med text-g-white-500 uppercase mb-4">our locations</h4>
 		{#each gyms as gym, i}
 			<div class={i === gyms.length - 1 ? 'mb-0' : 'mb-24'}>
@@ -196,7 +196,7 @@
 			</div>
 		{/each}
 	</section>
-	<section class="px-4 md:px-32 pb-12" title="Join">
+	<section class="px-4 md:px-8 lg:px-32 pb-12" title="Join">
 		<div class="w-full flex flex-col">
 			<div class="w-full flex justify-center text-g-white-500">
 				<h4 class="font-rama-slab uppercase text-[1.2rem]" style="letter-spacing: 1pt;">
