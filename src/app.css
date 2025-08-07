@@ -142,7 +142,7 @@ p = paragraph, h[number] = heading, pf = primary font, sf = secondary font, r = 
 	@apply text-[2.2rem] uppercase tracking-[0.19rem];
 }
 .text__title {
-	@apply text-[3.2rem] uppercase tracking-[0.19rem];
+	@apply text-[3.2rem] md:text-[2.2rem] uppercase tracking-[0.19rem];
 }
 
 .prw {
@@ -169,7 +169,7 @@ p = paragraph, h[number] = heading, pf = primary font, sf = secondary font, r = 
 	@apply text-g-black-500 text-[2.5rem] md:text-[3.5rem] font-rama-slab-bold uppercase leading-none tracking-[0.05em];
 }
 .h2sb {
-	@apply text-g-white-500 text-[1.8rem] md:text-[2.8rem] font-rama-slab-bold uppercase leading-none tracking-[0.05em];
+	@apply text-g-white-500 text-[1.8rem] md:text-[2.2rem] lg:text-[2.8rem] font-rama-slab-bold uppercase leading-none tracking-[0.05em];
 }
 .h3sr {
 	@apply text-g-white-500 text-[2rem] md:text-[2.2rem] font-rama-slab uppercase leading-none tracking-[0.05em];
