@@ -27,7 +27,7 @@
 	<section class="bg-g-black-500 p-8 flex justify-center" title="Title">
 		<div class="w-[1400px] grid md:grid-cols-2 h-[200px] md:gap-8">
 			<div class="w-full flex justify-center md:justify-start items-center">
-				<h1 class="h_sf_b_l_u text-[3rem] md:text-[4.2rem] tracking-wider">meet the team</h1>
+				<h1 class="h_sf_b_l_u text-[3rem] md:text-[3.2rem] lg:text-[4.2rem] tracking-wider">meet the team</h1>
 			</div>
 			<div class="flex justify-center md:justify-end items-center">
 				<div class="pr-2"><CallToActionButton title="Join Now" /></div>
@@ -36,7 +36,7 @@
 		</div>
 	</section>
 	<section class="flex justify-center" title="Team Grid">
-		<div class="flex flex-col md:grid md:grid-cols-3 p-8 md:p-0 md:pt-8 gap-8 w-[1400px]">
+		<div class="flex flex-col md:grid md:grid-cols-3 p-8 md:pt-8 gap-8 w-[1400px]">
 			{#each coaches as c}
 				<div class="w-full h-full flex flex-col" {@attach slideIn}>
 					<div class="w-full h-full fca flex-col">
