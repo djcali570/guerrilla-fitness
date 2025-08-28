@@ -5,7 +5,7 @@
 		link = '/',
 		title = 'Title',
 		textColor = '#fefffe',
-		bgColor = 'transparent',
+		bgColor = '#bf1e2d',
 		borderColor = '#bf1e2d',
 		type = 'link',
 		useSlideIn = false,
