@@ -3,8 +3,13 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import Nav from '$lib/components/Nav.svelte';
 	import { gyms } from '$lib/state/appState.svelte';
-	import { ics } from '$lib/types';
-	import { Input5 } from '@djcali570/component-lib';
+	import { d5cs, gymDropdown, ics } from '$lib/types';
+	import { DropDown5, Input5 } from '@djcali570/component-lib';
+
+	let name = $state('');
+	let email = $state('');
+	let selectedGym = $state('');
+	let message = $state('');
 </script>
 
 <svelte:head>
@@ -30,14 +35,17 @@
 						Looking for more info? Fill out the form below and a member from our team will reach out
 						to you shortly.
 					</p>
-					<div class="grid grid-cols-2 gap-2 pt-10">
-						<Input5 title="First Name" colorScheme={ics} validator="letter" />
-						<Input5 title="Last Name" colorScheme={ics} validator="letter" />
-					</div>
-					<Input5 title="Email" colorScheme={ics} />
-					<Input5 title="Subject" colorScheme={ics} />
+					<Input5 title="Name (Required)" colorScheme={ics} bind:value={name} validator="letter" />
+					<Input5 title="Email (Required)" colorScheme={ics} bind:value={email} />
+					<DropDown5
+						title="Location (Required)"
+						dropdownItems={gymDropdown}
+						bind:value={selectedGym}
+						colorScheme={d5cs}
+					/>
 					<Input5
 						title="Message"
+						bind:value={message}
 						colorScheme={ics}
 						textArea={true}
 						maxlength={255}
