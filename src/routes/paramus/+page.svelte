@@ -22,16 +22,48 @@
 
 	let schedule: ScheduleItem[] = [
 		{ day: 'Monday', time: '5:30AM', scheduleType: 'Crossfit' },
-		{ day: 'Monday', time: '7:00AM', scheduleType: 'Crossfit' },
-		{ day: 'Monday', time: '6:30PM', scheduleType: 'Strength' },
+		{ day: 'Monday', time: '6:30AM', scheduleType: 'Crossfit' },
+		{ day: 'Monday', time: '7:30AM', scheduleType: 'Open Gym' },
+		{ day: 'Monday', time: '9:00AM', scheduleType: 'Crossfit' },
+		{ day: 'Monday', time: '4:30PM', scheduleType: 'Crossfit' },
+		{ day: 'Monday', time: '5:30PM', scheduleType: 'Crossfit' },
+		{ day: 'Monday', time: '5:30PM', scheduleType: 'Open Gym' },
 		{ day: 'Tuesday', time: '5:30AM', scheduleType: 'Crossfit' },
-		{ day: 'Tuesday', time: '5:30AM', scheduleType: 'Crossfit' },
-		{ day: 'Tuesday', time: '7:00AM', scheduleType: 'Crossfit' },
+		{ day: 'Tuesday', time: '6:30AM', scheduleType: 'Crossfit' },
+		{ day: 'Tuesday', time: '7:30AM', scheduleType: 'Open Gym' },
+		{ day: 'Tuesday', time: '9:00AM', scheduleType: 'Crossfit' },
+		{ day: 'Tuesday', time: '12:00PM', scheduleType: 'Crossfit' },
+		{ day: 'Tuesday', time: '4:00PM', scheduleType: 'Specialty', desc: 'Kids' },
+		{ day: 'Tuesday', time: '5:00PM', scheduleType: 'Crossfit' },
+		{ day: 'Tuesday', time: '6:00PM', scheduleType: 'Crossfit' },
 		{ day: 'Wednesday', time: '5:30AM', scheduleType: 'Crossfit' },
-		{ day: 'Wednesday', time: '3:30PM', scheduleType: 'Open Gym' },
-		{ day: 'Wednesday', time: '6:30PM', scheduleType: 'Strength' },
-		{ day: 'Thursday', time: '6:30PM', scheduleType: 'Crossfit' },
-		{ day: 'Wednesday', time: '5:30AM', scheduleType: 'Crossfit' }
+		{ day: 'Wednesday', time: '6:30AM', scheduleType: 'Crossfit' },
+		{ day: 'Wednesday', time: '7:30AM', scheduleType: 'Open Gym' },
+		{ day: 'Wednesday', time: '9:00AM', scheduleType: 'Crossfit' },
+		{ day: 'Wednesday', time: '4:30PM', scheduleType: 'Crossfit' },
+		{ day: 'Wednesday', time: '5:30PM', scheduleType: 'Crossfit' },
+		{ day: 'Wednesday', time: '5:30PM', scheduleType: 'Open Gym' },
+		{ day: 'Thursday', time: '5:30AM', scheduleType: 'Crossfit' },
+		{ day: 'Thursday', time: '6:30AM', scheduleType: 'Crossfit' },
+		{ day: 'Thursday', time: '7:30AM', scheduleType: 'Open Gym' },
+		{ day: 'Thursday', time: '9:00AM', scheduleType: 'Crossfit' },
+		{ day: 'Thursday', time: '12:00PM', scheduleType: 'Crossfit' },
+		{ day: 'Thursday', time: '4:00PM', scheduleType: 'Specialty', desc: 'Kids' },
+		{ day: 'Thursday', time: '5:00PM', scheduleType: 'Crossfit' },
+		{ day: 'Thursday', time: '6:00PM', scheduleType: 'Crossfit' },
+		{ day: 'Friday', time: '5:30AM', scheduleType: 'Crossfit' },
+		{ day: 'Friday', time: '6:30AM', scheduleType: 'Crossfit' },
+		{ day: 'Friday', time: '7:30AM', scheduleType: 'Open Gym' },
+		{ day: 'Friday', time: '9:00AM', scheduleType: 'Crossfit' },
+		{ day: 'Friday', time: '4:30PM', scheduleType: 'Crossfit' },
+		{ day: 'Saturday', time: '8:00AM', scheduleType: 'Crossfit' },
+		{ day: 'Saturday', time: '9:00AM', scheduleType: 'Open Gym' },
+		{ day: 'Saturday', time: '9:00AM', scheduleType: 'Specialty', desc: 'Mobility' },
+		{ day: 'Saturday', time: '10:00AM', scheduleType: 'Crossfit' },
+		{ day: 'Sunday', time: '8:00AM', scheduleType: 'Crossfit' },
+		{ day: 'Sunday', time: '9:00AM', scheduleType: 'Open Gym' },
+		{ day: 'Sunday', time: '9:00AM', scheduleType: 'Specialty', desc: 'Core' },
+		{ day: 'Sunday', time: '10:00AM', scheduleType: 'Crossfit' }
 	];
 
 	const days: weekday[] = [
@@ -52,7 +84,8 @@
 				acc[day] = {
 					Crossfit: dayItems.filter((item) => item.scheduleType === 'Crossfit'),
 					'Open Gym': dayItems.filter((item) => item.scheduleType === 'Open Gym'),
-					Strength: dayItems.filter((item) => item.scheduleType === 'Strength')
+					Strength: dayItems.filter((item) => item.scheduleType === 'Strength'),
+					Specialty: dayItems.filter((item) => item.scheduleType === 'Specialty')
 				};
 			}
 			return acc;
@@ -215,14 +248,14 @@
 
 				<!-- Strength Column -->
 				<div class="grid grid-flow-row auto-rows-min">
-					<h4 class="h4sr underline h-8">Strength</h4>
+					<h4 class="h4sr underline h-8">Specialty</h4>
 					{#each activeDays as day}
-						{#if groupedByDay[day]?.Strength?.length}
-							{#each groupedByDay[day].Strength as item}
-								<div class="h4sr min-h-[1.5rem]">{item.time}</div>
+						{#if groupedByDay[day]?.Specialty?.length}
+							{#each groupedByDay[day].Specialty as item}
+								<div class="h4sr min-h-[1.5rem]">{item.time} | {item.desc}</div>
 							{/each}
 							<!-- Fill remaining slots with non-empty divs -->
-							{#each Array(maxSlotsPerDay[day] - groupedByDay[day].Strength.length) as _}
+							{#each Array(maxSlotsPerDay[day] - groupedByDay[day].Specialty.length) as _}
 								<div class="h4sr min-h-[1.5rem">&nbsp;</div>
 							{/each}
 						{:else}
