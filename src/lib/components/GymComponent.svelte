@@ -23,10 +23,21 @@
 			<p>{gym.address}</p>
 			<p class="pt-3">Text or Email:</p>
 			<a href="mailTo:info@guerrillafitness.net" class="prw">{gym.email}</a>
-			<a href={`tel:+${stripPhoneNumber(gym.phone)}`} class="prw">{gym.phone}</a>
+			<a href={`tel:+${stripPhoneNumber(gym.phone)}`} class="prw">{gym.phoneDisplay}</a>
 			<a href="mailTo:info@guerrillafitness.net" class="prw">info@guerrillafitness.net</a>
-			{#if extraContent}
-				{@render extraContent()}
+			{#if gym.access}
+				<div class="pt-3">
+					{#each gym.access as access}
+						<p class="text-xs">{access}</p>
+					{/each}
+				</div>
+			{/if}
+			{#if gym.servicing}
+				<div class="pt-3">
+					{#each gym.servicing as servicing}
+						<p class="text-xs max-w-[350px]">{servicing}</p>
+					{/each}
+				</div>
 			{/if}
 		</div>
 	</div>
