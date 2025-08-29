@@ -35,6 +35,7 @@ export const gyms: Gym[] = [
         name: 'Montclair',
         address: '19 Elm St, Montclair NJ 07042',
         phone: '1-973-337-6538',
+        phoneDisplay: '973-337-6538',
         image: `${PUBLIC_WEB_IMAGE_ENDPOINT}/temp_gym1/view?project=guerrilla&project=guerrilla`,
         link: '/montclair'
     },
@@ -42,8 +43,17 @@ export const gyms: Gym[] = [
         name: 'Paramus',
         address: '348 Evelyn St, Paramus NJ 07652',
         phone: '1-201-967-5000',
+        phoneDisplay: '201-967-5000',
         image: `${PUBLIC_WEB_IMAGE_ENDPOINT}/temp_gym2/view?project=guerrilla&project=guerrilla`,
-        link: '/paramus'
+        link: '/paramus',
+        access: [
+            'Back Access to the Gym (not available on GPS):',
+            'Off E. Midland Ave take Sette Dr behind Trader Joe’s to Powers Dr to Evelyn St.',
+            'Off E. Midland Ave enter Humdinger’s parking lot through to Evelyn St. '
+        ],
+        servicing: [
+            'Servicing Paramus, Fair Lawn, Oradell, Ridgewood, Westwood, Glen Rock, Waldwick, Midland Park, River Edge, Dumont, Bergenfield, Hackensack, Hawthorne and all Bergen County surrounding areas'
+        ]
     }
 ];
 
