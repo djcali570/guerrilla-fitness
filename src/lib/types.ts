@@ -20,18 +20,22 @@ export type Gym = {
     name: string;
     address: string;
     phone: string;
+    phoneDisplay: string;
     image?: string;
     email?: string;
     link?: string;
+    access?: string[];
+    servicing?: string[];
 }
 
 export type weekday = 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday' | 'Sunday';
-export type scheduleType = 'Crossfit' | 'Open Gym' | 'Strength';
+export type scheduleType = 'Crossfit' | 'Open Gym' | 'Strength' | 'Specialty';
 
 export interface ScheduleItem {
     day: weekday;
     time: string;
     scheduleType: scheduleType;
+    desc?: string;
 }
 
 export let acs: Accordion5ColorScheme = {
