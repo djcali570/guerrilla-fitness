@@ -24,7 +24,7 @@
 				<li class="x">
 					<a href="/" class="a__pr">New to Guerrilla Fitness</a>
 				</li>
-				<a href="/" class="a__pr">3 Trial Class</a>
+				<a href="/" class="a__pr">3 Class Trial</a>
 			</ul>
 		</div>
 		<div class="grid auto-rows-min md:grid-rows-2 pl-4 lg:pl-0 pt-10 md:pt-0" {@attach (node) => slideIn(node, 0.3)}>
@@ -44,8 +44,8 @@
 				<li>
 					<a href="mailto:info@guerrillafitness.net" class="a__pr">info@guerrillafitness.net</a>
 				</li>
-				<li><a href="tel:+19733376538" class="a__pr">Montclair | 1-973-337-6538</a></li>
-				<li><a href="tel:+12019675000" class="a__pr">Paramus | 1-201-967-5000</a></li>
+				<li><a href="tel:+19733376538" class="a__pr">Montclair | 973-337-6538</a></li>
+				<li><a href="tel:+12019675000" class="a__pr">Paramus | 201-967-5000</a></li>
 			</ul>
 		</div>
 		<div class="flex justify-center items-center md:items-end lg:items-center lg:flex-row md:flex-col gap-4 col-span-2 md:col-span-1 pt-10 md:pt-0" {@attach (node) => slideIn(node, 0.5)}>
