@@ -10,6 +10,10 @@
 	let email = $state('');
 	let selectedGym = $state('');
 	let message = $state('');
+
+	function stripPhoneNumber(phone: string) {
+		return phone.replace(/-/g, '');
+	}
 </script>
 
 <svelte:head>
@@ -70,11 +74,12 @@
 						<div class="x">
 							<a href={gym.link} class="a_pf_b_d_u underline text-sm">{gym.name}</a>
 							<p class="p_pf_r_g">{gym.address}</p>
+							<a  href={`tel:+${stripPhoneNumber(gym.phone)}`} class="p_pf_r_g">{gym.phoneDisplay}</a>
 						</div>
 					{/each}
 					<hr />
 					<h6 class="h_sf_r_d_u text-lg tracking-widest">Other ways to get in touch</h6>
-					<a href="tel:1555555555" class="p_pf_r_g">1-555-555-5555</a>
+					<a href="mailTo:info@guerrillafitness.net" class="p_pf_r_g">info@guerrillafitness.net</a>
 				</div>
 			</div>
 		</div>
