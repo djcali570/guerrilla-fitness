@@ -27,7 +27,7 @@ export const counter = $state({
 export const links: link[] = [
     { href: '/', title: 'get started', sublinks: [{ href: '/memberships', title: 'Membership Options' }, { href: '/new-to-guerrilla-fitness', title: 'New To Guerrilla Fitness' }, { href: '/our-workouts', title: 'Our Workouts' }, { href: '/nutrition', title: 'Nutrition Coaching' }] },
     { href: '/', title: 'Locations', sublinks: [{ href: '/montclair', title: 'Montclair' }, { href: '/paramus', title: 'Paramus' }] },
-    { href: '/meet-the-team', title: 'Meet The Team' }, { href: '/contact', title: 'Conact Us' },
+    { href: '/meet-the-team', title: 'Meet The Team' }, { href: '/contact', title: 'Contact Us' },
 ];
 
 export const gyms: Gym[] = [
