@@ -75,9 +75,10 @@
 					Our Mission
 				</h1>
 				<p class="p_pf_r_l text-justify leading-[2rem] pt-8" {@attach (node) => slideIn(node, 0.3)}>
-					At Gurrilla Fitness we empower you to become the best version of yourself through
-					CrossFit, Nutrition, and Accountability. We believe in pushing ourselves beyond our limits
-					and achieving our goals, and we want to help you do the same.
+					Our mission is simple. To build strong, healthy, capable individuals through expert
+					coaching, proven programming, and a supportive community. We prioritize getting and
+					staying strong as the foundation for health, longevity, and resilience—empowering our
+					members to move well, live fully, and thrive for life.
 				</p>
 			</div>
 			<div class="relative w-full max-h-[40rem] order-1 md:order-2">
