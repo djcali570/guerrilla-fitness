@@ -49,7 +49,7 @@
 		</div>
 		<div class="absolute bottom-0 right-0">
 			<CallToActionButton
-				textColor="#121212"
+				textColor="#FFF"
 				title={mcd.buttonTitle ? mcd.buttonTitle : 'Join Now'}
 				link={mcd.link}
 				useSlideIn={true}
