@@ -56,7 +56,7 @@
 	<section class="pb-16 px-4 md:px-8 lg:px-32" title="Testimonials">
 		<div class="grid md:grid-cols-[40%_60%]">
 			<div class="pr-4 w-full h-full flex items-center">
-				<SectionTitle title="Is Guerrilla Fitness Right For You?" mobile={true} />
+				<SectionTitle title="Just Show Up!" mobile={true} />
 			</div>
 			<div class="min-h-full">
 				<div class="flex flex-col md:flex-none md:grid md:grid-cols-2 gap-6 text-white md:h-full">
@@ -69,10 +69,10 @@
 					</div>
 					<div class="block md:hidden">
 						<div class="flex items-center justify-start">
-							<h3 class="h3_sf_b_l_u t05 text-5xl">Is Guerrilla Fitness Right For You?</h3>
+							<h3 class="h3_sf_b_l_u t05 text-5xl">Just Show Up!</h3>
 						</div>
 					</div>
-					<div class="block md:hidden">
+					<!-- <div class="block md:hidden">
 						<div class="flex flex-col gap-8 p_pf_r_l">
 							<div>
 								<p>
@@ -101,7 +101,7 @@
 								<CallToActionButton title="Join Now" />
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<div class="relative w-full h-[622px]">
 						<VideoPlayer
 							videoSource="{PUBLIC_WEB_IMAGE_ENDPOINT}/cameron/view?project={PUBLIC_PROJECT_ID}"
@@ -116,7 +116,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="hidden md:block md:px-8 lg:px-32 pb-16" title="Answers">
+	<!-- <section class="hidden md:block md:px-8 lg:px-32 pb-16" title="Answers">
 		<div class="grid grid-cols-2">
 			<div class="min-h-full">
 				<div class="grid grid-rows-2 grid-cols-2 h-full">
@@ -150,7 +150,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<section class="pb-12 px-4 md:px-8 lg:px-32" title="Carousel">
 		<Carousel />
 	</section>
