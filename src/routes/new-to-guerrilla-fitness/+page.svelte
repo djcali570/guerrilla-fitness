@@ -27,19 +27,16 @@
 	<section title="Page Image">
 		<div class="relative w-[100vw] h-[82vh]">
 			<img
-				class="w-full h-full object-cover filter"
-				src="{PUBLIC_WEB_IMAGE_ENDPOINT}/photob/view?project=guerrilla&project=guerrilla"
+				class="w-full h-full object-cover filter object-[50%_28%]"
+				src="{PUBLIC_WEB_IMAGE_ENDPOINT}/new-crossfit-header/view?project=guerrilla&project=guerrilla"
 				alt=""
 			/>
 			<div class="image__text" {@attach slideIn}>
-				<div class="">
-					<h6 class="h_sf_b_l_u text-[1.1rem] tracking-[0.3rem] text-center m-8">
-						effort over everything
-					</h6>
+				<div class="">			
 					<h1
 						class="h_sf_b_l_u text-[3rem] md:text-[4.5rem] tracking-widest leading-[3rem] md:leading-[5rem] text-center"
 					>
-						WE HELP PEOPLE LIVE STRONGER, HEALTHIER LIVES, THROUGH SOUND TRAINING AND NUTRITION
+						LIVE STRONGER AND HEALTHIER THROUGH SOUND TRAINING AND NUTRITION
 					</h1>
 					<div class="flex justify-center m-8">
 						<CallToActionButton title="Join Now" />
@@ -83,8 +80,8 @@
 			</div>
 			<div class="relative w-full max-h-[40rem] order-1 md:order-2">
 				<img
-					class="w-full h-full object-cover filter"
-					src="{PUBLIC_WEB_IMAGE_ENDPOINT}/photob/view?project=guerrilla&project=guerrilla"
+					class="w-full h-full object-cover"
+					src="{PUBLIC_WEB_IMAGE_ENDPOINT}/sled/view?project=guerrilla&project=guerrilla"
 					alt=""
 					{@attach (node) => slideIn(node, 0.5)}
 				/>
@@ -103,8 +100,8 @@
 		<div class="grid grid-rows-[min-content_1fr] md:grid-cols-2">
 			<div class="relative w-full">
 				<img
-					class="w-full h-full object-cover filter"
-					src="{PUBLIC_WEB_IMAGE_ENDPOINT}/photob/view?project=guerrilla&project=guerrilla"
+					class="w-full h-full object-cover"
+					src="{PUBLIC_WEB_IMAGE_ENDPOINT}/how-it-works/view?project=guerrilla&project=guerrilla"
 					alt=""
 					{@attach (node) => slideIn(node, 0.5)}
 				/>

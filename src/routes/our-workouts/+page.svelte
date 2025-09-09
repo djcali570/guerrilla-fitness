@@ -22,8 +22,8 @@
 	<section class="w-full bg-g-black-500">
 		<div class="relative w-full h-[450px] md:h-[700px]">
 			<img
-				class="w-full h-full object-cover object-top"
-				src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/workouts/view?project=guerrilla&project=guerrilla`}
+				class="w-full h-full object-cover object-[50%_65%] filter"
+				src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/our-workouts-header/view?project=guerrilla&project=guerrilla`}
 				alt=""
 			/>
 			<div class="video__overlay"></div>
@@ -51,8 +51,8 @@
 		<div class="flex flex-col md:grid grid-cols-2 md:h-[400px]">
 			<div class="relative w-full h-[300px] md:h-[400px]">
 				<img
-					class="w-full h-full object-cover"
-					src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/workout1/view?project=guerrilla&project=guerrilla`}
+					class="w-full h-full object-cover object-[50%_20%]"
+					src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/strength/view?project=guerrilla&project=guerrilla`}
 					alt=""
 					{@attach slideIn}
 				/>
@@ -124,7 +124,7 @@
 			<div class="relative w-full h-[300px] md:h-[400px]">
 				<img
 					class="w-full h-full object-cover"
-					src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/workout2/view?project=guerrilla&project=guerrilla`}
+					src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/conditioning/view?project=guerrilla&project=guerrilla`}
 					alt=""
 					{@attach slideIn}
 				/>
@@ -158,13 +158,17 @@
 	<section class="w-full bg-g-black-500">
 		<div class="relative w-full h-[450px] md:h-[600px]">
 			<img
-				class="w-full h-full object-cover object-top"
-				src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/workout4/view?project=guerrilla&project=guerrilla`}
+				class="w-full h-full object-cover"
+				src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/workouts-end/view?project=guerrilla&project=guerrilla`}
 				alt=""
 			/>
 			<div class="video__overlay"></div>
 			<div class="overlay__content" {@attach slideIn}>
-				<h1 class="video__title__text text-center">Rate of Perceived Exertion</h1>
+				<h1 class="video__title__text text-center">our dedication, passion, and enthusiasm drive us<br>
+				our supportive and enclusive community bonds us<br>
+				our philosophy guides us<br>
+				we are better together
+				</h1>
 			</div>
 		</div>
 	</section>

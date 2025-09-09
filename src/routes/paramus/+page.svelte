@@ -10,15 +10,7 @@
 	import Offerings from '$lib/components/Offerings.svelte';
 	import VideoPlayer from '$lib/components/VideoPlayer.svelte';
 	import type { ScheduleItem, scheduleType, weekday } from '$lib/types';
-	import { gyms } from '$lib/state/appState.svelte';
-
-	let sliderImages: string[] = [
-		'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0',
-		'https://images.unsplash.com/photo-1519681393784-d120267933ba',
-		'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df',
-		'https://images.unsplash.com/photo-1441974231531-c6227db76b6e',
-		'https://images.unsplash.com/photo-1742301039878-3ec6e0d15078'
-	];
+	import { gyms, paramusSliderImages } from '$lib/state/appState.svelte';
 
 	let schedule: ScheduleItem[] = [
 		{ day: 'Monday', time: '5:30AM', scheduleType: 'Crossfit' },
@@ -178,7 +170,7 @@
 		<GetStarted />
 	</section>
 	<section class="px-4 md:px-32 md:py-16 pb-16" title="Slider">
-		<ImageSlider5 imageLinks={sliderImages} />
+		<ImageSlider5 imageLinks={paramusSliderImages} />
 	</section>
 	<section class="px-4 md:px-32 md:py-16 pb-16" title="Schedule">
 		<div class="w-full grid md:grid-cols-2 grid-cols-none grid-flow-row auto-rows-min">

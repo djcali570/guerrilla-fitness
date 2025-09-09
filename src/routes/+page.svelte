@@ -32,12 +32,32 @@
 		<div class="main__video">
 			<VideoPlayer
 				videoSource="{PUBLIC_WEB_IMAGE_ENDPOINT}/main_video/view?project={PUBLIC_PROJECT_ID}"
+				showControls={false}
+			/>
+			<div class="video__overlay"></div>
+			<div class="overlay__content">
+				<h1 class="h_sf_b_l_u text-[8rem] leading-[8rem] text-center">we make people strong</h1>
+				<p class="p_pf_b_l_u text-[1.5rem] text-center">From your first class to your best lift, our mission is simple.<br />Build strength that lasts a lifetime</p>
+				
+				<div class="pt-8"><CallToActionButton title="Join Now" /></div>
+			</div>
+		</div>
+	</section>
+	<!-- <section class="video__section">
+		<div class="main__video">
+			<VideoPlayer
+				videoSource="{PUBLIC_WEB_IMAGE_ENDPOINT}/main_video/view?project={PUBLIC_PROJECT_ID}"
 			/>
 		</div>
 		<div class="video__overlay"></div>
-		<h1 class="video__title" {@attach slideIn}>Best hour of your day</h1>
-	</section>
-	<section class="py-24 px-4 md:px-8 lg:px-32" {@attach (node) => slideIn(node, 0, 10)} title="Guarantee">
+		<h1 class="video__title" {@attach slideIn}>We make people strong</h1>
+		<p class="prwu">Own Your Health</p>
+	</section> -->
+	<section
+		class="py-24 px-4 md:px-8 lg:px-32"
+		{@attach (node) => slideIn(node, 0, 10)}
+		title="Guarantee"
+	>
 		<div class="grid grid-rows-[min-content_1fr] md:grid-cols-2">
 			<h1 class="h3_sf_b_l_u text-5xl t05 w-full">
 				The Guerrilla, <br /> Promise
@@ -222,35 +242,14 @@
 		background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 		z-index: 1;
 	}
-	.main__video {
-		position: relative;
-		width: 100vw;
-		height: 82vh;
-	}
-
 	.video__section {
 		position: relative;
 		z-index: 2;
 	}
-	.video__title {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 100%;
-		transform: translate(-50%, -50%);
-		padding-left: 1rem;
-		padding-right: 1rem;
-		color: #feffef;
-		text-transform: uppercase;
-		font-family: rama-slab-bold;
-		font-size: 5em;
-		text-align: center;
-		z-index: 3;
-		line-height: 1.2;
-
-		@media (min-width: 1024px) {
-			font-size: 8em;
-		}
+	.main__video {
+		position: relative;
+		width: 100vw;
+		height: 82vh;
 	}
 	.video__overlay {
 		position: absolute;
@@ -258,5 +257,18 @@
 		background-color: black;
 		opacity: 0.4;
 		z-index: 2; /* Below the title but above the video */
+	}
+	.overlay__content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		transform: translate(-50%, -50%);
+		z-index: 3;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		row-gap: 1.5em;
 	}
 </style>

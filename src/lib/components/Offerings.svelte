@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { PUBLIC_WEB_IMAGE_ENDPOINT } from '$env/static/public';
+	import { PUBLIC_PROJECT_ID, PUBLIC_WEB_IMAGE_ENDPOINT } from '$env/static/public';
 	import { slideIn } from '$lib/gsapFunc';
 	import ImageCard from './ImageCard.svelte';
 </script>
@@ -10,7 +10,7 @@
 		<div class="md:col-start-1 md:row-span-6 h-[430px] md:h-[300px] lg:h-[430px]">
 			<div class="w-full h-full" {@attach slideIn}>
 				<ImageCard
-					imgLink="{PUBLIC_WEB_IMAGE_ENDPOINT}/photoa/view?project=guerrilla&project=guerrilla"
+					imgLink="{PUBLIC_WEB_IMAGE_ENDPOINT}/pg-01/view?project={PUBLIC_PROJECT_ID}"
 					title="CROSSFIT"
 					desc="Unlimited access to classes 7 days/wk"
 				/>
@@ -21,9 +21,9 @@
 		>
 			<div class="w-full h-full flex justify-center" {@attach (node) => slideIn(node, 0.2)}>
 				<ImageCard
-					imgLink="{PUBLIC_WEB_IMAGE_ENDPOINT}/photob/view?project=guerrilla&project=guerrilla"
+					imgLink="{PUBLIC_WEB_IMAGE_ENDPOINT}/pg-02/view?project={PUBLIC_PROJECT_ID}"
 					title="NUTRITION"
-					desc="Optimize your health with Nutrition and accountability coaching"
+					desc="Optimize your health with Nutrition and accountability coaching"					
 				/>
 			</div>
 		</div>
@@ -32,8 +32,8 @@
 		>
 			<div class="w-full h-full flex justify-end" {@attach (node) => slideIn(node, 0.5)}>
 				<ImageCard
-					imgLink="{PUBLIC_WEB_IMAGE_ENDPOINT}/photoc/view?project=guerrilla&project=guerrilla"
-					title="PRIVATE/SEMI PRIVATE TRAINING"
+					imgLink="{PUBLIC_WEB_IMAGE_ENDPOINT}/pg-03/view?project={PUBLIC_PROJECT_ID}"
+					title="PRIVATE TRAINING"
 					desc="Pursue your goals with focused 1-on-1 or small group coaching sessions"
 				/>
 			</div>
