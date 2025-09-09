@@ -16,11 +16,6 @@ export function menuActions() {
         updateStatus
     }
 }
-
-export const counter = $state({
-    count: 0
-});
-
 /**
  * Menu Links
  */
@@ -36,7 +31,7 @@ export const gyms: Gym[] = [
         address: '19 Elm St, Montclair NJ 07042',
         phone: '1-973-337-6538',
         phoneDisplay: '973-337-6538',
-        image: `${PUBLIC_WEB_IMAGE_ENDPOINT}/temp_gym1/view?project=guerrilla&project=guerrilla`,
+        image: `${PUBLIC_WEB_IMAGE_ENDPOINT}/montclair-map/view?project=guerrilla&project=guerrilla`,
         link: '/montclair'
     },
     {
@@ -44,7 +39,7 @@ export const gyms: Gym[] = [
         address: '348 Evelyn St, Paramus NJ 07652',
         phone: '1-201-967-5000',
         phoneDisplay: '201-967-5000',
-        image: `${PUBLIC_WEB_IMAGE_ENDPOINT}/temp_gym2/view?project=guerrilla&project=guerrilla`,
+        image: `${PUBLIC_WEB_IMAGE_ENDPOINT}/paramus-map/view?project=guerrilla&project=guerrilla`,
         link: '/paramus',
         access: [
             'Back Access to the Gym (not available on GPS):',
@@ -62,7 +57,7 @@ export const mainCarouselitems: Carousel[] = [
         title: 'What To Expect',
         subtitle: 'Expert Coaching',
         text: 'Learn how to move well, safely, and with purpose.  Our coaches tailor every workout to your current ability.  Ensuring you get the challenge you need and the support to reach your goals.',
-        img: 'https://images.unsplash.com/photo-1548690312-e3b507d8c110',
+        img: `${PUBLIC_WEB_IMAGE_ENDPOINT}/wte-01c/view?project=${PUBLIC_PROJECT_ID}`,
         showButton: true,
         buttonText: 'Join Now'
     },
@@ -70,7 +65,7 @@ export const mainCarouselitems: Carousel[] = [
         title: 'What To Expect',
         subtitle: 'Positive Culture',
         text: 'Thrive in an environment where encouragement is the norm and everyone’s effort is respected.  Here we train for strength, health, and longevity.  We are better together.',
-        img: 'https://images.unsplash.com/photo-1550259979-ed79b48d2a30',
+        img: `${PUBLIC_WEB_IMAGE_ENDPOINT}/wte-02/view?project=${PUBLIC_PROJECT_ID}`,
         showButton: true,
         buttonText: 'Join Now'
     },
@@ -78,7 +73,7 @@ export const mainCarouselitems: Carousel[] = [
         title: 'What To Expect',
         subtitle: 'Long Term Health',
         text: 'Get ready to transform how you look and feel for the rest of your life.',
-        img: 'https://images.unsplash.com/photo-1595078475328-1ab05d0a6a0e',
+        img: `${PUBLIC_WEB_IMAGE_ENDPOINT}/wte-03c/view?project=${PUBLIC_PROJECT_ID}`,
         showButton: true,
         buttonText: 'Join Now'
     }
@@ -183,3 +178,7 @@ export const coaches: Coach[] = [
 
 
 ]
+
+export const paramusSliderImages: string[] = ['p-slider-01', 'p-slider-02', 'p-slider-03', 'p-slider-04', 'p-slider-05', 'p-slider-06', 'p-slider-07', 'p-slider-08', 'p-slider-09', 'p-slider-10', 'p-slider-11', 'p-slider-12'];;
+
+export const montclairSliderImages: string[] = ['m-slider-01', 'm-slider-02', 'm-slider-03', 'm-slider-04', 'm-slider-05', 'm-slider-06', 'm-slider-07'];
