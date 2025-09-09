@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { PUBLIC_WEB_IMAGE_ENDPOINT } from "$env/static/public";
+
 	let {
 		imageLinks,
 		desktopHeight = 590,
@@ -13,7 +15,7 @@
 				<a class="card__carosuel__item" href="/" style="filter: brightness(100%);">
 					<div class="w-full h-full">
 						<div class="c__card">
-							<img class="w-full h-full object-cover" src={image} alt="" />
+							<img class="w-full h-full object-cover" src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/${image}/view?project=guerrilla&project=guerrilla`} alt="" />
 						</div>
 					</div>
 				</a>
