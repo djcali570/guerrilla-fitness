@@ -95,6 +95,10 @@ p = paragraph, h[number] = heading, pf = primary font, sf = secondary font, r = 
 	@apply font-rama-slab-bold text-g-white-500 uppercase;
 }
 
+.p_pf_b_l_u {
+	@apply font-ibm-plex-regular text-g-white-500 uppercase
+}
+
 .p_pf_r_l {
 	@apply font-ibm-plex-regular text-g-white-500;
 }
