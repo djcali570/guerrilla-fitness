@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { imgLink, title, desc }: { imgLink: string; title: string; desc?: string } = $props();
+	let { imgLink, title, desc, overlay }: { imgLink: string; title: string; desc?: string, overlay?: boolean } = $props();
 </script>
 
 <div class="w-full h-full relative max-w-full md:max-w-[350px]">
