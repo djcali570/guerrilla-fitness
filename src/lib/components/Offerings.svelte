@@ -35,6 +35,7 @@
 					imgLink="{PUBLIC_WEB_IMAGE_ENDPOINT}/pg-03/view?project={PUBLIC_PROJECT_ID}"
 					title="PRIVATE TRAINING"
 					desc="Pursue your goals with focused 1-on-1 or small group coaching sessions"
+					overlay="object-[70%_50%]"
 				/>
 			</div>
 		</div>
