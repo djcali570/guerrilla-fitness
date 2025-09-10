@@ -37,22 +37,15 @@
 			<div class="video__overlay"></div>
 			<div class="overlay__content">
 				<h1 class="h_sf_b_l_u text-[8rem] leading-[8rem] text-center">we make people strong</h1>
-				<p class="p_pf_b_l_u text-[1.5rem] text-center">From your first class to your best lift, our mission is simple.<br />Build strength that lasts a lifetime</p>
-				
+				<p class="p_pf_b_l_u text-[1.5rem] text-center">
+					From your first class to your best lift, our mission is simple.<br />Build strength that
+					lasts a lifetime
+				</p>
+
 				<div class="pt-8"><CallToActionButton title="Join Now" /></div>
 			</div>
 		</div>
 	</section>
-	<!-- <section class="video__section">
-		<div class="main__video">
-			<VideoPlayer
-				videoSource="{PUBLIC_WEB_IMAGE_ENDPOINT}/main_video/view?project={PUBLIC_PROJECT_ID}"
-			/>
-		</div>
-		<div class="video__overlay"></div>
-		<h1 class="video__title" {@attach slideIn}>We make people strong</h1>
-		<p class="prwu">Own Your Health</p>
-	</section> -->
 	<section
 		class="py-24 px-4 md:px-8 lg:px-32"
 		{@attach (node) => slideIn(node, 0, 10)}
@@ -92,36 +85,6 @@
 							<h3 class="h3_sf_b_l_u t05 text-5xl">Just Show Up!</h3>
 						</div>
 					</div>
-					<!-- <div class="block md:hidden">
-						<div class="flex flex-col gap-8 p_pf_r_l">
-							<div>
-								<p>
-									1. Have you tried other fitness programs, but are looking for something new, fun,
-									and challenging?
-								</p>
-							</div>
-							<div>
-								<p>
-									3. Are you looking for accountability to help you stay on track toward your goals?
-								</p>
-							</div>
-							<div>
-								<p>
-									2. Are you looking for support from a world-class coach to help you get in shape?
-								</p>
-							</div>
-							<div class="block md:hidden">
-								<div class="flex items-center justify-start">
-									<h3 class="h3_sf_b_l_u t05 text-4xl" {@attach slideIn}>
-										If you answered yes, Guerrilla Fitness is for you!
-									</h3>
-								</div>
-							</div>
-							<div>
-								<CallToActionButton title="Join Now" />
-							</div>
-						</div>
-					</div> -->
 					<div class="relative w-full h-[622px]">
 						<VideoPlayer
 							videoSource="{PUBLIC_WEB_IMAGE_ENDPOINT}/cameron/view?project={PUBLIC_PROJECT_ID}"
@@ -136,41 +99,6 @@
 			</div>
 		</div>
 	</section>
-	<!-- <section class="hidden md:block md:px-8 lg:px-32 pb-16" title="Answers">
-		<div class="grid grid-cols-2">
-			<div class="min-h-full">
-				<div class="grid grid-rows-2 grid-cols-2 h-full">
-					<div class="col-span-2 row-span-2 flex items-center justify-start s__font__b">
-						<h2 class="h3_sf_b_l_u text-4xl w-full lg:max-w-md tracking-[0.08em]" {@attach slideIn}>
-							if you answered yes, Guerrilla Fitness is for you!
-						</h2>
-					</div>
-				</div>
-			</div>
-
-			<div class="min-h-full pl-6 p__font__r">
-				<div class="grid grid-rows-2 grid-cols-2 gap-6 text-white h-full">
-					<div>
-						<p>
-							1. Have you tried other fitness programs, but are looking for something new, fun, and
-							challenging?
-						</p>
-					</div>
-					<div>
-						<p>
-							3. Are you looking for accountability to help you stay on track toward your goals?
-						</p>
-					</div>
-					<div>
-						<p>2. Are you looking for support from a world-class coach to help you get in shape?</p>
-					</div>
-					<div {@attach slideIn}>
-						<CallToActionButton />
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
 	<section class="pb-12 px-4 md:px-8 lg:px-32" title="Carousel">
 		<Carousel />
 	</section>
