@@ -102,7 +102,7 @@
 			<div class="w-full h-full md:row-span-3">
 				<div class="w-full h-full relative">
 					{#each items as item}
-						<img class="pic" src={item.img} alt="" />
+						<img class="pic {item.filter} {item.position}" src={item.img} alt="" />
 					{/each}
 				</div>
 			</div>
