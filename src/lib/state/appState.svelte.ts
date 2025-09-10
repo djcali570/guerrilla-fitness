@@ -44,7 +44,8 @@ export const gyms: Gym[] = [
         access: [
             'Back Access to the Gym (not available on GPS):',
             'Off E. Midland Ave take Sette Dr behind Trader Joe’s to Powers Dr to Evelyn St.',
-            'Off E. Midland Ave enter Humdinger’s parking lot through to Evelyn St. '
+            'Off E. Midland Ave enter Humdinger’s parking lot through to Evelyn St. ',
+            'Parking lot and street parking available'
         ],
         servicing: [
             'Servicing Paramus, Fair Lawn, Oradell, Ridgewood, Westwood, Glen Rock, Waldwick, Midland Park, River Edge, Dumont, Bergenfield, Hackensack, Hawthorne and all Bergen County surrounding areas'
@@ -67,7 +68,8 @@ export const mainCarouselitems: Carousel[] = [
         text: 'Thrive in an environment where encouragement is the norm and everyone’s effort is respected.  Here we train for strength, health, and longevity.  We are better together.',
         img: `${PUBLIC_WEB_IMAGE_ENDPOINT}/wte-02/view?project=${PUBLIC_PROJECT_ID}`,
         showButton: true,
-        buttonText: 'Join Now'
+        buttonText: 'Join Now',
+        position: 'object-[50%_0%]'
     },
     {
         title: 'What To Expect',
@@ -75,7 +77,8 @@ export const mainCarouselitems: Carousel[] = [
         text: 'Get ready to transform how you look and feel for the rest of your life.',
         img: `${PUBLIC_WEB_IMAGE_ENDPOINT}/wte-03c/view?project=${PUBLIC_PROJECT_ID}`,
         showButton: true,
-        buttonText: 'Join Now'
+        buttonText: 'Join Now',
+        position: 'object-[80%_50%]'
     }
 ];
 
@@ -132,14 +135,14 @@ export const coaches: Coach[] = [
     {
         name: 'Kendra',
         img: `${PUBLIC_WEB_IMAGE_ENDPOINT}/kendra/view?project=${PUBLIC_PROJECT_ID}`,
-        text: 'Need BIO',
+        text: 'It was truly “love at first sight” with CrossFit, and that passion has only grown stronger over time. I’m a Level 2 Certified CrossFit Coach and also hold a CrossFit Nutrition certification. Competing is one of the ways I stay motivated, set training goals, and push myself to new levels—I’ve had the privilege of winning individual events, placing high in team competitions, and qualifying multiple times for the CrossFit Open quarterfinals. Beyond CrossFit, I enjoy taking on new challenges like Spartan Races, GoRuck events, and even the occasional triathlon. I especially love bringing people together to test our fitness outside the gym and create shared experiences that carry over into life. Most importantly, I’m the proud mother of two daughters, and they are the driving force behind everything I do.',
         title: 'L2 Coach',
         newClients: true
     },
     {
         name: 'Fernando',
         img: `${PUBLIC_WEB_IMAGE_ENDPOINT}/fernando/view?project=${PUBLIC_PROJECT_ID}`,
-        text: 'Need BIO',
+        text: 'Hi, I’m Coach Fernando! I’ve been part of the CrossFit community since 2017, and I bring more than a decade of experience in education to my coaching. That blend of teaching and training has shaped the way I approach every class—with clarity, patience, and purpose. For me, CrossFit is so much more than fitness. It’s a community and an experience that has the power to be the best hour of someone’s day.\n\nI bring energy, encouragement, and a genuine commitment to helping every athlete I work with thrive. I want people to leave my sessions not just with a great workout, but with something useful they can carry with them—whether that’s confidence, a new skill, or just a better understanding of their own potential. You’ll find me coaching classes at Guerrilla Fitness Montclair each week, and I also offer individualized one-on-one training for those looking for more personal attention.\n\nAnd here’s a fun fact: I don’t just use my quads for squatting. On my days off, you’ll probably catch me out mountain biking, climbing, or skiing—because moving well and living strong extends far beyond the gym.',
         title: 'L2 Coach',
         newClients: true
     },
@@ -153,7 +156,7 @@ export const coaches: Coach[] = [
     {
         name: 'Rodrigo',
         img: `${PUBLIC_WEB_IMAGE_ENDPOINT}/rodrigo/view?project=${PUBLIC_PROJECT_ID}`,
-        text: 'Need BIO',
+        text: 'I started my CrossFit journey back in 2010 after watching the CrossFit Games on ESPN.  I was so inspired by the athletes I ran to join a CrossFit gym. My dedication to the sport soon turned to a passion for coaching. I quickly fell in love with the job of helping people achieve their health and fitness goals solidifying my decision to pursue coaching as a professional career.  In my 8 years as a Coach I’ve accumulated thousands of hours enjoying every minute along the way.\n\nMy competitive achievements include qualifying for the CrossFit Games in 2019 and 2020 as the Bolivian National Champion. I’ve held the title of National Champion of Bolivia in 2019, 2020, 2021, and 2024.\n\nI’m a Level 2 Certified CrossFit Coach.  I specialize in Olympic Lifting and Functional Bodybuilding.  My Opex and nutrition certifications allow me to individualize programming if you are looking for personal training and have specific performance and/or weight loss goals.\n\nI’m excited be a part of the Guerrilla Fitness staff and community. I take great pride in leading a class and connecting with members. I’m here to help and guide you on your fitness journey.  The overall goal is to make a healthier and happier YOU!\n\nSee you in class.',
         title: 'L2 Coach',
         newClients: true
     },
