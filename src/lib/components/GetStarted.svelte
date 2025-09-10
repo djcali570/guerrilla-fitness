@@ -6,7 +6,7 @@
 
 <div class="w-full flex flex-col">
 	<div class="w-full flex justify-center">
-		<h4 class="h4sr" style="letter-spacing: 1pt;">CrossFit. Nutrition. Accountability. Results.</h4>
+		<h4 class="h4sr" style="letter-spacing: 1pt;">Smart Training. Real Coaching. Lasting Results.</h4>
 	</div>
 	<div class="w-full flex justify-center py-6 md:py-8">
 		<h1 class="video__title__text" {@attach (node) => slideIn(node, 0.4)}>{title}</h1>

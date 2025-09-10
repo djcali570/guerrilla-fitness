@@ -32,7 +32,10 @@ export const gyms: Gym[] = [
         phone: '1-973-337-6538',
         phoneDisplay: '973-337-6538',
         image: `${PUBLIC_WEB_IMAGE_ENDPOINT}/montclair-map/view?project=guerrilla&project=guerrilla`,
-        link: '/montclair'
+        link: '/montclair',
+        servicing: [
+            'Servicing all of Essex County. Montclair, Glen Ridge, Bloomfield, Clifton, Cedar Grove, Verona and West Orange'
+        ]
     },
     {
         name: 'Paramus',
@@ -48,7 +51,7 @@ export const gyms: Gym[] = [
             'Parking lot and street parking available'
         ],
         servicing: [
-            'Servicing Paramus, Fair Lawn, Oradell, Ridgewood, Westwood, Glen Rock, Waldwick, Midland Park, River Edge, Dumont, Bergenfield, Hackensack, Hawthorne and all Bergen County surrounding areas'
+            'Servicing all of Bergen County. Paramus, Fair Lawn, Oradell, Ridgewood, Westwood, Glen Rock, Waldwick, Midland Park, River Edge, Dumont, Bergenfield, Hackensack and Hawthorne'
         ]
     }
 ];
@@ -78,7 +81,7 @@ export const mainCarouselitems: Carousel[] = [
         img: `${PUBLIC_WEB_IMAGE_ENDPOINT}/wte-03c/view?project=${PUBLIC_PROJECT_ID}`,
         showButton: true,
         buttonText: 'Join Now',
-        position: 'object-[80%_50%]'
+        position: 'object-[70%_50%] md:object-[80%_50%]'
     }
 ];
 
@@ -129,7 +132,7 @@ export const coaches: Coach[] = [
         name: 'Alex',
         img: `${PUBLIC_WEB_IMAGE_ENDPOINT}/alex/view?project=${PUBLIC_PROJECT_ID}`,
         text: 'I’ve been a coach at Guerrilla for roughly four years and a CrossFitter for about eight! I love playing sports like Baseball and Soccer and at times love riding my skateboard; I like to think I still got it, haha. My passion is everything revolving around health and fitness. I’m a big advocate of working on the small things to help compliment the bigger picture.\n\nI made myself a guinea pig for many different projects, such as trying out multiple diets to see what is realistic and what isn’t, competing in various challenges like the Ragnar Relay/Trail, CrossFit comps, Men’s Physique, etc.\n\nI enjoy breaking things down and helping others better understand particular concepts in both the realms of health and fitness. So let me help you achieve the best version of yourself!',
-        title: 'L2 Coach',
+        title: 'L2 Coach, Nutrition',
         newClients: true
     },
     {
@@ -150,14 +153,14 @@ export const coaches: Coach[] = [
         name: 'Dr. Alex',
         img: `${PUBLIC_WEB_IMAGE_ENDPOINT}/dr_alex/view?project=${PUBLIC_PROJECT_ID}`,
         text: 'I\'m passionate about helping athletes of all levels reach their full potential. With a foundation in health and exercise science, I have over a decade of experience as a Certified Strength and Conditioning Specialist, a USAW Olympic lifting coach, and a Level-1 CrossFit coach. My background in Physical Therapy allows me to approach training from a holistic perspective.\n\nAs a Level-1 CrossFit coach, I\'m dedicated to supporting athletes who want to make the most of their training. With a strong grasp of CrossFit principles and techniques, I\'m in a unique position to guide you on your journey towards improved fitness and performance.',
-        title: 'L2 Coach',
+        title: 'L2 Coach, Physical Therapist',
         newClients: true
     },
     {
         name: 'Rodrigo',
         img: `${PUBLIC_WEB_IMAGE_ENDPOINT}/rodrigo/view?project=${PUBLIC_PROJECT_ID}`,
         text: 'I started my CrossFit journey back in 2010 after watching the CrossFit Games on ESPN.  I was so inspired by the athletes I ran to join a CrossFit gym. My dedication to the sport soon turned to a passion for coaching. I quickly fell in love with the job of helping people achieve their health and fitness goals solidifying my decision to pursue coaching as a professional career.  In my 8 years as a Coach I’ve accumulated thousands of hours enjoying every minute along the way.\n\nMy competitive achievements include qualifying for the CrossFit Games in 2019 and 2020 as the Bolivian National Champion. I’ve held the title of National Champion of Bolivia in 2019, 2020, 2021, and 2024.\n\nI’m a Level 2 Certified CrossFit Coach.  I specialize in Olympic Lifting and Functional Bodybuilding.  My Opex and nutrition certifications allow me to individualize programming if you are looking for personal training and have specific performance and/or weight loss goals.\n\nI’m excited be a part of the Guerrilla Fitness staff and community. I take great pride in leading a class and connecting with members. I’m here to help and guide you on your fitness journey.  The overall goal is to make a healthier and happier YOU!\n\nSee you in class.',
-        title: 'L2 Coach',
+        title: 'L2 Coach, Nutrition',
         newClients: true
     },
 

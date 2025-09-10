@@ -2,7 +2,7 @@
 	import type { Gym } from '$lib/types';
 	import type { Snippet } from 'svelte';
 
-	let { gym, extraContent }: { gym: Gym; extraContent?: Snippet } = $props();
+	let { gym, showExtra = true, extraContent }: { gym: Gym; showExtra?: boolean, extraContent?: Snippet } = $props();
 
 	function stripPhoneNumber(phone: string) {
 		return phone.replace(/-/g, '');
@@ -25,19 +25,21 @@
 			<a href="mailTo:info@guerrillafitness.net" class="prw">{gym.email}</a>
 			<a href={`tel:+${stripPhoneNumber(gym.phone)}`} class="prw">{gym.phoneDisplay}</a>
 			<a href="mailTo:info@guerrillafitness.net" class="prw">info@guerrillafitness.net</a>
-			{#if gym.access}
-				<div class="pt-3">
-					{#each gym.access as access}
-						<p class="text-xs">{access}</p>
-					{/each}
-				</div>
-			{/if}
-			{#if gym.servicing}
-				<div class="pt-3">
-					{#each gym.servicing as servicing}
-						<p class="text-xs max-w-[350px]">{servicing}</p>
-					{/each}
-				</div>
+			{#if showExtra}
+				{#if gym.access}
+					<div class="pt-3">
+						{#each gym.access as access}
+							<p class="text-xs">{access}</p>
+						{/each}
+					</div>
+				{/if}
+				{#if gym.servicing}
+					<div class="pt-3">
+						{#each gym.servicing as servicing}
+							<p class="text-xs max-w-[350px]">{servicing}</p>
+						{/each}
+					</div>
+				{/if}
 			{/if}
 		</div>
 	</div>

@@ -120,9 +120,8 @@
 				showControls={false}
 			/>
 			<div class="video__overlay"></div>
-			<div class="overlay__content">
-				<p class="prwu">Effort Over Everything</p>
-				<h1 class="video__title__text text-center">Guerrilla Crossfit<br /> Paramus</h1>
+			<div class="overlay__content">				
+				<h1 class="video__title__text text-center">Guerrilla Fitness<br /> Paramus</h1>
 				<p class="prwu">348 Evelyn Street, Paramus, NJ 07652</p>
 				<div class="pt-8"><CallToActionButton title="Join Now" /></div>
 			</div>
@@ -153,6 +152,7 @@
 					<li>- Open 7 days a week</li>
 					<li>- Convenient and accessible schedule</li>
 					<li>- 1-on-1 & small group personal training</li>
+					<li>- Parking lot and street parking</li>
 				</ul>
 			</div>
 			<div class="pt-10">

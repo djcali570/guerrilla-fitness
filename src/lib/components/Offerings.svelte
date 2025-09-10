@@ -13,6 +13,7 @@
 					imgLink="{PUBLIC_WEB_IMAGE_ENDPOINT}/pg-01/view?project={PUBLIC_PROJECT_ID}"
 					title="CROSSFIT"
 					desc="Unlimited access to classes 7 days/wk"
+					overlay="filter brightness-75"					
 				/>
 			</div>
 		</div>
@@ -23,7 +24,8 @@
 				<ImageCard
 					imgLink="{PUBLIC_WEB_IMAGE_ENDPOINT}/pg-02/view?project={PUBLIC_PROJECT_ID}"
 					title="NUTRITION"
-					desc="Optimize your health with Nutrition and accountability coaching"					
+					desc="Optimize your health with Nutrition and accountability coaching"
+					overlay="filter brightness-75 object-[50%_90%]"						
 				/>
 			</div>
 		</div>
@@ -35,7 +37,7 @@
 					imgLink="{PUBLIC_WEB_IMAGE_ENDPOINT}/pg-03/view?project={PUBLIC_PROJECT_ID}"
 					title="PRIVATE TRAINING"
 					desc="Pursue your goals with focused 1-on-1 or small group coaching sessions"
-					overlay="object-[70%_50%]"
+					overlay="filter brightness-75 object-[70%_50%]"
 				/>
 			</div>
 		</div>

@@ -36,8 +36,16 @@
 			/>
 			<div class="video__overlay"></div>
 			<div class="overlay__content">
-				<h1 class="h_sf_b_l_u text-[8rem] leading-[8rem] text-center">we make people strong</h1>
-				<p class="p_pf_b_l_u text-[1.5rem] text-center">
+				<h1
+					class="h_sf_b_l_u text-[5rem] md:text-[8rem] leading-[5rem] md:leading-[8rem] text-center"
+				>
+					we make people strong
+				</h1>
+				<p class="md:hidden p_pf_b_l_u text-[1rem] md:text-[1.5rem] text-center px-4">
+					From your first class to your best lift, our mission is simple. <br /> Build strength that
+					lasts a lifetime
+				</p>
+				<p class="hidden md:block p_pf_b_l_u text-[1rem] md:text-[1.5rem] text-center">
 					From your first class to your best lift, our mission is simple.<br />Build strength that
 					lasts a lifetime
 				</p>
@@ -134,7 +142,7 @@
 		<h4 class="s__font__r text__med text-g-white-500 uppercase mb-4">our locations</h4>
 		{#each gyms as gym, i}
 			<div class={i === gyms.length - 1 ? 'mb-0' : 'mb-24'}>
-				<GymComponent {gym}>
+				<GymComponent {gym} showExtra={false}>
 					{#snippet extraContent()}
 						<div class="pt-8">
 							<CallToActionButton title="View Gym" link={gym.link} />

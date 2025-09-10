@@ -66,7 +66,7 @@
 				<div class="w-full h-[500px]">
 					<img
 						class="w-full h-full object-cover"
-						src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/nutrition_header/view?project=guerrilla&project=guerrilla`}
+						src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/nutrition-02/view?project=guerrilla&project=guerrilla`}
 						alt=""
 						{@attach slideIn}
 					/>
@@ -82,7 +82,7 @@
 						<div class="w-full h-[300px]">
 							<img
 								class="w-full h-full object-cover"
-								src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/nutrition_header/view?project=guerrilla&project=guerrilla`}
+								src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/nutrition-02/view?project=guerrilla&project=guerrilla`}
 								alt=""
 								{@attach slideIn}
 							/>
@@ -105,18 +105,17 @@
 			</div>
 		</div>
 	</section>
-	<section class="w-full bg-g-black-500 px-4 md:px-32 pt-8">
-		<Carousel items={nutritionCarouselitems} />
-	</section>
-	<section class="w-full bg-g-black-500 px-4 md:px-32 pt-10 pb-10">
+
+	<section class="w-full bg-g-black-500 px-4 md:px-32 pt-10 pb-10 mb-10">
 		<div class="w-full flex justify-end items-center">
-			<div class="md:w-[50%]">
-				<h1 class="h_sf_b_l_u text-[2.6rem] leading-[2.6rem] text-right" {@attach slideIn}>
-					At Guerrilla, We Believe Something As Fundamental As Nutrition Shouldn’t Be Complicated
+			<div class="">
+				<h1 class="h_sf_r_l_u text-[2.6rem] leading-[3rem] tracking-widest  text-center" {@attach slideIn}>
+					Fuel your training and your life with simple, sustainable nutrition habits that actually work.
 				</h1>
 			</div>
 		</div>
 	</section>
+	
 	<section class="w-full bg-g-white-500">
 		<div class="relative w-full md:h-[550px] flex flex-col md:grid grid-cols-2">
 			<div class="w-full h-[300px] md:h-[550px] relative">

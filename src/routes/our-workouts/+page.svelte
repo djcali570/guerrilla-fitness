@@ -164,10 +164,7 @@
 			/>
 			<div class="video__overlay"></div>
 			<div class="overlay__content" {@attach slideIn}>
-				<h1 class="video__title__text text-center">our dedication, passion, and enthusiasm drive us<br>
-				our supportive and enclusive community bonds us<br>
-				our philosophy guides us<br>
-				we are better together
+				<h1 class="video__title__text text-center">Just show up <br/> good things will happen
 				</h1>
 			</div>
 		</div>
