@@ -35,22 +35,27 @@
 	<section class="w-full bg-g-black-500">
 		<div class="relative w-full h-[450px] md:h-[600px]">
 			<img
-				class="w-full h-full object-cover"
+				class="w-full h-full object-cover filter brightness-75"
 				src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/nutrition_header/view?project=guerrilla&project=guerrilla`}
 				alt=""
 			/>
 			<div
-				class="absolute top-[50%] flex flex-col pl-[3rem] md:pl-[10rem] w-full md:w-[50%] gap-4"
+				class="absolute top-[50%] flex flex-col pl-[3rem] md:pl-[10rem] w-full md:w-[60%] gap-4"
 				{@attach slideIn}
 			>
-				<h6 class="h_sf_r_l_u text-[1rem] md:text-[1.5rem] tracking-[0.2rem]">
-					nutrition + accountability
-				</h6>
 				<h1 class="h_sf_b_l_u text-[3rem] md:text-[5rem] leading-[3rem] md:leading-[5rem]">
-					your goals go beyond the gym
+					Better Choices. <br /> Better Results.
 				</h1>
+				<h6 class="h_sf_r_l_u text-[1rem] md:text-[1.5rem] tracking-[0.2rem]">
+					You don’t need a perfect diet—just a plan that works for you.
+				</h6>
 				<div class="x">
-					<CallToActionButton title="Apply For Coaching" bgColor="#BF1E2D" width="12rem" />
+					<CallToActionButton
+						title="Apply For Coaching"
+						link="#form"
+						bgColor="#BF1E2D"
+						width="12rem"
+					/>
 				</div>
 			</div>
 		</div>
@@ -71,7 +76,7 @@
 			<div class="w-full h-full flex justify-start items-center pb-4 md:pb-0">
 				<div class="px-4 md:px-[7rem] flex flex-col gap-4 pt-4 md:pt-0">
 					<h2 class="h_sf_r_d_u text-[2.8rem] leading-[2.5rem]" {@attach slideIn}>
-						We believe in a habit-based approach to nutrition
+						We believe nutrition should feel doable, not overwhelming.
 					</h2>
 					<div class="md:hidden flex justify-start items-center">
 						<div class="w-full h-[300px]">
@@ -84,15 +89,18 @@
 						</div>
 					</div>
 					<p {@attach slideIn}>
-						At Guerrilla, we don’t just focus on the hour you spend inside the gym. The 23 hours you
-						spend outside the gym is where most people struggle to make progress toward their health
-						and fitness goals. That is where our nutrition and accountability coaches can help.
+						A balanced approach—built around real food and sustainable habits—fuels your training,
+						supports recovery, and helps you feel your best every day. We’re here to guide you
+						toward simple choices that add up to big results.
 					</p>
-					<p {@attach slideIn}>
-						At Guerrilla, we use a habit-based approach to nutrition that sets you up for success by
-						working on one thing at a time.
-					</p>
-					<CallToActionButton title="Apply For Coaching" bgColor="#BF1E2D" width="12rem" useSlideIn={true} />
+			
+					<CallToActionButton
+						title="Apply For Coaching"
+						link="#form"
+						bgColor="#BF1E2D"
+						width="12rem"
+						useSlideIn={true}
+					/>
 				</div>
 			</div>
 		</div>
@@ -116,15 +124,17 @@
 					class="w-full h-full object-cover"
 					src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/dish/view?project=guerrilla&project=guerrilla`}
 					alt=""
-                    {@attach slideIn}
+					{@attach slideIn}
 				/>
 				<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4">
-					<h1 class="h_sf_b_l_u text-[4rem] leading-[4rem] text-center" {@attach slideIn}>Apply for coaching</h1>
+					<h1 class="h_sf_b_l_u text-[4rem] leading-[4rem] text-center" {@attach slideIn}>
+						Apply for coaching
+					</h1>
 				</div>
 			</div>
-			<div class="flex justify-center items-center w-full">
+			<div id="form" class="flex justify-center items-center w-full">
 				<div class="w-full flex flex-col gap-4 p-8">
-					<Input5 title="Name (Required)" colorScheme={ics} bind:value={name}  />
+					<Input5 title="Name (Required)" colorScheme={ics} bind:value={name} />
 					<Input5 title="Email (Required)" colorScheme={ics} bind:value={email} />
 					<Input5 title="Phone (Required)" colorScheme={ics} validator="phone" bind:value={phone} />
 					<DropDown5
