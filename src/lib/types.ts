@@ -14,6 +14,8 @@ export type Carousel = {
     showButton?: boolean,
     buttonText?: string,
     link?: string,
+    filter?: string,
+    position?: string
 }
 
 export type Gym = {
