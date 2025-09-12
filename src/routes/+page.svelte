@@ -3,6 +3,7 @@
 	import CallToActionButton from '$lib/components/CallToActionButton.svelte';
 	import Carousel from '$lib/components/Carousel.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import GetStarted from '$lib/components/GetStarted.svelte';
 	import GymComponent from '$lib/components/GymComponent.svelte';
 	import Nav from '$lib/components/Nav.svelte';
 	import Offerings from '$lib/components/Offerings.svelte';
@@ -61,12 +62,12 @@
 	>
 		<div class="grid grid-rows-[min-content_1fr] md:grid-cols-2">
 			<h1 class="h3_sf_b_l_u text-5xl t05 w-full">
-				The Guerrilla, <br /> Promise
+				The Guerrilla <br /> Promise
 			</h1>
 
 			<div class="pt-6 md:pt-0 p__font__r">
 				<div class="grid grid-cols-1 gap-6 text-white h-full">
-					<p>
+					<p class="p_pf_r_l text-xl">
 						Our promise is to inspire, educate, guide, and support you, to a life lived stronger and
 						longer.
 					</p>
@@ -110,30 +111,8 @@
 	<section class="pb-12 px-4 md:px-8 lg:px-32" title="Carousel">
 		<Carousel />
 	</section>
-	<section class="px-4 md:px-32 pb-12" title="Join">
-		<div class="w-full flex flex-col">
-			<div class="w-full flex justify-center text-g-white-500">
-				<h4
-					class="font-rama-slab uppercase text-[1.2rem]"
-					style="letter-spacing: 1pt;"
-					{@attach (node) => slideIn(node, 0)}
-				>
-					CrossFit. Nutrition. Accountability. Results.
-				</h4>
-			</div>
-			<div class="w-full flex justify-center text-g-white-500">
-				<h1
-					class="h3_sf_b_l_u text-[3.2rem] md:text-[6.5rem]"
-					style="letter-spacing: 1pt;"
-					{@attach (node) => slideIn(node, 0.2)}
-				>
-					Get Started
-				</h1>
-			</div>
-			<div class="w-full flex justify-center" {@attach (node) => slideIn(node, 0.4)}>
-				<CallToActionButton title="3 Class Trial" />
-			</div>
-		</div>
+	<section class="px-4 md:px-32 pb-12">
+		<GetStarted />
 	</section>
 	<section class="px-4 md:px-8 lg:px-32 py-16" title="Offerings">
 		<Offerings />
@@ -152,22 +131,8 @@
 			</div>
 		{/each}
 	</section>
-	<section class="px-4 md:px-8 lg:px-32 pb-12" title="Join">
-		<div class="w-full flex flex-col">
-			<div class="w-full flex justify-center text-g-white-500">
-				<h4 class="font-rama-slab uppercase text-[1.2rem]" style="letter-spacing: 1pt;">
-					CrossFit. Nutrition. Accountability. Results.
-				</h4>
-			</div>
-			<div class="w-full flex justify-center text-g-white-500">
-				<h1 class="h3_sf_b_l_u text-[3.2rem] md:text-[6.5rem]" style="letter-spacing: 1pt;">
-					Get Started
-				</h1>
-			</div>
-			<div class="w-full flex justify-center">
-				<CallToActionButton title="3 Class Trial" />
-			</div>
-		</div>
+	<section class="px-4 md:px-8 lg:px-32 pb-12">
+		<GetStarted />
 	</section>
 	<Footer />
 </main>

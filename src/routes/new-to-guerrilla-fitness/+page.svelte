@@ -32,7 +32,7 @@
 				alt=""
 			/>
 			<div class="image__text" {@attach slideIn}>
-				<div class="">			
+				<div class="">
 					<h1
 						class="h_sf_b_l_u text-[3rem] md:text-[4.5rem] tracking-widest leading-[3rem] md:leading-[5rem] text-center"
 					>
@@ -54,7 +54,7 @@
 			</div>
 			<div class="pt-6 md:pt-0 p__font__r">
 				<div class="w-full h-full flex justify-center items-center">
-					<p class="p_pf_r_l text-justify leading-[2rem]" {@attach fade}>
+					<p class="p_pf_r_l text-xl" {@attach fade}>
 						We get to know you. Listen to your story and focus on your goals. Your journey is ours,
 						and we are with you every step of the way.
 					</p>
@@ -71,11 +71,10 @@
 				>
 					Our Mission
 				</h1>
-				<p class="p_pf_r_l text-justify leading-[2rem] pt-8" {@attach (node) => slideIn(node, 0.3)}>
-					Our mission is simple. To build strong, healthy, capable individuals through expert
-					coaching, proven programming, and a supportive community. We prioritize getting and
-					staying strong as the foundation for health, longevity, and resilience—empowering our
-					members to move well, live fully, and thrive for life.
+				<p class="p_pf_r_l text-xl pt-8" {@attach (node) => slideIn(node, 0.3)}>
+					Our mission is to build strong, healthy, capable people through expert coaching, smart
+					programming, and a supportive community. Helping you move well, live fully, and stay
+					resilient for life.
 				</p>
 			</div>
 			<div class="relative w-full max-h-[40rem] order-1 md:order-2">
@@ -123,18 +122,18 @@
 								<h4 class="h_sf_r_l_u text-[2rem] tracking-widest pr-2">Try a few classes</h4>
 							{/snippet}
 							{#snippet panel()}
-								<p class="p_pf_r_l text-justify leading-[2rem] pt-4">
+								<p class="p_pf_r_l text-xl pt-4">
 									Trial classes serve two important purposes:
 								</p>
-								<ul class="">
+								<ul class="text-xl">
 									<li class="p_pf_r_l py-2">
 										1. You get to experience our coaching firsthand, feel the energy of our
 										community, and see what the workouts are all about.
 									</li>
 									<li class="p_pf_r_l py-2">
-										2. We get to learn about you - Where you are in your fitness journey, what you
+										2. We get to learn about you. Where you are in your fitness journey, what you
 										are looking for, and how we can best guide you toward your goals. It’s a two way
-										introduction built to set you up for success
+										introduction built to set you up for success.
 									</li>
 								</ul>
 							{/snippet}
@@ -148,12 +147,12 @@
 								<h4 class="h_sf_r_l_u text-[2rem] tracking-widest pr-2">Choose your membership</h4>
 							{/snippet}
 							{#snippet panel()}
-								<p class="p_pf_r_l text-justify leading-[2rem] pt-4">
+								<p class="p_pf_r_l text-xl pt-4">
 									After your trial classes, we’ll follow up to talk about your experience and answer
 									any questions. Based on that, and what we learned about you and where you are at,
 									we’ll help guide you toward the membership option that fits you best.
 								</p>
-								<p class="p_pf_r_l text-justify leading-[2rem] pt-4">
+								<p class="p_pf_r_l text-xl pt-4">
 									Our goal is to ensure you get started in the way that sets you up for long term
 									success.
 								</p>
@@ -168,13 +167,13 @@
 								<h4 class="h_sf_r_l_u text-[2rem] tracking-widest pr-2">Get lasting results</h4>
 							{/snippet}
 							{#snippet panel()}
-								<p class="p_pf_r_l text-justify leading-[2rem] pt-4">
+								<p class="p_pf_r_l text-xl pt-4">
 									Transform how you feel in your body with a proven fitness and nutrition program.
 									We don’t promise quick fixes, but we do promise our committment to you. It’s not
 									just about reaching your goals; it’s about who you become in the process. We are
 									here to support and challenge you every step of the way, to become your best self.
 								</p>
-								<p class="p_pf_r_l text-justify leading-[2rem] pt-4">
+								<p class="p_pf_r_l text-xl pt-4">
 									Just show up. Trust the process. Good things will happen!
 								</p>
 							{/snippet}

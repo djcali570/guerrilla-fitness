@@ -38,11 +38,10 @@
 		<div class="w-full flex flex-col justify-center items-center" {@attach slideIn}>
 			<h1 class="video__title__text text-center">WORKOUTS THAT REALLY WORK</h1>
 			<p class="p_pf_r_l text-g-white-500 pt-8 w-full md:w-[50%] text-[1.3rem] md:text-[1.8rem]">
-				At Guerrilla Fitness, every workout is built on proven principles of strength, conditioning,
-				and smart programming. We focus on proper technique, progressive training, and balanced
-				intensity—ensuring you get stronger, move better, and build lasting fitness. Our workouts
-				work because they’re coached with purpose, tailored to your abilities, and designed for
-				results that last a lifetime.
+				Every workout is built on proven principles of strength, conditioning, and smart
+				programming. With proper technique, progressive training, and balanced intensity, you’ll get
+				stronger and move better. Our coaching ensures each workout has purpose, is tailored to you,
+				and delivers results that last.
 			</p>
 		</div>
 	</section>
@@ -68,13 +67,8 @@
 					<p
 						class="p_pf_r_l text-g-white-500 w-full md:w-[50%] text-[1rem] md:text-[1.2rem] text-left px-8 py-8"
 					>
-						At Guerrilla Fitness, strength training isn’t about lifting the heaviest weight or
-						competing with anyone else—it’s about learning to move well, getting stronger at your
-						own pace, and building a foundation for lifelong health. Think squats, presses, and
-						deadlifts. We start with the basics, teach you proper technique, and progress gradually
-						so you feel confident and capable every step of the way. Strength is the key to
-						everything—more energy, better mobility, fewer injuries, and the ability to do more of
-						what you love, for years to come.
+						Build physical and psychological confidence, resilience, and lifelong health. Starting
+						with the basics and progressing at your own pace.
 					</p>
 				</div>
 			</div>
@@ -88,13 +82,8 @@
 					<p
 						class="p_pf_r_l text-g-white-500 pt-8 md:w-[80%] text-[1rem] md:text-[1.2rem] text-left"
 					>
-						At Guerrilla Fitness, strength training isn’t about lifting the heaviest weight or
-						competing with anyone else—it’s about learning to move well, getting stronger at your
-						own pace, and building a foundation for lifelong health. Think squats, presses, and
-						deadlifts. We start with the basics, teach you proper technique, and progress gradually
-						so you feel confident and capable every step of the way. Strength is the key to
-						everything—more energy, better mobility, fewer injuries, and the ability to do more of
-						what you love, for years to come.
+						Build physical and psychological confidence, resilience, and lifelong health. Starting
+						with the basics and progressing at your own pace.
 					</p>
 				</div>
 			</div>
@@ -112,12 +101,8 @@
 					<p
 						class="p_pf_r_l text-g-white-500 pt-8 md:w-[80%] text-[1rem] md:text-[1.2rem] text-left"
 					>
-						The conditioning portion of our workouts is designed to designed to work hand-in-hand
-						with the strength segment. This is where we focus on improving your heart and lung
-						health, boosting stamina, and building the ability to keep moving with energy and
-						efficiency. It’s always scaled to your current fitness level, so you can work at a pace
-						that challenges you without feeling overwhelmed—helping you get fitter, faster, and
-						stronger over time.
+						Build cardiovascular stamina, and efficiency. Scaled to your fitness level so you can
+						train, recover, and get fitter over time.
 					</p>
 				</div>
 			</div>
@@ -140,18 +125,14 @@
 					<p
 						class="p_pf_r_l text-g-white-500 w-full md:w-[50%] text-[1rem] md:text-[1.2rem] text-left px-8 py-8"
 					>
-						The conditioning portion of our workouts is designed to designed to work hand-in-hand
-						with the strength segment. This is where we focus on improving your heart and lung
-						health, boosting stamina, and building the ability to keep moving with energy and
-						efficiency. It’s always scaled to your current fitness level, so you can work at a pace
-						that challenges you without feeling overwhelmed—helping you get fitter, faster, and
-						stronger over time.
+						Build cardiovascular stamina, and efficiency. Scaled to your fitness level so you can
+						train, recover, and get fitter over time.
 					</p>
 				</div>
 			</div>
 		</div>
 	</section>
-	
+
 	<section class="py-32">
 		<GetStarted />
 	</section>
@@ -164,8 +145,7 @@
 			/>
 			<div class="video__overlay"></div>
 			<div class="overlay__content" {@attach slideIn}>
-				<h1 class="video__title__text text-center">Just show up <br/> good things will happen
-				</h1>
+				<h1 class="video__title__text text-center">Just show up <br /> good things will happen</h1>
 			</div>
 		</div>
 	</section>

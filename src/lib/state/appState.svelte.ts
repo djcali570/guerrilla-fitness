@@ -185,6 +185,6 @@ export const coaches: Coach[] = [
 
 ]
 
-export const paramusSliderImages: string[] = ['p-slider-01', 'p-slider-02', 'p-slider-03', 'p-slider-04', 'p-slider-05', 'p-slider-06', 'p-slider-07', 'p-slider-08', 'p-slider-09', 'p-slider-10', 'p-slider-11', 'p-slider-12'];;
+export const paramusSliderImages: string[] = ['p-slider-04', 'p-slider-02', 'p-slider-01', 'p-slider-05', 'p-slider-07', 'p-slider-08', 'p-slider-11', 'p-slider-12', 'p-slider-13', 'p-slider-10', 'p-slider-03'];;
 
-export const montclairSliderImages: string[] = ['m-slider-01', 'm-slider-02', 'm-slider-03', 'm-slider-04', 'm-slider-05', 'm-slider-06', 'm-slider-07'];
+export const montclairSliderImages: string[] = ['m-slider-01', 'm-slider-02', 'm-slider-03', 'm-slider-04', 'm-slider-05', 'm-slider-06', 'm-slider-07', 'm-slider-08', 'm-slider-09', 'm-slider-10'];

@@ -36,7 +36,7 @@
 		<div class="relative w-full h-[450px] md:h-[600px]">
 			<img
 				class="w-full h-full object-cover filter brightness-75"
-				src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/nutrition_header/view?project=guerrilla&project=guerrilla`}
+				src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/nutrition-04/view?project=guerrilla&project=guerrilla`}
 				alt=""
 			/>
 			<div
@@ -44,10 +44,10 @@
 				{@attach slideIn}
 			>
 				<h1 class="h_sf_b_l_u text-[3rem] md:text-[5rem] leading-[3rem] md:leading-[5rem]">
-					Better Choices. <br /> Better Results.
+					Better Choices <br /> Better Results
 				</h1>
 				<h6 class="h_sf_r_l_u text-[1rem] md:text-[1.5rem] tracking-[0.2rem]">
-					You don’t need a perfect diet—just a plan that works for you.
+					You don’t need a perfect diet—just a plan that works for you
 				</h6>
 				<div class="x">
 					<CallToActionButton
@@ -76,7 +76,7 @@
 			<div class="w-full h-full flex justify-start items-center pb-4 md:pb-0">
 				<div class="px-4 md:px-[7rem] flex flex-col gap-4 pt-4 md:pt-0">
 					<h2 class="h_sf_r_d_u text-[2.8rem] leading-[2.5rem]" {@attach slideIn}>
-						We believe nutrition should feel doable, not overwhelming.
+						We make healthy nutrition clear and manageable
 					</h2>
 					<div class="md:hidden flex justify-start items-center">
 						<div class="w-full h-[300px]">
@@ -89,8 +89,8 @@
 						</div>
 					</div>
 					<p {@attach slideIn}>
-						A balanced approach—built around real food and sustainable habits—fuels your training,
-						supports recovery, and helps you feel your best every day. We’re here to guide you
+						A balanced approach, built around real food and sustainable habits. Fuel your training,
+						support recovery to feel your best every day. We’re here to guide you
 						toward simple choices that add up to big results.
 					</p>
 			
@@ -120,8 +120,8 @@
 		<div class="relative w-full md:h-[550px] flex flex-col md:grid grid-cols-2">
 			<div class="w-full h-[300px] md:h-[550px] relative">
 				<img
-					class="w-full h-full object-cover"
-					src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/dish/view?project=guerrilla&project=guerrilla`}
+					class="w-full h-full object-cover filter brightness-75"
+					src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/nutrition-03/view?project=guerrilla&project=guerrilla`}
 					alt=""
 					{@attach slideIn}
 				/>

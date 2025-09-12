@@ -22,7 +22,7 @@
 			</div>
 			<ul class="fss flex-col pb-4">
 				<li class="x">
-					<a href="/" class="a__pr">New to Guerrilla Fitness</a>
+					<a href="/new-to-guerrilla-fitness" class="a__pr">New to Guerrilla Fitness</a>
 				</li>
 				<a href="/" class="a__pr">3 Class Trial</a>
 			</ul>
