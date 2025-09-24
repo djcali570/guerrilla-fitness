@@ -16,6 +16,7 @@
 		"@sveltejs/kit": "^2.21.1",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
 		"@types/eslint": "^9.6.1",
+		"@types/google.maps": "^3.58.1",
 		"@types/nodemailer": "^7.0.1",
 		"autoprefixer": "^10.4.20",
 		"eslint": "^9.27.0",
@@ -35,6 +36,7 @@
 	"type": "module",
 	"dependencies": {
 		"@djcali570/component-lib": "^0.1.00",
+		"@googlemaps/js-api-loader": "^1.16.10",
 		"gsap": "^3.13.0",
 		"nodemailer": "^7.0.5"
 	}
