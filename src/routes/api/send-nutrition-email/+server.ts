@@ -6,7 +6,6 @@ import nodemailer from 'nodemailer';
 export const POST: RequestHandler = async (event) => {
     const formData = await event.request.formData();
     const data = formData.get('data');
-
     const dataJson = JSON.parse(data as string);
 
     // Validation
@@ -23,12 +22,16 @@ export const POST: RequestHandler = async (event) => {
         return new Response(JSON.stringify({ success: false, message: 'Please enter a valid email address' }), { status: 500 })
     }
 
+    if (Validation.isEmpty(dataJson.phone)) {
+        return new Response(JSON.stringify({ success: false, message: 'Please enter your phone number' }), { status: 500 })
+    }
+
     if (Validation.isEmpty(dataJson.selectedGym)) {
         return new Response(JSON.stringify({ success: false, message: 'Please select a gym location' }), { status: 500 })
     }
 
-    if (Validation.isEmpty(dataJson.message)) {
-        return new Response(JSON.stringify({ success: false, message: 'Please enter a message' }), { status: 500 })
+    if (Validation.isEmpty(dataJson.experience)) {
+        return new Response(JSON.stringify({ success: false, message: 'Please enter your fitness experience' }), { status: 500 })
     }
 
     /**
@@ -47,17 +50,18 @@ export const POST: RequestHandler = async (event) => {
     const options = {
         from: PRIVATE_EMAIL_USERNAME,
         to: PRIVATE_EMAIL_ADDRESS,
-        subject: 'New Website Contact',
-        text: 'New website contact',
+        subject: 'New Nutrition Contact',
+        text: 'New Nutrition Contact',
         html: `
             <table width="100%" cellspacing="0" border="0">
                 <tbody>
                     <tr><td><p>Hello,</p></td></tr>
-                    <tr><td><p>You have a new contact via website form</p></td></tr>
+                    <tr><td><p>You have a new contact via website form for nutrition coaching</p></td></tr>
                     <tr><td><p>Name: ${dataJson.name}</p></td></tr>
                     <tr><td><p>Email: ${dataJson.email}</p></td></tr>
+                    <tr><td><p>Phone: ${dataJson.phone}</p></td></tr>
                     <tr><td><p>Location: ${dataJson.selectedGym}</p></td></tr>
-                    <tr><td><p>Message: ${dataJson.message}</p></td></tr>     
+                    <tr><td><p>Experience: ${dataJson.experience}</p></td></tr>     
                     <tr><td><p></p></td></tr>
                     <tr><td><p>Please respond as soon as possible</p></td></tr>
                     <tr><td><p></p></td></tr>

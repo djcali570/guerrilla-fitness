@@ -12,6 +12,6 @@
 		<h1 class="video__title__text" {@attach (node) => slideIn(node, 0.4)}>{title}</h1>
 	</div>
 	<div class="w-full flex justify-center">
-		<CallToActionButton title="3 Class Trial"  useSlideIn={true}/>
+		<CallToActionButton title="3 Class Trial"  useSlideIn={true} link="/memberships"/>
 	</div>
 </div>

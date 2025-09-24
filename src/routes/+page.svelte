@@ -5,6 +5,7 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import GetStarted from '$lib/components/GetStarted.svelte';
 	import GymComponent from '$lib/components/GymComponent.svelte';
+	import Map from '$lib/components/Map.svelte';
 	import Nav from '$lib/components/Nav.svelte';
 	import Offerings from '$lib/components/Offerings.svelte';
 	import VideoPlayer from '$lib/components/VideoPlayer.svelte';
@@ -51,7 +52,7 @@
 					lasts a lifetime
 				</p>
 
-				<div class="pt-8"><CallToActionButton title="Join Now" /></div>
+				<div class="pt-8"><CallToActionButton title="Join Now" link="/memberships" /></div>
 			</div>
 		</div>
 	</section>
@@ -133,6 +134,9 @@
 	</section>
 	<section class="px-4 md:px-8 lg:px-32 pb-12">
 		<GetStarted />
+	</section>
+	<section>
+		<Map lat={-34.397} lng={150.644}/>
 	</section>
 	<Footer />
 </main>

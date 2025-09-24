@@ -62,7 +62,7 @@
 		</div>
 		<div class="nav__actions">
 			<div class="block sm:hidden"><MenuButton /></div>
-			<div class="hidden sm:block"><CallToActionButton title="3 Class Trial" /></div>
+			<div class="hidden sm:block"><CallToActionButton title="3 Class Trial" link="/memberships"/></div>
 		</div>
 	</div>
 </nav>

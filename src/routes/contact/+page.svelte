@@ -4,15 +4,52 @@
 	import Nav from '$lib/components/Nav.svelte';
 	import { gyms } from '$lib/state/appState.svelte';
 	import { d5cs, gymDropdown, ics } from '$lib/types';
-	import { DropDown5, Input5 } from '@djcali570/component-lib';
+	import { Dialog5, DropDown5, Input5 } from '@djcali570/component-lib';
 
 	let name = $state('');
 	let email = $state('');
 	let selectedGym = $state('');
 	let message = $state('');
+	let modalStatus = $state(false);
+	let modalMessage = $state('');
+	let messageFunc = $state(() => {});
 
 	function stripPhoneNumber(phone: string) {
 		return phone.replace(/-/g, '');
+	}
+
+	function clear() {
+		name = '';
+		email = '';
+		selectedGym = '';
+		message = '';
+	}
+
+	async function sendMail() {
+		const postRequestData = new FormData();
+
+		const data = {
+			name: name,
+			email: email,
+			selectedGym: selectedGym,
+			message: message
+		};
+
+		postRequestData.append('data', JSON.stringify(data));
+
+		const response = await fetch('/api/send-contact-email', {
+			method: 'POST',
+			body: postRequestData
+		});
+
+		const responseData = await response.json();
+
+		modalMessage = responseData.message;
+		modalStatus = true;
+
+		if (responseData.success) {
+			clear();
+		}
 	}
 </script>
 
@@ -39,7 +76,7 @@
 						Looking for more info? Fill out the form below and a member from our team will reach out
 						to you shortly.
 					</p>
-					<Input5 title="Name (Required)" colorScheme={ics} bind:value={name} validator="letter" />
+					<Input5 title="Name (Required)" colorScheme={ics} bind:value={name} />
 					<Input5 title="Email (Required)" colorScheme={ics} bind:value={email} />
 					<DropDown5
 						title="Location (Required)"
@@ -60,7 +97,7 @@
 						bgColor="#010010"
 						borderColor="#010010"
 						type="btn"
-						click={() => console.log('clicked')}
+						click={sendMail}
 					/>
 				</div>
 			</div>
@@ -74,7 +111,8 @@
 						<div class="x">
 							<a href={gym.link} class="a_pf_b_d_u underline text-sm">{gym.name}</a>
 							<p class="p_pf_r_g">{gym.address}</p>
-							<a  href={`tel:+${stripPhoneNumber(gym.phone)}`} class="p_pf_r_g">{gym.phoneDisplay}</a>
+							<a href={`tel:+${stripPhoneNumber(gym.phone)}`} class="p_pf_r_g">{gym.phoneDisplay}</a
+							>
 						</div>
 					{/each}
 					<hr />
@@ -87,4 +125,15 @@
 	<section class="w-full bg-g-black-500" title="footer">
 		<Footer />
 	</section>
+
+	<Dialog5 bind:modalStatus dialogType="ok" onUpdate={messageFunc}>
+		{#snippet title()}
+			<div class="py-2">Message</div>
+		{/snippet}
+		{#snippet content()}
+			<div class="max-w-[350px]">
+				<div class="w-full h-full flex justify-center items-center px-4 p_pf_r_l text-center">{modalMessage}</div>
+			</div>
+		{/snippet}
+	</Dialog5>
 </main>

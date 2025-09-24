@@ -27,7 +27,9 @@
 	<section class="bg-g-black-500 p-8 flex justify-center" title="Title">
 		<div class="w-[1400px] grid md:grid-cols-2 h-[200px] md:gap-8">
 			<div class="w-full flex justify-center md:justify-start items-center">
-				<h1 class="h_sf_b_l_u text-[3rem] md:text-[3.2rem] lg:text-[4.2rem] tracking-wider">meet the team</h1>
+				<h1 class="h_sf_b_l_u text-[3rem] md:text-[3.2rem] lg:text-[4.2rem] tracking-wider">
+					meet the team
+				</h1>
 			</div>
 			<div class="flex justify-center md:justify-end items-center">
 				<div class="pr-2"><CallToActionButton title="Join Now" /></div>
@@ -43,7 +45,7 @@
 						<img
 							class="w-full h-auto object-cover aspect-[22/22] object-top"
 							src={c.img}
-							alt={c.name}
+							alt={c.name}							
 						/>
 
 						<div class="pt-4 w-full">

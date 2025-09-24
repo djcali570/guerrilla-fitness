@@ -1,8 +1,13 @@
 <script lang="ts">
 	import type { Gym } from '$lib/types';
 	import type { Snippet } from 'svelte';
+	import Map from './Map.svelte';
 
-	let { gym, showExtra = true, extraContent }: { gym: Gym; showExtra?: boolean, extraContent?: Snippet } = $props();
+	let {
+		gym,
+		showExtra = true,
+		extraContent
+	}: { gym: Gym; showExtra?: boolean; extraContent?: Snippet } = $props();
 
 	function stripPhoneNumber(phone: string) {
 		return phone.replace(/-/g, '');
@@ -50,20 +55,20 @@
 			</div>
 			<div class="hidden md:block">
 				<div class="w-full flex justify-center items-center bg-gray-700 h-full">
-					<h2 class="h2sb">MAP HERE</h2>
+					<Map lat={gym.lat} lng={gym.lng} />
 				</div>
 			</div>
 		</div>
 		<div class="block md:hidden order-3 pt-8">
 			<div class="w-full flex justify-center items-center bg-gray-700 h-[230px]">
-				<h2 class="h2sb">MAP HERE</h2>
+				<Map lat={gym.lat} lng={gym.lng} />
 			</div>
 		</div>
 	{:else}
 		<div
 			class="w-full flex justify-center items-center mt-8 md:mt-0 bg-gray-700 min-h-[270px] order-2"
 		>
-			<h2 class="h2sb">MAP HERE</h2>
+			<Map lat={gym.lat} lng={gym.lng} />
 		</div>
 	{/if}
 </div>

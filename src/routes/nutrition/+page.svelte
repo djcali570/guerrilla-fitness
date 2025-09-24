@@ -1,22 +1,54 @@
 <script lang="ts">
 	import { PUBLIC_WEB_IMAGE_ENDPOINT } from '$env/static/public';
 	import CallToActionButton from '$lib/components/CallToActionButton.svelte';
-	import Carousel from '$lib/components/Carousel.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Nav from '$lib/components/Nav.svelte';
 	import { slideIn } from '$lib/gsapFunc';
-	import { nutritionCarouselitems } from '$lib/state/appState.svelte';
 	import { d5cs, gymDropdown, ics } from '$lib/types';
-	import { DropDown5, Input5 } from '@djcali570/component-lib';
+	import { Dialog5, DropDown5, Input5 } from '@djcali570/component-lib';
 
 	let name = $state('');
 	let email = $state('');
 	let phone = $state('');
 	let selectedGym = $state('');
 	let experience = $state('');
+	let modalStatus = $state(false);
+	let modalMessage = $state('');
+
+	function clear() {
+		name = '';
+		email = '';
+		phone = '';
+		selectedGym = '';
+		experience = '';
+	}
 
 	async function submitForm() {
-		console.log('form submitted');
+		const postRequestData = new FormData();
+
+		const data = {
+			name: name,
+			email: email,
+			phone: phone,
+			selectedGym: selectedGym,
+			experience: experience
+		};
+
+		postRequestData.append('data', JSON.stringify(data));
+
+		const response = await fetch('/api/send-nutrition-email', {
+			method: 'POST',
+			body: postRequestData
+		});
+
+		const responseData = await response.json();
+
+		modalMessage = responseData.message;
+		modalStatus = true;
+
+		if (responseData.success) {
+			clear();
+		}
 	}
 </script>
 
@@ -90,10 +122,10 @@
 					</div>
 					<p {@attach slideIn}>
 						A balanced approach, built around real food and sustainable habits. Fuel your training,
-						support recovery to feel your best every day. We’re here to guide you
-						toward simple choices that add up to big results.
+						support recovery to feel your best every day. We’re here to guide you toward simple
+						choices that add up to big results.
 					</p>
-			
+
 					<CallToActionButton
 						title="Apply For Coaching"
 						link="#form"
@@ -109,13 +141,17 @@
 	<section class="w-full bg-g-black-500 px-4 md:px-32 pt-10 pb-10 mb-10">
 		<div class="w-full flex justify-end items-center">
 			<div class="">
-				<h1 class="h_sf_r_l_u text-[2.6rem] leading-[3rem] tracking-widest  text-center" {@attach slideIn}>
-					Fuel your training and your life with simple, sustainable nutrition habits that actually work.
+				<h1
+					class="h_sf_r_l_u text-[2.6rem] leading-[3rem] tracking-widest text-center"
+					{@attach slideIn}
+				>
+					Fuel your training and your life with simple, sustainable nutrition habits that actually
+					work.
 				</h1>
 			</div>
 		</div>
 	</section>
-	
+
 	<section class="w-full bg-g-white-500">
 		<div class="relative w-full md:h-[550px] flex flex-col md:grid grid-cols-2">
 			<div class="w-full h-[300px] md:h-[550px] relative">
@@ -156,4 +192,17 @@
 	<div class="bg-g-black-500">
 		<Footer />
 	</div>
+
+	<Dialog5 bind:modalStatus dialogType="ok">
+		{#snippet title()}
+			<div class="py-2">Message</div>
+		{/snippet}
+		{#snippet content()}
+			<div class="max-w-[350px]">
+				<div class="w-full h-full flex justify-center items-center px-4 p_pf_r_l text-center">
+					{modalMessage}
+				</div>
+			</div>
+		{/snippet}
+	</Dialog5>
 </main>

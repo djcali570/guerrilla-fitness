@@ -28,6 +28,8 @@ export type Gym = {
     link?: string;
     access?: string[];
     servicing?: string[];
+    lat: number;
+    lng: number;
 }
 
 export type weekday = 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday' | 'Sunday';
@@ -81,6 +83,8 @@ export type MembershipCardData = {
     buttonTitle?: string;
     bullets?: string[];
     link?: string;
+    link2?: string;
+    recommended?: boolean;
 }
 
 export let gymDropdown: DropDownItem[] = [
@@ -99,4 +103,5 @@ export interface Coach {
     text: string;
     title: string;
     newClients: boolean;
+    zoomLevel?: string;
 }

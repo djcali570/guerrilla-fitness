@@ -82,7 +82,7 @@
 						</h4>
 						<p class="text__p p__font__r">{item.text}</p>
 						{#if item.showButton}
-							<div class="pt-6"><CallToActionButton title={item.buttonText} /></div>
+							<div class="pt-6"><CallToActionButton title={item.buttonText} link={item.link}/></div>
 						{/if}
 					</div>
 				{/each}

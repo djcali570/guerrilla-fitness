@@ -13,7 +13,7 @@
 				<h4 class="h4sr">get started</h4>
 			</div>
 			<div class="flex justify-start items-center md:justify-center pb-4">
-				<CallToActionButton title="3 Class Trial" />
+				<CallToActionButton title="3 Class Trial" link="/memberships" />
 			</div>
 		</div>
 		<div class="grid grid-rows-2 md:pl-4 lg:pl-0" {@attach (node) => slideIn(node, 0.2)}>

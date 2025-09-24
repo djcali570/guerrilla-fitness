@@ -35,7 +35,9 @@ export const gyms: Gym[] = [
         link: '/montclair',
         servicing: [
             'Servicing all of Essex County. Montclair, Glen Ridge, Bloomfield, Clifton, Cedar Grove, Verona and West Orange'
-        ]
+        ],
+        lat: 40.80928,
+        lng: -74.21330
     },
     {
         name: 'Paramus',
@@ -52,7 +54,9 @@ export const gyms: Gym[] = [
         ],
         servicing: [
             'Servicing all of Bergen County. Paramus, Fair Lawn, Oradell, Ridgewood, Westwood, Glen Rock, Waldwick, Midland Park, River Edge, Dumont, Bergenfield, Hackensack and Hawthorne'
-        ]
+        ],
+        lat: 40.94462,
+        lng: -74.06975
     }
 ];
 
@@ -63,7 +67,8 @@ export const mainCarouselitems: Carousel[] = [
         text: 'Learn how to move well, safely, and with purpose.  Our coaches tailor every workout to your current ability.  Ensuring you get the challenge you need and the support to reach your goals.',
         img: `${PUBLIC_WEB_IMAGE_ENDPOINT}/wte-01c/view?project=${PUBLIC_PROJECT_ID}`,
         showButton: true,
-        buttonText: 'Join Now'
+        buttonText: 'Join Now',
+        link:'/memberships'
     },
     {
         title: 'What To Expect',
@@ -72,7 +77,8 @@ export const mainCarouselitems: Carousel[] = [
         img: `${PUBLIC_WEB_IMAGE_ENDPOINT}/wte-02/view?project=${PUBLIC_PROJECT_ID}`,
         showButton: true,
         buttonText: 'Join Now',
-        position: 'object-[50%_0%]'
+        position: 'object-[50%_0%]',
+        link:'/memberships'
     },
     {
         title: 'What To Expect',
@@ -81,7 +87,8 @@ export const mainCarouselitems: Carousel[] = [
         img: `${PUBLIC_WEB_IMAGE_ENDPOINT}/wte-03c/view?project=${PUBLIC_PROJECT_ID}`,
         showButton: true,
         buttonText: 'Join Now',
-        position: 'object-[70%_50%] md:object-[80%_50%]'
+        position: 'object-[70%_50%] md:object-[80%_50%]',
+        link:'/memberships'
     }
 ];
 
@@ -121,13 +128,7 @@ export const coaches: Coach[] = [
         title: 'L3 Coach',
         newClients: true
     },
-    {
-        name: 'Naama',
-        img: `${PUBLIC_WEB_IMAGE_ENDPOINT}/naama/view?project=${PUBLIC_PROJECT_ID}`,
-        text: 'My favorite part about being a coach is seeing the look on someone’s face when they do something they didn’t think possible. If I’m able to be even the smallest part of that moment, people change their perspective of what they can do - be it a squat PR, a handstand, a double under, a loss of pounds on the scale - then that’s the best reward I could ever want.  No matter your fitness level or what stage in life you are at, there is always something you can improve, and I’m here to help you with that.',
-        title: 'L3 Coach',
-        newClients: true
-    },
+
     {
         name: 'Alex',
         img: `${PUBLIC_WEB_IMAGE_ENDPOINT}/alex/view?project=${PUBLIC_PROJECT_ID}`,
@@ -141,6 +142,14 @@ export const coaches: Coach[] = [
         text: 'It was truly “love at first sight” with CrossFit, and that passion has only grown stronger over time. I’m a Level 2 Certified CrossFit Coach and also hold a CrossFit Nutrition certification. Competing is one of the ways I stay motivated, set training goals, and push myself to new levels—I’ve had the privilege of winning individual events, placing high in team competitions, and qualifying multiple times for the CrossFit Open quarterfinals. Beyond CrossFit, I enjoy taking on new challenges like Spartan Races, GoRuck events, and even the occasional triathlon. I especially love bringing people together to test our fitness outside the gym and create shared experiences that carry over into life. Most importantly, I’m the proud mother of two daughters, and they are the driving force behind everything I do.',
         title: 'L2 Coach',
         newClients: true
+    },
+    {
+        name: 'Keith',
+        img: `${PUBLIC_WEB_IMAGE_ENDPOINT}/keith/view?project=${PUBLIC_PROJECT_ID}`,
+        text: 'I have been fascinated with teaching people how to move their bodies for a long time.  It started with jiujitsu, then yoga, and then CrossFit.  When I discovered CrossFit in the early 2000s it was all new and foreign to me, but I was captivated and had to learn all I could about every facet of CrossFit. I started organizing workouts in Central Park and that evolved into opening CrossFit NYC in 2005. The next step was opening CrossFit Virtuosity and The Brooklyn Barbell Club in 2009. Then I started coaching on seminars for olympic weightlifting, gymnastics, kettlebells, and starting strength. In 2010, I began coaching CrossFit Level 1 and Level 2 seminars. I have now worked over 375 seminars for CrossFit and I\’m still going.\n\n In addition to coaching CrossFit and Jiujitsu, I try to spend as much time with my kids as I can, eat a carnivore diet, and play my guitar.',
+        title: 'L4 Coach',
+        newClients: true,
+        zoomLevel: '1.25'
     },
     {
         name: 'Fernando',
@@ -178,10 +187,13 @@ export const coaches: Coach[] = [
         title: 'Nutrition Coach',
         newClients: true
     },
-
-
-
-
+    {
+        name: 'Naama',
+        img: `${PUBLIC_WEB_IMAGE_ENDPOINT}/naama/view?project=${PUBLIC_PROJECT_ID}`,
+        text: 'My favorite part about being a coach is seeing the look on someone’s face when they do something they didn’t think possible. If I’m able to be even the smallest part of that moment, people change their perspective of what they can do - be it a squat PR, a handstand, a double under, a loss of pounds on the scale - then that’s the best reward I could ever want.  No matter your fitness level or what stage in life you are at, there is always something you can improve, and I’m here to help you with that.',
+        title: 'L3 Coach',
+        newClients: true
+    },
 
 ]
 

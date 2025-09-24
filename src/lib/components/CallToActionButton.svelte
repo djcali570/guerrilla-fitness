@@ -28,6 +28,7 @@
 	{#if useSlideIn}
 		<a
 			href={link}
+			target="_blank"
 			class="button"
 			style="--bgColor: {bgColor}; --borderColor: {borderColor}; --textColor: {textColor}; --width: {width};"
 			{@attach slideIn}
@@ -36,6 +37,7 @@
 	{:else}
 		<a
 			href={link}
+			target="_blank"
 			class="button"
 			style="--bgColor: {bgColor}; --borderColor: {borderColor}; --textColor: {textColor}; --width: {width};"
 			><div class="w-full h-full flex justify-center items-center pfr">{title}</div></a
