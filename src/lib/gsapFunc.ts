@@ -38,7 +38,7 @@ export function slideIn(element: HTMLElement, delay: number = 0.3, y: number = 3
     };
 }
 
-export function fade(element: HTMLElement, delay: number = 0.3) {
+export function fade(element: HTMLElement, delay: number = 0.3, once?: boolean) {
 
     const tween = gsap.fromTo(
         element,
@@ -51,7 +51,7 @@ export function fade(element: HTMLElement, delay: number = 0.3) {
         trigger: element,
         start: 'top bottom',
         onEnter: () => tween.play(), // Play the animation when entering the viewport
-        once: true // Animation plays only once (optional, remove if you want it to replay on scroll)
+        once: once ?? true // Animation plays only once (optional, remove if you want it to replay on scroll)
     });
 
     // Return cleanup function

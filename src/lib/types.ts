@@ -3,6 +3,7 @@ import type { Accordion5ColorScheme, DropDown5ColorScheme, DropDownItem, Input5C
 export type link = {
     href: string,
     title: string,
+    target?: string | null,
     sublinks?: link[],
 }
 

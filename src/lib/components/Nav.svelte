@@ -48,11 +48,19 @@
 			<ul class="relative hidden sm:flex items-center justify-start h-full">
 				{#each links as link}
 					<li class="nav__item">
-						<a href={link.href} onmouseenter={() => setActiveItem(link.title)}>{link.title}</a>
+						<a
+							href={link.href}
+							target={link.target ? link.target : null}
+							onmouseenter={() => setActiveItem(link.title)}>{link.title}</a
+						>
 						{#if activeItem === link.title && link.sublinks}
 							<div class="submenu shadow-lg" role="menu">
 								{#each link.sublinks as sublink}
-									<a href={sublink.href} role="menuitem">{sublink.title}</a>
+									<a
+										href={sublink.href}
+										target={sublink.target ? sublink.target : null}
+										role="menuitem">{sublink.title}</a
+									>
 								{/each}
 							</div>
 						{/if}
@@ -62,7 +70,9 @@
 		</div>
 		<div class="nav__actions">
 			<div class="block sm:hidden"><MenuButton /></div>
-			<div class="hidden sm:block"><CallToActionButton title="3 Class Trial" link="/memberships"/></div>
+			<div class="hidden sm:block">
+				<CallToActionButton title="3 Class Trial" link="/memberships" />
+			</div>
 		</div>
 	</div>
 </nav>

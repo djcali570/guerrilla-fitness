@@ -34,7 +34,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="p-12 md:p-32">
+	<section class="p-10 md:p-32">
 		<div class="w-full flex flex-col justify-center items-center" {@attach slideIn}>
 			<h1 class="video__title__text text-center">WORKOUTS THAT REALLY WORK</h1>
 			<p class="p_pf_r_l text-g-white-500 pt-8 w-full md:w-[50%] text-[1.3rem] md:text-[1.8rem]">
@@ -46,42 +46,27 @@
 		</div>
 	</section>
 
-	<section class="py-32">
-		<div class="flex flex-col md:grid grid-cols-2 md:h-[400px]">
-			<div class="relative w-full h-[300px] md:h-[400px]">
-				<img
-					class="w-full h-full object-cover object-[50%_20%]"
-					src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/strength/view?project=guerrilla&project=guerrilla`}
-					alt=""
-					{@attach slideIn}
-				/>
-				<div
-					class="absolute transform -translate-x-1/2 translate-y-[-30%] left-1/2 md:hidden bg-g-black-500 w-[90%]"
-					{@attach slideIn}
-				>
+	<section class="mb-[280px] md:mb-[130px]">
+		<div
+			class="relative w-full h-[300px] md:h-[400px] md:grid grid-cols-1 md:grid-cols-2 md:grid-rows-[400px]"
+		>
+			<img
+				class="w-full h-full object-cover object-[50%_20%]"
+				src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/strength/view?project=guerrilla`}
+				alt=""
+				{@attach slideIn}
+			/>
+			<div
+				class="absolute md:relative flex justify-center items-center top-[80%] left-1/2 translate-x-[-50%] md:top-0 w-[90%] md:w-full bg-g-black-500"
+				{@attach slideIn}
+			>
+				<div class="flex flex-col justify-start items-start w-full md:w-[70%]">
 					<h1
 						class="h_sf_r_l_u text-[3rem] md:text-[4rem] leading-[3rem] md:leading-[4rem] text-left pt-8 px-8"
 					>
 						STRENGTH TRAINING – SIMPLIFIED
 					</h1>
-					<p
-						class="p_pf_r_l text-g-white-500 w-full md:w-[50%] text-[1rem] md:text-[1.2rem] text-left px-8 py-8"
-					>
-						Build physical and psychological confidence, resilience, and lifelong health. Starting
-						with the basics and progressing at your own pace.
-					</p>
-				</div>
-			</div>
-			<div class="hidden md:flex justify-center w-full">
-				<div class="flex flex-col justify-center pt-8 md:pt-0 px-8 md:px-0 w-3/4" {@attach slideIn}>
-					<h1
-						class="h_sf_r_l_u text-[3rem] md:text-[4rem] leading-[3rem] md:leading-[4rem] text-left"
-					>
-						STRENGTH TRAINING – SIMPLIFIED
-					</h1>
-					<p
-						class="p_pf_r_l text-g-white-500 pt-8 md:w-[80%] text-[1rem] md:text-[1.2rem] text-left"
-					>
+					<p class="p_pf_r_l text-g-white-500 text-[1rem] md:text-[1.2rem] text-left px-8 py-8">
 						Build physical and psychological confidence, resilience, and lifelong health. Starting
 						with the basics and progressing at your own pace.
 					</p>
@@ -89,42 +74,28 @@
 			</div>
 		</div>
 	</section>
-	<section class="py-32">
-		<div class="flex flex-col md:grid grid-cols-2 md:h-[400px]">
-			<div class="hidden md:flex justify-center w-full">
-				<div class="flex flex-col justify-center pt-8 md:pt-0 px-8 md:px-0 w-3/4" {@attach slideIn}>
-					<h1
-						class="h_sf_r_l_u text-[3rem] md:text-[4rem] leading-[3rem] md:leading-[4rem] text-left"
-					>
-						Conditioning
-					</h1>
-					<p
-						class="p_pf_r_l text-g-white-500 pt-8 md:w-[80%] text-[1rem] md:text-[1.2rem] text-left"
-					>
-						Build cardiovascular stamina, and efficiency. Scaled to your fitness level so you can
-						train, recover, and get fitter over time.
-					</p>
-				</div>
-			</div>
-			<div class="relative w-full h-[300px] md:h-[400px]">
-				<img
-					class="w-full h-full object-cover"
-					src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/conditioning/view?project=guerrilla&project=guerrilla`}
-					alt=""
-					{@attach slideIn}
-				/>
-				<div
-					class="absolute transform -translate-x-1/2 translate-y-[-30%] left-1/2 md:hidden bg-g-black-500 w-[90%]"
-					{@attach slideIn}
-				>
+
+	<section class="mb-[210px] md:mb-[130px]">
+		<div
+			class="relative w-full h-[300px] md:h-[400px] md:grid grid-cols-1 md:grid-cols-2 md:grid-rows-[400px]"
+		>
+			<img
+				class="w-full h-full object-cover object-[50%_20%] md:order-2"
+				src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/conditioning/view?project=guerrilla`}
+				alt=""
+				{@attach slideIn}
+			/>
+			<div
+				class="absolute md:relative flex justify-center items-center top-[80%] left-1/2 translate-x-[-50%] md:top-0 w-[90%] md:w-full md:order-1 bg-g-black-500"
+				{@attach slideIn}
+			>
+				<div class="flex flex-col justify-start items-start w-full md:w-[70%]">
 					<h1
 						class="h_sf_r_l_u text-[3rem] md:text-[4rem] leading-[3rem] md:leading-[4rem] text-left pt-8 px-8"
 					>
-						Conditioning
+						CONDITIONING
 					</h1>
-					<p
-						class="p_pf_r_l text-g-white-500 w-full md:w-[50%] text-[1rem] md:text-[1.2rem] text-left px-8 py-8"
-					>
+					<p class="p_pf_r_l text-g-white-500 text-[1rem] md:text-[1.2rem] text-left px-8 py-8">
 						Build cardiovascular stamina, and efficiency. Scaled to your fitness level so you can
 						train, recover, and get fitter over time.
 					</p>
@@ -133,13 +104,13 @@
 		</div>
 	</section>
 
-	<section class="py-32">
+	<section class="mb-[70px] md:mb-[130px]">
 		<GetStarted />
 	</section>
 	<section class="w-full bg-g-black-500">
-		<div class="relative w-full h-[450px] md:h-[600px]">
+		<div class="relative w-full h-[450px] md:h-[600px] overflow-hidden">
 			<img
-				class="w-full h-full object-cover"
+				class="w-full h-full object-cover scale-150 md:scale-100"
 				src={`${PUBLIC_WEB_IMAGE_ENDPOINT}/workouts-end/view?project=guerrilla&project=guerrilla`}
 				alt=""
 			/>

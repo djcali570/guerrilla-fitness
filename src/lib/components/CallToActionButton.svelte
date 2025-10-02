@@ -3,16 +3,18 @@
 
 	let {
 		link = '/',
+		target = '_blank',
 		title = 'Title',
 		textColor = '#fefffe',
 		bgColor = '#bf1e2d',
 		borderColor = '#bf1e2d',
 		type = 'link',
 		useSlideIn = false,
-		width = '8rem',		
+		width = '8rem',
 		click = () => {}
 	}: {
 		link?: string;
+		target?: string | null;
 		title?: string;
 		textColor?: string;
 		bgColor?: string;
@@ -28,7 +30,7 @@
 	{#if useSlideIn}
 		<a
 			href={link}
-			target="_blank"
+			target={target}
 			class="button"
 			style="--bgColor: {bgColor}; --borderColor: {borderColor}; --textColor: {textColor}; --width: {width};"
 			{@attach slideIn}
@@ -37,7 +39,7 @@
 	{:else}
 		<a
 			href={link}
-			target="_blank"
+			target={target}
 			class="button"
 			style="--bgColor: {bgColor}; --borderColor: {borderColor}; --textColor: {textColor}; --width: {width};"
 			><div class="w-full h-full flex justify-center items-center pfr">{title}</div></a

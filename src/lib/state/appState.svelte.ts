@@ -20,9 +20,9 @@ export function menuActions() {
  * Menu Links
  */
 export const links: link[] = [
-    { href: '/', title: 'get started', sublinks: [{ href: '/memberships', title: 'Membership Options' }, { href: '/new-to-guerrilla-fitness', title: 'New To Guerrilla Fitness' }, { href: '/our-workouts', title: 'Our Workouts' }, { href: '/nutrition', title: 'Nutrition Coaching' }] },
+    { href: '/', title: 'get started', sublinks: [{ href: '/memberships', title: 'Membership Options' }, { href: '/new-to-guerrilla-fitness', title: 'New To CrossFit' }, { href: '/our-workouts', title: 'Our Workouts' }, { href: '/nutrition', title: 'Nutrition Coaching' }] },
     { href: '/', title: 'Locations', sublinks: [{ href: '/montclair', title: 'Montclair' }, { href: '/paramus', title: 'Paramus' }] },
-    { href: '/meet-the-team', title: 'Meet The Team' }, { href: '/contact', title: 'Contact Us' },
+    { href: '/meet-the-team', title: 'Meet The Team' }, { href: '/contact', title: 'Contact Us' }, { href: 'https://fullyamped.com/collections/guerrilla-fitness-crossfit', title: 'Merch', target: '_blank' }
 ];
 
 export const gyms: Gym[] = [
@@ -68,7 +68,7 @@ export const mainCarouselitems: Carousel[] = [
         img: `${PUBLIC_WEB_IMAGE_ENDPOINT}/wte-01c/view?project=${PUBLIC_PROJECT_ID}`,
         showButton: true,
         buttonText: 'Join Now',
-        link:'/memberships'
+        link: '/memberships'
     },
     {
         title: 'What To Expect',
@@ -78,7 +78,7 @@ export const mainCarouselitems: Carousel[] = [
         showButton: true,
         buttonText: 'Join Now',
         position: 'object-[50%_0%]',
-        link:'/memberships'
+        link: '/memberships'
     },
     {
         title: 'What To Expect',
@@ -88,7 +88,7 @@ export const mainCarouselitems: Carousel[] = [
         showButton: true,
         buttonText: 'Join Now',
         position: 'object-[70%_50%] md:object-[80%_50%]',
-        link:'/memberships'
+        link: '/memberships'
     }
 ];
 

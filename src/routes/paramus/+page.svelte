@@ -11,6 +11,26 @@
 	import VideoPlayer from '$lib/components/VideoPlayer.svelte';
 	import type { ScheduleItem, scheduleType, weekday } from '$lib/types';
 	import { gyms, paramusSliderImages } from '$lib/state/appState.svelte';
+	import TabBar from '$lib/components/TabBar.svelte';
+	import { fade } from '$lib/gsapFunc';
+
+	// Define the valid tab keys
+	type TabKey = 'MON' | 'TUE' | 'WED' | 'THU' | 'FRI' | 'SAT' | 'SUN';
+
+	// Map shorthand tab names to full day names
+	const dayMap: Record<TabKey, string> = {
+		MON: 'Monday',
+		TUE: 'Tuesday',
+		WED: 'Wednesday',
+		THU: 'Thursday',
+		FRI: 'Friday',
+		SAT: 'Saturday',
+		SUN: 'Sunday'
+	};
+
+	// Type the tabs array
+	let tabs: TabKey[] = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
+	let selectedTab = $state(0);
 
 	let schedule: ScheduleItem[] = [
 		{ day: 'Monday', time: '5:30AM', scheduleType: 'Crossfit' },
@@ -57,6 +77,16 @@
 		{ day: 'Sunday', time: '9:00AM', scheduleType: 'Specialty', desc: 'Core' },
 		{ day: 'Sunday', time: '10:00AM', scheduleType: 'Crossfit' }
 	];
+
+	// Helper function to filter schedule by day and type
+	function getTimesForDayAndType(day: string, type: 'Crossfit' | 'Open Gym' | 'Specialty') {
+		return schedule
+			.filter((item) => item.day === day && item.scheduleType === type)
+			.map((item) => ({
+				time: item.time,
+				desc: item.desc || '' // Handle undefined desc
+			}));
+	}
 
 	const days: weekday[] = [
 		'Monday',
@@ -120,7 +150,7 @@
 				showControls={false}
 			/>
 			<div class="video__overlay"></div>
-			<div class="overlay__content">				
+			<div class="overlay__content">
 				<h1 class="video__title__text text-center">Guerrilla Fitness<br /> Paramus</h1>
 				<p class="prwu">348 Evelyn Street, Paramus, NJ 07652</p>
 				<div class="pt-8"><CallToActionButton title="Join Now" /></div>
@@ -153,6 +183,7 @@
 					<li>- Convenient and accessible schedule</li>
 					<li>- 1-on-1 & small group personal training</li>
 					<li>- Parking lot and street parking</li>
+					<li>- Tribe Physical Therapy</li>
 				</ul>
 			</div>
 			<div class="pt-10">
@@ -162,6 +193,7 @@
 					<li>- Showers</li>
 					<li>- Communal space</li>
 					<li>- Members only events</li>
+					<li>- ProPath Massage</li>
 				</ul>
 			</div>
 		</div>
@@ -172,92 +204,42 @@
 	<section class="px-4 md:px-32 md:py-16 pb-16" title="Slider">
 		<ImageSlider5 imageLinks={paramusSliderImages} />
 	</section>
-	<section class="px-4 md:px-32 md:py-16 pb-16" title="Schedule">
+	<section class="px-4 md:px-32 md:py-16 pb-16">
 		<div class="w-full grid md:grid-cols-2 grid-cols-none grid-flow-row auto-rows-min">
 			<h2 class="h2sb pb-4 md:pb-0">Schedule</h2>
-			<div class="grid grid-cols-4 gap-4">
-				<!-- Weekday Column -->
-				<div class="grid grid-flow-row auto-rows-min">
-					<div class="h4sr h-8"></div>
-					<!-- Spacer for header alignment -->
-					{#each activeDays as day}
-						{#each Array(maxSlotsPerDay[day]) as _, i}
-							<div class="h4sr min-h-[1.5rem] flex items-start">
-								{#if i === 0}
-									{day}
-								{:else}
-									&nbsp;
-								{/if}
-							</div>
+
+			<div>
+				<TabBar bind:selectedTab {tabs} minHeight={50} />
+				<div class="grid grid-cols-3 gap-4 text-g-white-500 pt-4">
+					<div class="flex justify-center"><h4 class="h4sr underline h-8">Crossfit</h4></div>
+					<div class="flex justify-center"><h4 class="h4sr underline h-8">Open Gym</h4></div>
+					<div class="flex justify-center"><h4 class="h4sr underline h-8">Specialty</h4></div>
+				</div>
+				<div class="grid grid-cols-3 gap-4 text-g-white-500 pt-4">
+					<div class="flex flex-col items-center">
+						{#each getTimesForDayAndType(dayMap[tabs[selectedTab]], 'Crossfit') as time (selectedTab + time.time)}
+							<div {@attach (node) => fade(node, 0.3, false)}>{time.time}</div>
 						{/each}
-						<div class="h4sr">&nbsp;</div>
-					{/each}
-				</div>
-
-				<!-- Crossfit Column -->
-				<div class="grid grid-flow-row auto-rows-min">
-					<h4 class="h4sr underline h-8">Crossfit</h4>
-					{#each activeDays as day}
-						{#if groupedByDay[day]?.Crossfit?.length}
-							{#each groupedByDay[day].Crossfit as item}
-								<div class="h4sr min-h-[1.5rem]">{item.time}</div>
-							{/each}
-							<!-- Fill remaining slots with non-empty divs -->
-							{#each Array(maxSlotsPerDay[day] - groupedByDay[day].Crossfit.length) as _}
-								<div class="h4sr min-h-[1.5rem]">&nbsp;</div>
-							{/each}
-						{:else}
-							<!-- Ghost entries for days with no Crossfit -->
-							{#each Array(maxSlotsPerDay[day]) as _}
-								<div class="h4sr min-h-[1.5rem]">&nbsp;</div>
-							{/each}
+						{#if getTimesForDayAndType(dayMap[tabs[selectedTab]], 'Crossfit').length === 0}
+							<div {@attach (node) => fade(node, 0.3, false)}>No Crossfit sessions</div>
 						{/if}
-						<div class="h4sr">&nbsp;</div>
-					{/each}
-				</div>
-
-				<!-- Open Gym Column -->
-				<div class="grid grid-flow-row auto-rows-min">
-					<h4 class="h4sr underline h-8">Open Gym</h4>
-					{#each activeDays as day}
-						{#if groupedByDay[day]?.['Open Gym']?.length}
-							{#each groupedByDay[day]['Open Gym'] as item}
-								<div class="h4sr min-h-[1.5rem]">{item.time}</div>
-							{/each}
-							<!-- Fill remaining slots with non-empty divs -->
-							{#each Array(maxSlotsPerDay[day] - groupedByDay[day]['Open Gym'].length) as _}
-								<div class="h4sr min-h-[1.5rem]">&nbsp;</div>
-							{/each}
-						{:else}
-							<!-- Ghost entries for days with no Open Gym -->
-							{#each Array(maxSlotsPerDay[day]) as _}
-								<div class="h4sr min-h-[1.5rem]">&nbsp;</div>
-							{/each}
+					</div>
+					<div class="flex flex-col items-center">
+						{#each getTimesForDayAndType(dayMap[tabs[selectedTab]], 'Open Gym') as time (selectedTab + time.time)}
+							<div {@attach (node) => fade(node, 0.3, false)}>{time.time}</div>
+						{/each}
+						{#if getTimesForDayAndType(dayMap[tabs[selectedTab]], 'Open Gym').length === 0}
+							<div {@attach (node) => fade(node, 0.3, false)}>No Open Gym sessions</div>
 						{/if}
-						<div class="h4sr">&nbsp;</div>
-					{/each}
-				</div>
-
-				<!-- Strength Column -->
-				<div class="grid grid-flow-row auto-rows-min">
-					<h4 class="h4sr underline h-8">Specialty</h4>
-					{#each activeDays as day}
-						{#if groupedByDay[day]?.Specialty?.length}
-							{#each groupedByDay[day].Specialty as item}
-								<div class="h4sr min-h-[1.5rem]">{item.time} | {item.desc}</div>
-							{/each}
-							<!-- Fill remaining slots with non-empty divs -->
-							{#each Array(maxSlotsPerDay[day] - groupedByDay[day].Specialty.length) as _}
-								<div class="h4sr min-h-[1.5rem">&nbsp;</div>
-							{/each}
-						{:else}
-							<!-- Ghost entries for days with no Strength -->
-							{#each Array(maxSlotsPerDay[day]) as _}
-								<div class="h4sr min-h-[1.5rem]">&nbsp;</div>
-							{/each}
+					</div>
+					<div class="flex flex-col items-center">
+						{#each getTimesForDayAndType(dayMap[tabs[selectedTab]], 'Specialty') as time (selectedTab + time.time)}
+							<div {@attach (node) => fade(node, 0.3, false)}>{time.time} | {time.desc}</div>
+						{/each}
+						{#if getTimesForDayAndType(dayMap[tabs[selectedTab]], 'Specialty').length === 0}
+							<div {@attach (node) => fade(node, 0.3, false)}>No Specialty sessions</div>
 						{/if}
-						<div class="h4sr">&nbsp;</div>
-					{/each}
+					</div>
 				</div>
 			</div>
 		</div>

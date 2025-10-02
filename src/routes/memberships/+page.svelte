@@ -27,7 +27,7 @@
 			price: '225',
 			priceAbbv: '4wks',
 			subTitle: '',
-			title: 'Unlimited Classes',
+			title: 'Experienced CrossFitter',
 			desc: 'Auto Renews After 4WKS',
 			link: 'https://guerrillafitness.wodify.com/OnlineSalesPage/Main?q=ReviewPurchase%7COnlineMembershipId%3D46052%26LocationId%3D508%26OnlineMembershipPaymentOptionId%3D1158038',
 			link2:
@@ -69,9 +69,7 @@
 				'Optimize macros, crush PRs, or improve body composition',
 				'Flexible 1:1 meetings to suit your needs'
 			],
-			link: 'https://guerrillafitness.wodify.com/OnlineSalesPage/Main?q=Memberships%7CLocationId%3D508%26IsClassesView%3DTrue',
-			link2:
-				'https://guerrillafitness.wodify.com/OnlineSalesPage/Main?q=Memberships%7CLocationId%3D10397%26IsClassesView%3DTrue'
+			link: '/contact'
 		},
 		{
 			subTitle: '1:1 Training',
@@ -83,9 +81,7 @@
 				'Perfect for all experience levels and fitness goals',
 				'Single sessions and package options available'
 			],
-			link: 'https://guerrillafitness.wodify.com/OnlineSalesPage/Main?q=Memberships%7CLocationId%3D508%26IsClassesView%3DTrue',
-			link2:
-				'https://guerrillafitness.wodify.com/OnlineSalesPage/Main?q=Memberships%7CLocationId%3D10397%26IsClassesView%3DTrue'
+			link: '/contact'
 		},
 		{
 			subTitle: '1:4-6 Training',
@@ -96,9 +92,7 @@
 				'Custom tailored workouts, precise guidance, and the push you need',
 				'Whether you are just starting out or looking to level up - This program is for you'
 			],
-			link: 'https://guerrillafitness.wodify.com/OnlineSalesPage/Main?q=Memberships%7CLocationId%3D508%26IsClassesView%3DTrue',
-			link2:
-				'https://guerrillafitness.wodify.com/OnlineSalesPage/Main?q=Memberships%7CLocationId%3D10397%26IsClassesView%3DTrue'
+			link: '/contact'
 		}
 	];
 </script>
@@ -121,6 +115,9 @@
 				showControls={false}
 				videoSource="{PUBLIC_WEB_IMAGE_ENDPOINT}/main_video/view?project={PUBLIC_PROJECT_ID}"
 			/>
+			<div class="overlay__content">
+				<h1 class="video__title__text text-center">Memberships</h1>
+			</div>
 		</div>
 		<div class="video__overlay"></div>
 	</section>
@@ -129,17 +126,20 @@
 		<p class="p_pf_r_d text-center pt-1">
 			Choose your membership location to check for eligibility: <a
 				class="underline"
-				href="https://app.truemed.com/crossfit/qualify/tm_qual_gzf8c9k1xl" target="_blank">Montclair</a
+				href="https://app.truemed.com/crossfit/qualify/tm_qual_gzf8c9k1xl"
+				target="_blank">Montclair</a
 			>
 			|
-			<a class="underline" href="https://app.truemed.com/crossfit/qualify/tm_qual_8ca0xhoatf"
+			<a
+				class="underline"
+				href="https://app.truemed.com/crossfit/qualify/tm_qual_8ca0xhoatf"
 				target="_blank">Paramus</a
 			>
 		</p>
 	</section>
 	<section class="px-4 md:px-32 bg-[#fefffe]">
 		<div class="flex justify-center py-10">
-			<h1 class="h_sf_b_d_u text-[3rem]" {@attach slideIn}>unlimited</h1>
+			<h1 class="h_sf_b_d_u text-[3rem]" {@attach slideIn}>class plans</h1>
 		</div>
 		<div class="pb-10">
 			<div class="grid md:grid-cols-2 gap-10">
@@ -173,7 +173,7 @@
 			<div class="grid md:grid-cols-3 gap-10">
 				{#each services as card}
 					<div class="flex justify-center items-center">
-						<MembershipCard mcd={card} buttonType="btn" />
+						<MembershipCard mcd={card} buttonType="link" target={null} />
 					</div>
 				{/each}
 			</div>
@@ -204,5 +204,18 @@
 		background-color: black;
 		opacity: 0.4;
 		z-index: 2; /* Below the title but above the video */
+	}
+	.overlay__content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		transform: translate(-50%, -50%);
+		z-index: 3;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		row-gap: 1.5em;
 	}
 </style>

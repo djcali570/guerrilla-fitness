@@ -72,7 +72,7 @@
 				alt=""
 			/>
 			<div
-				class="absolute top-[50%] flex flex-col pl-[3rem] md:pl-[10rem] w-full md:w-[60%] gap-4"
+				class="absolute top-[40%] md:top-[50%] flex flex-col pl-[3rem] md:pl-[10rem] w-full md:w-[60%] gap-4"
 				{@attach slideIn}
 			>
 				<h1 class="h_sf_b_l_u text-[3rem] md:text-[5rem] leading-[3rem] md:leading-[5rem]">

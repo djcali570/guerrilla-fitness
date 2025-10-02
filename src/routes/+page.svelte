@@ -9,7 +9,7 @@
 	import Nav from '$lib/components/Nav.svelte';
 	import Offerings from '$lib/components/Offerings.svelte';
 	import VideoPlayer from '$lib/components/VideoPlayer.svelte';
-	import { fade, slideIn } from '$lib/gsapFunc';
+	import { slideIn } from '$lib/gsapFunc';
 	import { gyms } from '$lib/state/appState.svelte';
 	import SectionTitle from './_components/SectionTitle.svelte';
 	import TestimonialTilteDesktop from './_components/TestimonialTilteDesktop.svelte';
@@ -97,14 +97,14 @@
 					</div>
 					<div class="relative w-full h-[622px]">
 						<VideoPlayer
-							videoSource="{PUBLIC_WEB_IMAGE_ENDPOINT}/cameron/view?project={PUBLIC_PROJECT_ID}"
-							vttSource="/vtt/test_cameron.vtt"
+							videoSource="{PUBLIC_WEB_IMAGE_ENDPOINT}/andrew/view?project={PUBLIC_PROJECT_ID}"
+							vttSource="/vtt/andrew.vtt"
 							autoPlay={false}
 						/>
-						<TestimonialTitleMobile name="Cameron" title="Member Since 2016" />
+						<TestimonialTitleMobile name="Andrew" title="Member Since 2016" />
 					</div>
 					<TestimonialTilteDesktop name="Joanne" title="Member Since 2024" />
-					<TestimonialTilteDesktop name="Cameron" title="Member Since 2016" />
+					<TestimonialTilteDesktop name="Andrew" title="Member Since 2016" />
 				</div>
 			</div>
 		</div>
@@ -136,7 +136,7 @@
 		<GetStarted />
 	</section>
 	<section>
-		<Map lat={-34.397} lng={150.644}/>
+		<Map lat={-34.397} lng={150.644} />
 	</section>
 	<Footer />
 </main>

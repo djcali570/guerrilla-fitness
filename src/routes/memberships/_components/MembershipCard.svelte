@@ -6,10 +6,12 @@
 
 	let {
 		mcd,
-		buttonType
+		buttonType,
+		target
 	}: {
 		mcd: MembershipCardData;
 		buttonType: 'link' | 'btn';
+		target?: string | null;
 	} = $props();
 
 	let currentCard: MembershipCardData = $state(mcd);
@@ -23,9 +25,7 @@
 <div class="w-full h-full bg-[#f4f5f2]">
 	<div class="relative p-6 flex flex-col h-full">
 		{#if mcd.recommended}
-			<p
-				class="bg-g-primary-500 p_pf_r_l_u text-sm absolute top-0 left-0 w-full  h-7 p-1"
-			>
+			<p class="bg-g-primary-500 p_pf_r_l_u text-sm absolute top-0 left-0 w-full h-7 p-1">
 				Recommended
 			</p>
 		{/if}
@@ -75,6 +75,7 @@
 				link={mcd.link}
 				useSlideIn={true}
 				type={buttonType}
+				{target}
 				click={() => {
 					updateCard(mcd);
 					modalStatus = true;

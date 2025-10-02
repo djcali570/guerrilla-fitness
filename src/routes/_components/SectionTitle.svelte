@@ -2,7 +2,7 @@
 	import { slideIn } from "$lib/gsapFunc";
 
 	let { title, mobile }: { title: string; mobile: boolean } = $props();
-	let displayStyle = mobile ? 'hidden md:block min-h-full' : 'test';
+	let displayStyle = mobile ? 'hidden md:block' : 'test';
 </script>
 
 <div class={displayStyle} {@attach slideIn}>
