@@ -8,11 +8,11 @@
 <div class="w-full flex justify-center mt-10">
 	<div class="grid grid-rows-3 gap-4 lg:gap-10 md:grid-cols-3 md:grid-rows-12 w-full lg:w-[85%]">
 		<div class="md:col-start-1 md:row-span-6 h-[430px] md:h-[300px] lg:h-[430px]">
-			<div class="w-full h-full" {@attach slideIn}>
+			<div class="w-full h-full flex justify-center" {@attach slideIn}>
 				<ImageCard
 					imgLink="{PUBLIC_WEB_IMAGE_ENDPOINT}/pg-01/view?project={PUBLIC_PROJECT_ID}"
 					title="CROSSFIT"
-					desc="Unlimited access to classes 7 days/wk"
+					desc="Unlimited access to classes 7 days a"
 					overlay="filter brightness-75"
 					link="/our-workouts"		
 				/>
