@@ -5,11 +5,7 @@
 	import VideoPlayer from '$lib/components/VideoPlayer.svelte';
 	import { slideIn } from '$lib/gsapFunc';
 	import type { MembershipCardData } from '$lib/types';
-	import { BottomSheet5, Dialog5 } from '@djcali570/component-lib';
 	import MembershipCard from './_components/MembershipCard.svelte';
-
-	let modalStatus = $state(false);
-	let selectedCard: MembershipCardData = $state({});
 
 	let mcd: MembershipCardData[] = [
 		{
@@ -18,7 +14,7 @@
 			subTitle: '3 one-on-one sessions + unlimited classes',
 			title: 'New To Crossfit',
 			desc: 'Renews at $225 after 4 WKS',
-			link: 'https://guerrillafitness.wodify.com/OnlineSalesPage/Main?q=ReviewPurchase%7COnlineMembershipId%3D286036%26LocationId%3D508%26OnlineMembershipPaymentOptionId%3D1249140',
+			link: 'https://guerrillafitness.wodify.com/OnlineSalesPage/Main?q=Memberships%7CLocationId%3D508%26IsClassesView%3DTrue',
 			link2:
 				'https://guerrillafitness.wodify.com/OnlineSalesPage/Main?q=Memberships%7CLocationId%3D10397%26IsClassesView%3DTrue',
 			recommended: true
@@ -29,7 +25,7 @@
 			subTitle: '',
 			title: 'Experienced CrossFitter',
 			desc: 'Auto Renews After 4WKS',
-			link: 'https://guerrillafitness.wodify.com/OnlineSalesPage/Main?q=ReviewPurchase%7COnlineMembershipId%3D46052%26LocationId%3D508%26OnlineMembershipPaymentOptionId%3D1158038',
+			link: 'https://guerrillafitness.wodify.com/OnlineSalesPage/Main?q=Memberships%7CLocationId%3D508%26IsClassesView%3DTrue',
 			link2:
 				'https://guerrillafitness.wodify.com/OnlineSalesPage/Main?q=Memberships%7CLocationId%3D10397%26IsClassesView%3DTrue'
 		}
@@ -42,7 +38,7 @@
 			title: '3 Class Trial',
 			desc: 'Must show proof of residency',
 			buttonTitle: 'Buy Now',
-			link: 'https://guerrillafitness.wodify.com/OnlineSalesPage/Main?q=ReviewPurchase%7COnlineMembershipId%3D239221%26LocationId%3D508%26OnlineMembershipPaymentOptionId%3D930443',
+			link: 'https://guerrillafitness.wodify.com/OnlineSalesPage/Main?q=Memberships%7CLocationId%3D508%26IsClassesView%3DTrue',
 			link2:
 				'https://guerrillafitness.wodify.com/OnlineSalesPage/Main?q=Memberships%7CLocationId%3D10397%26IsClassesView%3DTrue'
 		},
@@ -53,7 +49,7 @@
 			title: 'Drop In',
 			desc: '',
 			buttonTitle: 'Buy Now',
-			link: 'https://guerrillafitness.wodify.com/OnlineSalesPage/Main?q=Classes%7COnlineMembershipId%3D3618%26LocationId%3D508',
+			link: 'https://guerrillafitness.wodify.com/OnlineSalesPage/Main?q=Memberships%7CLocationId%3D508%26IsClassesView%3DTrue',
 			link2:
 				'https://guerrillafitness.wodify.com/OnlineSalesPage/Main?q=Memberships%7CLocationId%3D10397%26IsClassesView%3DTrue'
 		}
