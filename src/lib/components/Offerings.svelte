@@ -12,7 +12,7 @@
 				<ImageCard
 					imgLink="{PUBLIC_WEB_IMAGE_ENDPOINT}/pg-01/view?project={PUBLIC_PROJECT_ID}"
 					title="CROSSFIT"
-					desc="Unlimited access to classes 7 days a"
+					desc="Unlimited access to classes 7 days/wk"
 					overlay="filter brightness-75"
 					link="/our-workouts"		
 				/>
