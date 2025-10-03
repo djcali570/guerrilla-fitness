@@ -66,9 +66,9 @@
 				class="fca size-10 rounded-full text-g-white-500 border-g-white-500 border-[2px] hover:border-g-white-700 duration-300 hover:text-g-white-700"
 			>
 				<a
-					href="https://www.instagram.com/guerrillafitnesscrossfit/"
+					href="https://www.youtube.com/channel/UC51AJai4D2aJiyCHeYPvZzA"
 					class="size-[28px]"
-					title="Follow us on Instagram"
+					title="Follow us on YouTube"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
