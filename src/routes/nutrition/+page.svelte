@@ -83,7 +83,7 @@
 				</h6>
 				<div class="x">
 					<CallToActionButton
-						title="Apply For Coaching"
+						title="Request Coaching"
 						link="#form"
 						bgColor="#BF1E2D"
 						width="12rem"
@@ -127,7 +127,7 @@
 					</p>
 
 					<CallToActionButton
-						title="Apply For Coaching"
+						title="Request Coaching"
 						link="#form"
 						bgColor="#BF1E2D"
 						width="12rem"
@@ -163,7 +163,7 @@
 				/>
 				<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4">
 					<h1 class="h_sf_b_l_u text-[4rem] leading-[4rem] text-center" {@attach slideIn}>
-						Apply for coaching
+						Request coaching
 					</h1>
 				</div>
 			</div>
