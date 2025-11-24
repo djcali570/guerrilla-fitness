@@ -144,14 +144,6 @@ export const coaches: Coach[] = [
         newClients: true
     },
     {
-        name: 'Keith',
-        img: `${PUBLIC_WEB_IMAGE_ENDPOINT}/keith/view?project=${PUBLIC_PROJECT_ID}`,
-        text: 'I have been fascinated with teaching people how to move their bodies for a long time.  It started with jiujitsu, then yoga, and then CrossFit.  When I discovered CrossFit in the early 2000s it was all new and foreign to me, but I was captivated and had to learn all I could about every facet of CrossFit. I started organizing workouts in Central Park and that evolved into opening CrossFit NYC in 2005. The next step was opening CrossFit Virtuosity and The Brooklyn Barbell Club in 2009. Then I started coaching on seminars for olympic weightlifting, gymnastics, kettlebells, and starting strength. In 2010, I began coaching CrossFit Level 1 and Level 2 seminars. I have now worked over 375 seminars for CrossFit and I\’m still going.\n\n In addition to coaching CrossFit and Jiujitsu, I try to spend as much time with my kids as I can, eat a carnivore diet, and play my guitar.',
-        title: 'L4 Coach',
-        newClients: true,
-        zoomLevel: '1.25'
-    },
-    {
         name: 'Fernando',
         img: `${PUBLIC_WEB_IMAGE_ENDPOINT}/fernando/view?project=${PUBLIC_PROJECT_ID}`,
         text: 'Hi, I’m Coach Fernando! I’ve been part of the CrossFit community since 2017, and I bring more than a decade of experience in education to my coaching. That blend of teaching and training has shaped the way I approach every class—with clarity, patience, and purpose. For me, CrossFit is so much more than fitness. It’s a community and an experience that has the power to be the best hour of someone’s day.\n\nI bring energy, encouragement, and a genuine commitment to helping every athlete I work with thrive. I want people to leave my sessions not just with a great workout, but with something useful they can carry with them—whether that’s confidence, a new skill, or just a better understanding of their own potential. You’ll find me coaching classes at Guerrilla Fitness Montclair each week, and I also offer individualized one-on-one training for those looking for more personal attention.\n\nAnd here’s a fun fact: I don’t just use my quads for squatting. On my days off, you’ll probably catch me out mountain biking, climbing, or skiing—because moving well and living strong extends far beyond the gym.',
@@ -172,7 +164,6 @@ export const coaches: Coach[] = [
         title: 'L2 Coach, Nutrition',
         newClients: true
     },
-
     {
         name: 'Dan',
         img: `${PUBLIC_WEB_IMAGE_ENDPOINT}/dan/view?project=${PUBLIC_PROJECT_ID}`,
