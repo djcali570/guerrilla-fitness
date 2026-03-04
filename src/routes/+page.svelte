@@ -52,7 +52,7 @@
 					lasts a lifetime
 				</p>
 
-				<div class="pt-8"><CallToActionButton title="Join Now" link="/memberships" /></div>
+				<div class="pt-8"><CallToActionButton title="3 Class Trial" link="/memberships" /></div>
 			</div>
 		</div>
 	</section>
