@@ -1,11 +1,15 @@
 <script lang="ts">
 	import { PUBLIC_PROJECT_ID, PUBLIC_WEB_IMAGE_ENDPOINT } from '$env/static/public';
+	import CallToActionButton from '$lib/components/CallToActionButton.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Nav from '$lib/components/Nav.svelte';
 	import VideoPlayer from '$lib/components/VideoPlayer.svelte';
 	import { slideIn } from '$lib/gsapFunc';
 	import type { MembershipCardData } from '$lib/types';
+	import { Dialog5 } from '@djcali570/component-lib';
 	import MembershipCard from './_components/MembershipCard.svelte';
+
+	let gymSelect = $state(false);
 
 	let mcd: MembershipCardData[] = [
 		{
@@ -113,6 +117,16 @@
 			/>
 			<div class="overlay__content">
 				<h1 class="video__title__text text-center">Memberships</h1>
+				<CallToActionButton
+					textColor="#FFF"
+					title={mcd[0].buttonTitle ? mcd[0].buttonTitle : '3 CLASS TRIAL'}
+					link={mcd[0].link}
+					useSlideIn={true}
+					type="btn"
+					click={() => {
+						gymSelect = true;
+					}}
+				/>
 			</div>
 		</div>
 		<div class="video__overlay"></div>
@@ -179,6 +193,26 @@
 		<Footer />
 	</div>
 </main>
+
+<Dialog5 bind:modalStatus={gymSelect} dialogType="ok" okButtonText="Cancel">
+	{#snippet title()}
+		<div class="py-2">Gym Selection</div>
+	{/snippet}
+	{#snippet content()}
+		<div class="max-w-[350px]">
+			<div
+				class="w-full h-full flex flex-col justify-center items-center px-4 p_pf_r_l text-center"
+			>
+				<div>Please Select a gym</div>
+
+				<div class="flex gap-2 pt-4">
+					<CallToActionButton title="Montclair" link={mcd[0].link} />
+					<CallToActionButton title="Paramus" link={mcd[0].link2} />
+				</div>
+			</div>
+		</div>
+	{/snippet}
+</Dialog5>
 
 <style>
 	.video__section {
